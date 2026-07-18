@@ -1,0 +1,218 @@
+[gd_scene format=3 uid="uid://blc76nxscvpbv"]
+
+[ext_resource type="PackedScene" uid="uid://b72u5kwdpw4te" path="res://scenes/character/zombie/zombie_001_norm.tscn" id="1_7pxgy"]
+[ext_resource type="Script" uid="uid://cj4hccewpwgyv" path="res://scripts/character/components/drop_body/ZombieArm1Drop.gd" id="2_jiuhg"]
+[ext_resource type="Texture2D" uid="uid://dkf4tt81vr4vi" path="res://assets/reanim/Zombie_cone3.png" id="3_0vst7"]
+[ext_resource type="Script" uid="uid://jl0nl4a234bc" path="res://scripts/resources/resource_body_change.gd" id="4_tdg5j"]
+[ext_resource type="Texture2D" uid="uid://ctfic3lc46v2n" path="res://assets/reanim/Zombie_cone2.png" id="5_jiuhg"]
+
+[sub_resource type="Resource" id="Resource_jiuhg"]
+script = ExtResource("4_tdg5j")
+sprite_change = Array[NodePath]([NodePath("../Body/BodyCorrect/Anim_cone/Anim_cone")])
+sprite_change_texture = Array[Texture2D]([ExtResource("5_jiuhg")])
+metadata/_custom_type_script = "uid://jl0nl4a234bc"
+
+[sub_resource type="Resource" id="Resource_0vst7"]
+script = ExtResource("4_tdg5j")
+sprite_change = Array[NodePath]([NodePath("../Body/BodyCorrect/Anim_cone/Anim_cone")])
+sprite_change_texture = Array[Texture2D]([ExtResource("3_0vst7")])
+metadata/_custom_type_script = "uid://jl0nl4a234bc"
+
+[sub_resource type="Resource" id="Resource_tdg5j"]
+script = ExtResource("4_tdg5j")
+sprite_disappear = Array[NodePath]([NodePath("../Body/BodyCorrect/Anim_cone")])
+node_drop = NodePath("../Body/NodeDrop/Node2D_Arm1_Drop")
+metadata/_custom_type_script = "uid://jl0nl4a234bc"
+
+[node name="Zombie003Cone" unique_id=507417470 instance=ExtResource("1_7pxgy")]
+zombie_type = 3
+
+[node name="BodyCorrect" parent="Body" index="0"]
+unique_name_in_owner = false
+
+[node name="_ground" parent="Body/BodyCorrect" index="0" unique_id=991592989]
+visible = true
+
+[node name="Anim_innerarm3" parent="Body/BodyCorrect/Anim_innerarm" parent_id_path=PackedInt32Array(2067243020) index="0" unique_id=925974421]
+position = Vector2(21.9, 23.8)
+rotation = 8.683013
+scale = Vector2(0.793, 0.793)
+
+[node name="Anim_innerarm2" parent="Body/BodyCorrect/Anim_innerarm" parent_id_path=PackedInt32Array(2067243020) index="1" unique_id=1634211063]
+position = Vector2(33.6, 34.6)
+rotation = 8.428195
+scale = Vector2(0.795, 0.886)
+
+[node name="Anim_innerarm1" parent="Body/BodyCorrect/Anim_innerarm" parent_id_path=PackedInt32Array(2067243020) index="2" unique_id=294883347]
+position = Vector2(48.7, 41.5)
+rotation = 8.271115
+scale = Vector2(0.995, 0.995)
+
+[node name="Zombie_flaghand" parent="Body/BodyCorrect/Zombie_flaghand" parent_id_path=PackedInt32Array(851435722) index="0" unique_id=914742018]
+visible = false
+position = Vector2(-8.448725, 49.8707)
+rotation = 5.722935
+
+[node name="Zombie_flagpole" parent="Body/BodyCorrect/Zombie_flag" parent_id_path=PackedInt32Array(888927977) index="0" unique_id=343698953]
+position = Vector2(6.3881383, -6.577599)
+rotation = -0.6004127
+
+[node name="Zombie_flag" parent="Body/BodyCorrect/Zombie_flag" parent_id_path=PackedInt32Array(888927977) index="1" unique_id=1607195862]
+position = Vector2(8.388129, -6.577599)
+rotation = -0.6004127
+
+[node name="Zombie_innerarm_screendoor" parent="Body/BodyCorrect/Zombie_innerarm_screendoor" parent_id_path=PackedInt32Array(1293642331) index="0" unique_id=889736193]
+visible = false
+position = Vector2(1.6512756, 47.978024)
+
+[node name="Zombie_neck" parent="Body/BodyCorrect" index="5" unique_id=1713611]
+position = Vector2(44.2, 27.2)
+rotation = 0.263545
+scale = Vector2(0.837, 0.797)
+
+[node name="Anim_head1" parent="Body/BodyCorrect/Anim_head" parent_id_path=PackedInt32Array(889357428) index="0" unique_id=305952388]
+position = Vector2(20.9, 1.8)
+rotation = -0.020944
+
+[node name="Zombie_innerleg_upper" parent="Body/BodyCorrect/leg" parent_id_path=PackedInt32Array(1779529884) index="0" unique_id=236722919]
+position = Vector2(46, 70.7)
+rotation = 0.031416
+scale = Vector2(0.799, 0.962)
+skew = -0.015708
+
+[node name="Zombie_innerleg_lower" parent="Body/BodyCorrect/leg" parent_id_path=PackedInt32Array(1779529884) index="1" unique_id=959228158]
+position = Vector2(33, 94.5)
+rotation = -6.640978
+scale = Vector2(0.798, 0.798)
+
+[node name="Zombie_innerleg_foot" parent="Body/BodyCorrect/leg" parent_id_path=PackedInt32Array(1779529884) index="2" unique_id=1186836581]
+position = Vector2(43.3, 105.8)
+rotation = -6.28144
+
+[node name="Zombie_outerleg_upper" parent="Body/BodyCorrect/leg" parent_id_path=PackedInt32Array(1779529884) index="3" unique_id=1296519292]
+position = Vector2(58.9, 73.3)
+rotation = -0.471239
+scale = Vector2(0.799, 0.799)
+
+[node name="Zombie_outerleg_foot" parent="Body/BodyCorrect/leg" parent_id_path=PackedInt32Array(1779529884) index="4" unique_id=493319351]
+position = Vector2(69.2, 109)
+rotation = -0.076794
+scale = Vector2(0.798, 0.798)
+skew = -6.2831855
+
+[node name="Zombie_outerleg_lower" parent="Body/BodyCorrect/leg" parent_id_path=PackedInt32Array(1779529884) index="5" unique_id=1008857985]
+position = Vector2(76.4, 93.6)
+rotation = -0.3735
+scale = Vector2(0.798, 0.798)
+skew = -5e-07
+
+[node name="Zombie_body" parent="Body/BodyCorrect" index="8" unique_id=944639131]
+position = Vector2(43.9, 26.8)
+rotation = 0.261799
+
+[node name="Zombie_duckytube" parent="Body/BodyCorrect/Zombie_duckytube" parent_id_path=PackedInt32Array(1513176424) index="0" unique_id=1142736004]
+position = Vector2(6.5, 41.3)
+rotation = 0.0
+scale = Vector2(0.8, 0.8)
+
+[node name="Zombie_tie" parent="Body/BodyCorrect/Zombie_tie" parent_id_path=PackedInt32Array(559880305) index="0" unique_id=360310229]
+position = Vector2(35.4, 45.5)
+rotation = 6.12436
+
+[node name="Anim_head2" parent="Body/BodyCorrect/Anim_head2" parent_id_path=PackedInt32Array(2093158389) index="0" unique_id=1949002323]
+position = Vector2(28.5, 35.4)
+rotation = -0.066323
+scale = Vector2(0.798, 0.798)
+
+[node name="Anim_tongue" parent="Body/BodyCorrect/Anim_tongue" parent_id_path=PackedInt32Array(1224355417) index="0" unique_id=1722091338]
+position = Vector2(35.5, 36.9)
+rotation = 6.185447
+scale = Vector2(0.797, 0.717)
+skew = -0.2443463
+
+[node name="Zombie_mustache" parent="Body/BodyCorrect/Zombie_mustache" parent_id_path=PackedInt32Array(1321956222) index="0" unique_id=462427631]
+position = Vector2(19.3, 24)
+rotation = -0.020944
+
+[node name="Anim_screendoor" parent="Body/BodyCorrect/Anim_screendoor" parent_id_path=PackedInt32Array(722436161) index="0" unique_id=75994408]
+visible = false
+position = Vector2(-1.4560494, 31.55605)
+rotation = 0.0
+scale = Vector2(0.8, 0.8)
+
+[node name="Zombie_innerarm_screendoor_hand" parent="Body/BodyCorrect/Zombie_innerarm_screendoor_hand" parent_id_path=PackedInt32Array(1447449147) index="0" unique_id=1254570422]
+visible = false
+position = Vector2(-2.0633745, 48.48535)
+
+[node name="Zombie_outerarm_screendoor" parent="Body/BodyCorrect/Zombie_outerarm_screendoor" parent_id_path=PackedInt32Array(1707107249) index="0" unique_id=626321369]
+visible = false
+position = Vector2(34.080574, 42.934074)
+rotation = 0.024223166
+
+[node name="Zombie_outerarm_hand" parent="Body/BodyCorrect/Zombie_outerarm_hand" parent_id_path=PackedInt32Array(1627264158) index="0" unique_id=1655720202]
+position = Vector2(49.1, 58.1)
+rotation = 8.150687
+scale = Vector2(0.79, 0.79)
+
+[node name="Zombie_outerarm_upper" parent="Body/BodyCorrect/Zombie_outerarm_upper" parent_id_path=PackedInt32Array(121646891) index="0" unique_id=2042299627]
+position = Vector2(54.1, 34.2)
+rotation = 6.258751
+scale = Vector2(0.794, 0.794)
+
+[node name="Zombie_outerarm_lower" parent="Body/BodyCorrect/Zombie_outerarm_lower" parent_id_path=PackedInt32Array(902376917) index="0" unique_id=224005766]
+position = Vector2(55, 47.2)
+rotation = 0.942478
+scale = Vector2(0.792, 0.792)
+
+[node name="Anim_hair" parent="Body/BodyCorrect/Anim_hair" parent_id_path=PackedInt32Array(700406020) index="0" unique_id=1482504482]
+position = Vector2(16, 0.5)
+rotation = -0.059341
+scale = Vector2(0.799, 0.799)
+skew = -2e-07
+
+[node name="Anim_cone" parent="Body/BodyCorrect" index="23" unique_id=2101136490]
+visible = true
+
+[node name="Anim_cone" parent="Body/BodyCorrect/Anim_cone" index="0" unique_id=1000565333]
+position = Vector2(22.3, -23.7)
+rotation = -0.062832
+scale = Vector2(0.799, 0.799)
+
+[node name="Anim_bucket" parent="Body/BodyCorrect/Anim_bucket" parent_id_path=PackedInt32Array(1745489942) index="0" unique_id=1999092670]
+position = Vector2(14.5, -13.7)
+rotation = -0.054105
+
+[node name="Node2D_Arm1_Drop" type="Node2D" parent="Body/NodeDrop" parent_id_path=PackedInt32Array(269802807) index="2" unique_id=999189754]
+script = ExtResource("2_jiuhg")
+bounce_damping = 0.2
+
+[node name="Node2D" type="Node2D" parent="Body/NodeDrop/Node2D_Arm1_Drop" index="0" unique_id=1079986671]
+position = Vector2(-10, -101)
+
+[node name="Anim_cone" type="Sprite2D" parent="Body/NodeDrop/Node2D_Arm1_Drop/Node2D" index="0" unique_id=1159593886]
+position = Vector2(-18, -35)
+rotation = 0.121765
+scale = Vector2(0.794647, 0.794647)
+texture = ExtResource("3_0vst7")
+centered = false
+
+[node name="HpStageChangeComponent" parent="." index="3" unique_id=2077024211]
+body_change_armor1 = Array[ExtResource("4_tdg5j")]([SubResource("Resource_jiuhg"), SubResource("Resource_0vst7"), SubResource("Resource_tdg5j")])
+
+[node name="HpComponent" parent="." index="4"]
+position = Vector2(0, -38)
+max_hp_armor1 = 370
+sfx_be_attack_armor1 = 1
+
+[node name="VBoxContainer" parent="HpComponent" index="0" unique_id=1189275420]
+offset_top = -24.0
+offset_bottom = 24.0
+
+[node name="ProgressBarHpArmor2" parent="HpComponent/VBoxContainer/Armor2Control" parent_id_path=PackedInt32Array(1447254387) index="0" unique_id=606616615]
+modulate = Color(1, 1, 1, 0.192157)
+
+[node name="ProgressBarHpArmor1" parent="HpComponent/VBoxContainer/Armor1Control" parent_id_path=PackedInt32Array(309037623) index="0" unique_id=1886401935]
+modulate = Color(1, 1, 1, 0.192157)
+
+[node name="ProgressBarHp" parent="HpComponent/VBoxContainer/HpControl" parent_id_path=PackedInt32Array(1908644885) index="0" unique_id=1871248485]
+modulate = Color(1, 1, 1, 0.192157)

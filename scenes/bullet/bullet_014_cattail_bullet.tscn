@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://mrofp8xsn0xd"]
+
+[ext_resource type="PackedScene" uid="uid://45gwbrqotnwa" path="res://scenes/bullet/bullet_000_track_base.tscn" id="1_dbrh7"]
+[ext_resource type="Texture2D" uid="uid://spfd63h0e5vv" path="res://assets/image/projectile/ProjectileCactus.png" id="2_hfvkc"]
+
+[node name="Bullet014CattailBullet" unique_id=1151380997 instance=ExtResource("1_dbrh7")]
+is_garlic = false
+is_ice = true
+ice_time = 1.0
+attack_value = 30
+speed = 600.0
+bullet_mode = 1
+bullet_type = 14
+
+[node name="BulletBody" parent="Body" index="0"]
+texture = ExtResource("2_hfvkc")
+
+[node name="BulletEffect" parent="." index="2"]
+is_bullet_effect = false

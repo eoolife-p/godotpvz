@@ -1,0 +1,152 @@
+[gd_scene format=3 uid="uid://c6kipytcq8ibl"]
+
+[ext_resource type="PackedScene" uid="uid://c5cke4cm02um7" path="res://scenes/character/plant/plant_000_base.tscn" id="1_14btg"]
+[ext_resource type="Texture2D" uid="uid://cktibggsi1jj" path="res://assets/reanim/Jalapeno_stem.png" id="2_2sesa"]
+[ext_resource type="Script" uid="uid://ioiiaewsgcvc" path="res://scripts/character/plant/plant_021_jalapeno.gd" id="2_citj3"]
+[ext_resource type="Texture2D" uid="uid://hqee4ag4ittk" path="res://assets/reanim/Jalapeno_body.png" id="3_6qgup"]
+[ext_resource type="Texture2D" uid="uid://bln0hxmmktyex" path="res://assets/reanim/Jalapeno_mouth.png" id="4_7jj3l"]
+[ext_resource type="Texture2D" uid="uid://dg0urs411rllm" path="res://assets/reanim/Jalapeno_eye1.png" id="5_wobmd"]
+[ext_resource type="Texture2D" uid="uid://oi3otxyuk3li" path="res://assets/reanim/Jalapeno_eye2.png" id="6_citj3"]
+[ext_resource type="Texture2D" uid="uid://b4t56wxmfhp6u" path="res://assets/reanim/Jalapeno_cheek.png" id="7_yip6k"]
+[ext_resource type="Texture2D" uid="uid://crbckbw317krk" path="res://assets/reanim/Jalapeno_eyebrow1.png" id="8_6ompq"]
+[ext_resource type="Texture2D" uid="uid://4p7jqmj2ot5i" path="res://assets/reanim/Jalapeno_eyebrow2.png" id="9_60eid"]
+[ext_resource type="Animation" uid="uid://bx17w74rvafw3" path="res://animation/character/plant/021_jalapeno/Jalapeno_explode.tres" id="10_cvvd8"]
+[ext_resource type="Animation" uid="uid://dbgfoesxm6gq6" path="res://animation/character/plant/021_jalapeno/Jalapeno_idle.tres" id="11_te1fo"]
+[ext_resource type="Script" uid="uid://lxlakp664pau" path="res://scripts/character/components/bomb_component/component_bomb_jalapeno.gd" id="12_wobmd"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3dqyt"]
+_data = {
+&"Jalapeno_explode": ExtResource("10_cvvd8"),
+&"Jalapeno_idle": ExtResource("11_te1fo")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_iuttm"]
+animation = &"Jalapeno_explode"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wirwa"]
+animation = &"Jalapeno_idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_50dyk"]
+advance_mode = 2
+advance_expression = "is_show"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vvi4i"]
+advance_mode = 2
+advance_expression = "not is_idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6qgup"]
+advance_mode = 2
+advance_expression = "is_idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7jj3l"]
+advance_mode = 2
+advance_expression = "not is_show"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_p8hbt"]
+states/Jalapeno_explode/node = SubResource("AnimationNodeAnimation_iuttm")
+states/Jalapeno_explode/position = Vector2(418, 180)
+states/Jalapeno_idle/node = SubResource("AnimationNodeAnimation_wirwa")
+states/Jalapeno_idle/position = Vector2(418, 42)
+transitions = ["Start", "Jalapeno_idle", SubResource("AnimationNodeStateMachineTransition_50dyk"), "Jalapeno_idle", "Jalapeno_explode", SubResource("AnimationNodeStateMachineTransition_vvi4i"), "Jalapeno_explode", "Jalapeno_idle", SubResource("AnimationNodeStateMachineTransition_6qgup"), "Start", "Jalapeno_explode", SubResource("AnimationNodeStateMachineTransition_7jj3l")]
+graph_offset = Vector2(60, -4)
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_qsyk2"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_g5a41"]
+nodes/output/position = Vector2(380, 140)
+nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_p8hbt")
+nodes/StateMachine/position = Vector2(-140, 100)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_qsyk2")
+nodes/TimeScale/position = Vector2(180, 120)
+node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"StateMachine"]
+
+[node name="Plant021Jalapeno" unique_id=644828263 node_paths=PackedStringArray("node_no_change_direction") instance=ExtResource("1_14btg")]
+script = ExtResource("2_citj3")
+plant_type = 21
+node_no_change_direction = [NodePath("HpComponent"), NodePath("SleepComponent"), null]
+
+[node name="BodyCorrect" parent="Body" index="0"]
+position = Vector2(-42, -71)
+
+[node name="Anim_blink" type="Sprite2D" parent="Body/BodyCorrect" index="0" unique_id=586468549]
+visible = false
+centered = false
+
+[node name="Anim_idle" type="Sprite2D" parent="Body/BodyCorrect" index="1" unique_id=444760839]
+centered = false
+
+[node name="Anim_explode" type="Sprite2D" parent="Body/BodyCorrect" index="2" unique_id=64815585]
+visible = false
+centered = false
+
+[node name="Jalapeno_stem" type="Sprite2D" parent="Body/BodyCorrect" index="3" unique_id=1691891361]
+position = Vector2(35.24478, 3.3186593)
+rotation = 0.21341315
+scale = Vector2(0.7521417, 0.7898508)
+skew = -0.030192165
+texture = ExtResource("2_2sesa")
+centered = false
+
+[node name="Jalapeno_body" type="Sprite2D" parent="Body/BodyCorrect" index="4" unique_id=630265268]
+position = Vector2(16.692537, 11.626123)
+scale = Vector2(0.8264851, 0.7715149)
+texture = ExtResource("3_6qgup")
+centered = false
+
+[node name="Jalapeno_mouth" type="Sprite2D" parent="Body/BodyCorrect" index="5" unique_id=1871977317]
+position = Vector2(24.755217, 34.403732)
+scale = Vector2(0.934463, 0.706246)
+texture = ExtResource("4_7jj3l")
+centered = false
+
+[node name="Jalapeno_eye1" type="Sprite2D" parent="Body/BodyCorrect" index="6" unique_id=1829025136]
+position = Vector2(21.3, 20.318659)
+scale = Vector2(0.8, 0.70528334)
+texture = ExtResource("5_wobmd")
+centered = false
+
+[node name="Jalapeno_eye2" type="Sprite2D" parent="Body/BodyCorrect" index="7" unique_id=934251403]
+position = Vector2(41, 26.12239)
+scale = Vector2(0.8, 0.59015614)
+texture = ExtResource("6_citj3")
+centered = false
+
+[node name="Jalapeno_cheek" type="Sprite2D" parent="Body/BodyCorrect" index="8" unique_id=778822654]
+position = Vector2(41.392536, 28.592537)
+scale = Vector2(0.767463, 0.709358)
+texture = ExtResource("7_yip6k")
+centered = false
+
+[node name="Jalapeno_eyebrow1" type="Sprite2D" parent="Body/BodyCorrect" index="9" unique_id=708552170]
+position = Vector2(24.03732, 15.996268)
+rotation = 0.17778966
+scale = Vector2(0.8764181, 0.78881335)
+skew = -0.0033604163
+texture = ExtResource("8_6ompq")
+centered = false
+
+[node name="Jalapeno_eyebrow2" type="Sprite2D" parent="Body/BodyCorrect" index="10" unique_id=25547724]
+position = Vector2(40.1, 22.52239)
+scale = Vector2(0.8835301, 0.749067)
+texture = ExtResource("9_60eid")
+centered = false
+
+[node name="BlinkComponent" parent="." index="5"]
+is_enable_default = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="8" unique_id=175533413]
+libraries/ = SubResource("AnimationLibrary_3dqyt")
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="9" unique_id=1184590086]
+deterministic = false
+tree_root = SubResource("AnimationNodeBlendTree_g5a41")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
+parameters/TimeScale/scale = 1.0
+
+[node name="BombComponent" type="Node2D" parent="." index="10" unique_id=164977255]
+unique_name_in_owner = true
+script = ExtResource("12_wobmd")
+can_attack_plant_status = 7
+can_attack_zombie_status = 31
+bomb_sfx = &"Jalapeno"

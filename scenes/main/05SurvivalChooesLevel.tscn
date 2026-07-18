@@ -1,0 +1,1124 @@
+[gd_scene format=3 uid="uid://dv3jkvtrar62p"]
+
+[ext_resource type="Theme" uid="uid://cx302yraw066y" path="res://data/ChooesLevel.tres" id="1_c1y5h"]
+[ext_resource type="Script" uid="uid://jru6xfv7g4f1" path="res://scripts/choose_level/choose_level.gd" id="2_memm2"]
+[ext_resource type="Texture2D" uid="uid://bwevuvs5nnwfx" path="res://assets/image/ui/ui_challenge/Challenge_Background.jpg" id="3_hcfbb"]
+[ext_resource type="PackedScene" uid="uid://bhjnqm3kqr2fq" path="res://scenes/choose_level/choose_level_button.tscn" id="4_gtn0x"]
+[ext_resource type="Resource" uid="uid://uixdq60xe4ng" path="res://resources/level_date_resource/mode_survival/survival_flag_01_day.tres" id="6_7m0yj"]
+[ext_resource type="Texture2D" uid="uid://hb4b6ujaahoc" path="res://assets/image/Almanac/Almanac_GroundDay.jpg" id="7_v10ix"]
+[ext_resource type="PackedScene" uid="uid://cfc5vrs1dcy0j" path="res://scenes/character/plant/plant_001_pea_shooter_single.tscn" id="8_nmuw1"]
+[ext_resource type="Resource" uid="uid://clejk4rhotrml" path="res://resources/level_date_resource/mode_survival/survival_flag_02_night.tres" id="11_j77gj"]
+[ext_resource type="Texture2D" uid="uid://bvp2j68muqgm8" path="res://assets/image/Almanac/Almanac_GroundNight.jpg" id="12_fw7le"]
+[ext_resource type="PackedScene" uid="uid://prux5sri4p8i" path="res://scenes/character/plant/plant_009_puff.tscn" id="13_wq805"]
+[ext_resource type="Resource" uid="uid://chckqm8l383xa" path="res://resources/level_date_resource/mode_survival/survival_flag_03_pool.tres" id="14_spbaq"]
+[ext_resource type="Texture2D" uid="uid://bx8xtt6oantp1" path="res://assets/image/Almanac/Almanac_GroundPool.jpg" id="15_myt2c"]
+[ext_resource type="PackedScene" uid="uid://w2cplfosy68e" path="res://scenes/character/plant/plant_017_lily_pad.tscn" id="16_8l0dj"]
+[ext_resource type="Resource" uid="uid://cdd7t41cpekti" path="res://resources/level_date_resource/mode_survival/survival_flag_04_fog.tres" id="17_fdkwy"]
+[ext_resource type="Texture2D" uid="uid://dwva3w3r5kjvb" path="res://assets/image/Almanac/Almanac_GroundNightPool.jpg" id="18_q5nmj"]
+[ext_resource type="PackedScene" uid="uid://dvtg44jen3lb6" path="res://scenes/character/plant/plant_025_sea_shroom.tscn" id="19_86o21"]
+[ext_resource type="Resource" uid="uid://diavxa6duvk3q" path="res://resources/level_date_resource/mode_survival/survival_flag_05_Roof.tres" id="20_6spch"]
+[ext_resource type="Resource" uid="uid://bhlkcjxux6gwr" path="res://resources/level_date_resource/mode_survival/survival_flag_06_day.tres" id="23_uos7r"]
+[ext_resource type="PackedScene" uid="uid://b72u5kwdpw4te" path="res://scenes/character/zombie/zombie_001_norm.tscn" id="24_j77gj"]
+[ext_resource type="Resource" uid="uid://bjct5t8843n1e" path="res://resources/level_date_resource/mode_survival/survival_flag_07_night.tres" id="25_gtn0x"]
+[ext_resource type="PackedScene" uid="uid://cfdenkma7cksu" path="res://scenes/character/zombie/zombie_006_paper.tscn" id="26_spbaq"]
+[ext_resource type="Resource" uid="uid://by5hqj5mspmh0" path="res://resources/level_date_resource/mode_survival/survival_flag_08_pool.tres" id="27_fwrgu"]
+[ext_resource type="Resource" uid="uid://bdqduptedqvxt" path="res://resources/level_date_resource/mode_survival/survival_flag_09_fog.tres" id="28_jxfl6"]
+[ext_resource type="PackedScene" uid="uid://dxic1u3pj6402" path="res://scenes/character/zombie/zombie_016_jackbox.tscn" id="29_6spch"]
+[ext_resource type="Resource" uid="uid://dwykiyj0lgyf3" path="res://resources/level_date_resource/mode_survival/survival_flag_10_Roof.tres" id="30_rjfvb"]
+[ext_resource type="PackedScene" uid="uid://bbg8g31tr56th" path="res://scenes/character/zombie/zombie_021_bungi.tscn" id="31_yp0s4"]
+[ext_resource type="Resource" uid="uid://b7ca2jr4qu8f6" path="res://resources/level_date_resource/mode_survival/survival_flag_11_day.tres" id="32_8x5l1"]
+[ext_resource type="Resource" uid="uid://dix24anc46q6f" path="res://resources/level_date_resource/mode_survival/survival_flag_12_night.tres" id="33_o4fgc"]
+[ext_resource type="Resource" uid="uid://d4dhe3i4oubmr" path="res://resources/level_date_resource/mode_survival/survival_flag_13_pool.tres" id="34_p4eqw"]
+[ext_resource type="Resource" uid="uid://dru201ovpsp3s" path="res://resources/level_date_resource/mode_survival/survival_flag_14_fog.tres" id="35_u5mra"]
+[ext_resource type="Texture2D" uid="uid://bj57iq2dgnb0g" path="res://assets/image/Almanac/Almanac_GroundRoof.jpg" id="36_6ic1y"]
+[ext_resource type="Resource" uid="uid://dm2i8rxcmf8ky" path="res://resources/level_date_resource/mode_survival/survival_flag_15_Roof.tres" id="36_y1t6b"]
+[ext_resource type="PackedScene" uid="uid://g6ybgmhkx6rj" path="res://scenes/character/plant/plant_033_cabbage_pult.tscn" id="37_ttjhx"]
+[ext_resource type="Texture2D" uid="uid://xc3kqag3vqlq" path="res://assets/image/ui/ui_level/Almanac_CloseButton.png" id="40_mfip2"]
+[ext_resource type="Texture2D" uid="uid://c82uuprowr5d" path="res://assets/image/ui/ui_level/Almanac_CloseButtonHighlight.png" id="41_5u2b0"]
+[ext_resource type="BitMap" uid="uid://bc7yq02xscrlr" path="res://assets/image/ui/ui_level/Almanac_CloseButton_Mask.png" id="42_wgaqh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1i0xb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ddvl6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ykbb6"]
+
+[node name="ChooseLevel" type="Control" unique_id=257920273]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_c1y5h")
+script = ExtResource("2_memm2")
+game_mode = 104
+
+[node name="BG" type="TextureRect" parent="." unique_id=1029103433]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_hcfbb")
+
+[node name="Label" type="Label" parent="." unique_id=1584198878]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -67.0
+offset_top = 22.0
+offset_right = 77.0
+offset_bottom = 72.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/font_size = 36
+text = "生 存 模 式"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Scrooll" type="ScrollContainer" parent="." unique_id=673029391]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 87.0
+offset_right = 1088.0
+offset_bottom = 568.0
+
+[node name="GridContainer" type="GridContainer" parent="Scrooll" unique_id=1981187126]
+layout_mode = 2
+theme_override_constants/h_separation = 49
+theme_override_constants/v_separation = 20
+columns = 7
+
+[node name="ChooseLevelButton" parent="Scrooll/GridContainer" unique_id=1297242858 instance=ExtResource("4_gtn0x")]
+layout_mode = 2
+curr_level_data_game_para = ExtResource("6_7m0yj")
+
+[node name="Label" parent="Scrooll/GridContainer/ChooseLevelButton/TextureButton" index="0"]
+text = "十旗 白天"
+
+[node name="Panel" type="Panel" parent="Scrooll/GridContainer/ChooseLevelButton" unique_id=434139808]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -49.0
+offset_top = 2.13101
+offset_right = 46.0
+offset_bottom = 74.131
+grow_horizontal = 2
+pivot_offset = Vector2(41, 33.5)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1i0xb")
+
+[node name="TextureRect" type="TextureRect" parent="Scrooll/GridContainer/ChooseLevelButton/Panel" unique_id=1903266840]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = -39.0
+offset_right = 145.0
+offset_bottom = 161.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_v10ix")
+
+[node name="Plant001PeaShooterSingle" parent="Scrooll/GridContainer/ChooseLevelButton/Panel/TextureRect" unique_id=1578104377 node_paths=PackedStringArray("node_no_change_direction") instance=ExtResource("8_nmuw1")]
+position = Vector2(85.8333, 88.115)
+node_no_change_direction = [NodePath("HpComponent"), NodePath("SleepComponent"), null]
+character_init_type = 1
+
+[node name="ChooseLevelButton2" parent="Scrooll/GridContainer" unique_id=389555105 instance=ExtResource("4_gtn0x")]
+layout_mode = 2
+curr_level_data_game_para = ExtResource("11_j77gj")
+
+[node name="Label" parent="Scrooll/GridContainer/ChooseLevelButton2/TextureButton" index="0"]
+text = "十旗 黑夜"
+
+[node name="Panel" type="Panel" parent="Scrooll/GridContainer/ChooseLevelButton2" unique_id=2113831273]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -46.0
+offset_top = 3.0
+offset_right = 47.0
+offset_bottom = 73.0
+grow_horizontal = 2
+pivot_offset = Vector2(41, 33.5)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ddvl6")
+
+[node name="TextureRect" type="TextureRect" parent="Scrooll/GridContainer/ChooseLevelButton2/Panel" unique_id=323251906]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = -41.5
+offset_right = 142.0
+offset_bottom = 158.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("12_fw7le")
+
+[node name="Plant009Puff" parent="Scrooll/GridContainer/ChooseLevelButton2/Panel/TextureRect" unique_id=245847626 instance=ExtResource("13_wq805")]
+position = Vector2(87.5, 90.8333)
+character_init_type = 1
+
+[node name="ChooseLevelButton3" parent="Scrooll/GridContainer" unique_id=1214243341 instance=ExtResource("4_gtn0x")]
+layout_mode = 2
+curr_level_data_game_para = ExtResource("14_spbaq")
+
+[node name="Label" parent="Scrooll/GridContainer/ChooseLevelButton3/TextureButton" index="0"]
+text = "十旗 泳池"
+
+[node name="Panel" type="Panel" parent="Scrooll/GridContainer/ChooseLevelButton3" unique_id=344568622]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -46.0
+offset_top = 3.0
+offset_right = 47.0
+offset_bottom = 73.0
+grow_horizontal = 2
+pivot_offset = Vector2(41, 33.5)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ddvl6")
+
+[node name="TextureRect" type="TextureRect" parent="Scrooll/GridContainer/ChooseLevelButton3/Panel" unique_id=339470406]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.683
+offset_top = -59.9414
+offset_right = 141.317
+offset_bottom = 140.059
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("15_myt2c")
+
+[node name="Plant017LilyPad" parent="Scrooll/GridContainer/ChooseLevelButton3/Panel/TextureRect" unique_id=1962921527 instance=ExtResource("16_8l0dj")]
+position = Vector2(98.6383, 129.902)
+character_init_type = 1
+
+[node name="ChooseLevelButton4" parent="Scrooll/GridContainer" unique_id=1519883028 instance=ExtResource("4_gtn0x")]
+layout_mode = 2
+curr_level_data_game_para = ExtResource("17_fdkwy")
+
+[node name="Label" parent="Scrooll/GridContainer/ChooseLevelButton4/TextureButton" index="0"]
+text = "十旗 浓雾"
+
+[node name="Panel" type="Panel" parent="Scrooll/GridContainer/ChooseLevelButton4" unique_id=1032630767]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -46.0
+offset_top = 3.0
+offset_right = 47.0
+offset_bottom = 73.0
+grow_horizontal = 2
+pivot_offset = Vector2(41, 33.5)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ddvl6")
+
+[node name="TextureRect" type="TextureRect" parent="Scrooll/GridContainer/ChooseLevelButton4/Panel" unique_id=2110737014]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.683
+offset_top = -59.9414
+offset_right = 141.317
+offset_bottom = 140.059
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("18_q5nmj")
+
+[node name="Plant025SeaShroom" parent="Scrooll/GridContainer/ChooseLevelButton4/Panel/TextureRect" unique_id=620994012 instance=ExtResource("19_86o21")]
+position = Vector2(93.6383, 116.569)
+character_init_type = 1
+
+[node name="ChooseLevelButton5" parent="Scrooll/GridContainer" unique_id=65421728 instance=ExtResource("4_gtn0x")]
+layout_mode = 2
+curr_level_data_game_para = ExtResource("20_6spch")
+
+[node name="Label" parent="Scrooll/GridContainer/ChooseLevelButton5/TextureButton" index="0"]
+text = "十旗 屋顶"
+
+[node name="Panel" type="Panel" parent="Scrooll/GridContainer/ChooseLevelButton5" unique_id=76551012]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -45.9398
+offset_top = 0.987915
+offset_right = 42.0602
+offset_bottom = 68.9879
+grow_horizontal = 2
+pivot_offset = Vector2(41, 33.5)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ykbb6")
+
+[node name="TextureRect" type="TextureRect" parent="Scrooll/GridContainer/ChooseLevelButton5/Panel" unique_id=283108162]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = -51.0
+offset_right = 141.0
+offset_bottom = 149.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("36_6ic1y")
+
+[node name="Plant033CabbagePult" parent="Scrooll/GridContainer/ChooseLevelButton5/Panel/TextureRect" unique_id=1383476930 instance=ExtResource("37_ttjhx")]
+position = Vector2(103.233, 113.353)
+character_init_type = 1
+
+[node name="ChooseLevelButton6" parent="Scrooll/GridContainer" unique_id=320200733 instance=ExtResource("4_gtn0x")]
+layout_mode = 2
+curr_level_data_game_para = ExtResource("23_uos7r")
+
+[node name="Label" parent="Scrooll/GridContainer/ChooseLevelButton6/TextureButton" index="0"]
+text = "十轮 白天"
+
+[node name="Panel" type="Panel" parent="Scrooll/GridContainer/ChooseLevelButton6" unique_id=1568825070]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -49.0
+offset_top = 2.13101
+offset_right = 46.0
+offset_bottom = 74.131
+grow_horizontal = 2
+pivot_offset = Vector2(41, 33.5)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1i0xb")
+
+[node name="TextureRect" type="TextureRect" parent="Scrooll/GridContainer/ChooseLevelButton6/Panel" unique_id=730895768]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = -39.0
+offset_right = 145.0
+offset_bottom = 161.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_v10ix")
+
+[node name="Zombie001Norm" parent="Scrooll/GridContainer/ChooseLevelButton6/Panel/TextureRect" unique_id=1388595040 instance=ExtResource("24_j77gj")]
+position = Vector2(96.666664, 93.11498)
+scale = Vector2(0.6, 0.6)
+character_init_type = 1
+
+[node name="ChooseLevelButton7" parent="Scrooll/GridContainer" unique_id=185441258 instance=ExtResource("4_gtn0x")]
+layout_mode = 2
+curr_level_data_game_para = ExtResource("25_gtn0x")
+
+[node name="Label" parent="Scrooll/GridContainer/ChooseLevelButton7/TextureButton" index="0"]
+text = "十轮 黑夜"
+
+[node name="Panel" type="Panel" parent="Scrooll/GridContainer/ChooseLevelButton7" unique_id=9262300]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -46.0
+offset_top = 3.0
+offset_right = 47.0
+offset_bottom = 73.0
+grow_horizontal = 2
+pivot_offset = Vector2(41, 33.5)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ddvl6")
+
+[node name="TextureRect" type="TextureRect" parent="Scrooll/GridContainer/ChooseLevelButton7/Panel" unique_id=709593930]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = -41.5
+offset_right = 142.0
+offset_bottom = 158.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("12_fw7le")
+
+[node name="Zombie006Paper" parent="Scrooll/GridContainer/ChooseLevelButton7/Panel/TextureRect" unique_id=1375045791 instance=ExtResource("26_spbaq")]
+position = Vector2(96.666664, 94.166664)
+scale = Vector2(0.6, 0.6)
+character_init_type = 1
+
+[node name="ChooseLevelButton8" parent="Scrooll/GridContainer" unique_id=263786015 instance=ExtResource("4_gtn0x")]
+layout_mode = 2
+curr_level_data_game_para = ExtResource("27_fwrgu")
+
+[node name="Label" parent="Scrooll/GridContainer/ChooseLevelButton8/TextureButton" index="0"]
+text = "十轮 泳池"
+
+[node name="Panel" type="Panel" parent="Scrooll/GridContainer/ChooseLevelButton8" unique_id=195452015]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -46.0
+offset_top = 3.0
+offset_right = 47.0
+offset_bottom = 73.0
+grow_horizontal = 2
+pivot_offset = Vector2(41, 33.5)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ddvl6")
+
+[node name="TextureRect" type="TextureRect" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel" unique_id=1774169319]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.683
+offset_top = -59.9414
+offset_right = 141.317
+offset_bottom = 140.059
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("15_myt2c")
+
+[node name="Zombie001Norm" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect" unique_id=389917101 instance=ExtResource("24_j77gj")]
+position = Vector2(99.47164, 124.90235)
+scale = Vector2(0.6, 0.6)
+character_init_type = 1
+
+[node name="Anim_innerarm3" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Anim_innerarm" parent_id_path=PackedInt32Array(389917101, 2067243020) index="0" unique_id=925974421]
+position = Vector2(24.669935, 75.85947)
+rotation = 6.317419
+scale = Vector2(0.799, 0.799)
+
+[node name="Anim_innerarm2" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Anim_innerarm" parent_id_path=PackedInt32Array(389917101, 2067243020) index="1" unique_id=1634211063]
+position = Vector2(26.479736, 61.369934)
+rotation = 6.347934
+scale = Vector2(0.799, 0.799)
+
+[node name="Anim_innerarm1" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Anim_innerarm" parent_id_path=PackedInt32Array(389917101, 2067243020) index="2" unique_id=294883347]
+position = Vector2(29.949669, 41.7098)
+rotation = 6.347934
+scale = Vector2(0.9983007, 0.9983007)
+
+[node name="Zombie_flaghand" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Zombie_flaghand" parent_id_path=PackedInt32Array(389917101, 851435722) index="0" unique_id=914742018]
+position = Vector2(-5.9803977, 48.34053)
+rotation = 5.747871
+scale = Vector2(0.79760134, 0.79760134)
+
+[node name="Zombie_flagpole" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Zombie_flag" parent_id_path=PackedInt32Array(389917101, 888927977) index="0" unique_id=343698953]
+position = Vector2(10.592752, -6.695813)
+rotation = -0.5692102
+
+[node name="Zombie_flag" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Zombie_flag" parent_id_path=PackedInt32Array(389917101, 888927977) index="1" unique_id=1607195862]
+position = Vector2(12.592747, -6.695813)
+rotation = -0.5692102
+
+[node name="Zombie_innerarm_screendoor" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Zombie_innerarm_screendoor" parent_id_path=PackedInt32Array(389917101, 1293642331) index="0" unique_id=889736193]
+position = Vector2(3.7098012, 47)
+
+[node name="Zombie_neck" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect" index="5" unique_id=1713611]
+position = Vector2(35.35947, 30.639868)
+rotation = 0.11430166
+scale = Vector2(0.837, 0.797)
+
+[node name="Anim_head1" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Anim_head" parent_id_path=PackedInt32Array(389917101, 889357428) index="0" unique_id=305952388]
+position = Vector2(15.398675, 3.3098013)
+rotation = 0.058451656
+scale = Vector2(0.799, 0.799)
+
+[node name="Zombie_innerleg_upper" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/leg" parent_id_path=PackedInt32Array(389917101, 1779529884) index="0" unique_id=236722919]
+position = Vector2(43.869934, 76.13986)
+rotation = 0.09041454
+scale = Vector2(0.80430067, 0.8)
+skew = -0.09757852
+
+[node name="Zombie_outerleg_upper" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/leg" parent_id_path=PackedInt32Array(389917101, 1779529884) index="3" unique_id=1296519292]
+position = Vector2(54.8, 67.939865)
+rotation = 0.015867269
+scale = Vector2(0.8, 0.8)
+
+[node name="Zombie_outerleg_foot" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/leg" parent_id_path=PackedInt32Array(389917101, 1779529884) index="4" unique_id=493319351]
+position = Vector2(44.530067, 109.369934)
+rotation = -0.008543807
+
+[node name="Zombie_outerleg_lower" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/leg" parent_id_path=PackedInt32Array(389917101, 1779529884) index="5" unique_id=1008857985]
+position = Vector2(59.770596, 93.73987)
+rotation = -0.017088313
+scale = Vector2(0.8, 0.8)
+skew = -0.00976429
+
+[node name="Zombie_body" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect" index="8" unique_id=944639131]
+position = Vector2(35.029404, 30.109802)
+rotation = 0.13804027
+
+[node name="Zombie_duckytube" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect" index="9" unique_id=1513176424]
+visible = true
+
+[node name="Zombie_duckytube" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Zombie_duckytube" index="0" unique_id=1142736004]
+position = Vector2(3.0098011, 43.5)
+rotation = 0.05339785
+scale = Vector2(0.8, 0.8)
+
+[node name="Zombie_tie" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Zombie_tie" parent_id_path=PackedInt32Array(389917101, 559880305) index="0" unique_id=360310229]
+position = Vector2(27.689537, 46.65947)
+rotation = 6.2411375
+scale = Vector2(0.799, 0.799)
+
+[node name="Anim_head2" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Anim_head2" parent_id_path=PackedInt32Array(389917101, 2093158389) index="0" unique_id=1949002323]
+position = Vector2(21.069271, 33.629406)
+rotation = 0.13980919
+scale = Vector2(0.7983007, 0.7983007)
+
+[node name="Anim_tongue" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Anim_tongue" parent_id_path=PackedInt32Array(389917101, 1224355417) index="0" unique_id=1722091338]
+position = Vector2(28.299337, 37.219604)
+rotation = 6.276888
+scale = Vector2(0.799, 0.72939867)
+skew = 0.30037948
+
+[node name="Zombie_mustache" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Zombie_mustache" parent_id_path=PackedInt32Array(389917101, 1321956222) index="0" unique_id=462427631]
+position = Vector2(11.979073, 25.269934)
+rotation = 0.058451656
+scale = Vector2(0.799, 0.799)
+
+[node name="Anim_screendoor" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Anim_screendoor" parent_id_path=PackedInt32Array(389917101, 722436161) index="0" unique_id=75994408]
+position = Vector2(0.67973506, 29.490198)
+rotation = 0.0036617313
+
+[node name="Zombie_innerarm_screendoor_hand" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Zombie_innerarm_screendoor_hand" parent_id_path=PackedInt32Array(389917101, 1447449147) index="0" unique_id=1254570422]
+position = Vector2(-0.320265, 47.690197)
+
+[node name="Zombie_outerarm_screendoor" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Zombie_outerarm_screendoor" parent_id_path=PackedInt32Array(389917101, 1707107249) index="0" unique_id=626321369]
+position = Vector2(37.4098, 40.779736)
+
+[node name="Zombie_outerarm_hand" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Zombie_outerarm_hand" parent_id_path=PackedInt32Array(389917101, 1627264158) index="0" unique_id=1655720202]
+position = Vector2(34.76927, 77.119606)
+rotation = 6.4489794
+scale = Vector2(0.798, 0.798)
+
+[node name="Zombie_outerarm_upper" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Zombie_outerarm_upper" parent_id_path=PackedInt32Array(389917101, 121646891) index="0" unique_id=2042299627]
+position = Vector2(48.179733, 40.519604)
+rotation = 6.326818
+scale = Vector2(0.799, 0.799)
+
+[node name="Zombie_outerarm_lower" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Zombie_outerarm_lower" parent_id_path=PackedInt32Array(389917101, 902376917) index="0" unique_id=224005766]
+position = Vector2(40.93987, 61.429405)
+rotation = 6.402598
+scale = Vector2(0.798, 0.798)
+
+[node name="Anim_hair" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Anim_hair" parent_id_path=PackedInt32Array(389917101, 700406020) index="0" unique_id=1482504482]
+position = Vector2(11.498675, 0.33986753)
+rotation = 0.058451656
+scale = Vector2(0.799, 0.799)
+skew = -4.6993375e-07
+
+[node name="Anim_cone" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Anim_cone" parent_id_path=PackedInt32Array(389917101, 2101136490) index="0" unique_id=1000565333]
+position = Vector2(21.738543, -23.44053)
+rotation = 0.10977281
+scale = Vector2(0.7993007, 0.7993007)
+
+[node name="Anim_bucket" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Anim_bucket" parent_id_path=PackedInt32Array(389917101, 1745489942) index="0" unique_id=1999092670]
+position = Vector2(9.748343, -13.630067)
+rotation = 0.019529002
+scale = Vector2(0.8, 0.8)
+
+[node name="ProgressBarHpArmor2" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm/HpComponent/VBoxContainer/Armor2Control" parent_id_path=PackedInt32Array(389917101, 1447254387) index="0" unique_id=606616615]
+value = 0.5
+
+[node name="DropItemComponent" parent="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm" index="9" unique_id=347239241]
+can_drop_x_range = Vector2(0, 900)
+drop_coin_rate = 0.3
+drop_coin_silver_glod_diamond_rate = [0.5, 0.4, 0.1]
+drop_garden_plant_rate = 0.004
+is_enable_default = true
+
+[node name="ChooseLevelButton9" parent="Scrooll/GridContainer" unique_id=534491736 instance=ExtResource("4_gtn0x")]
+layout_mode = 2
+curr_level_data_game_para = ExtResource("28_jxfl6")
+
+[node name="Label" parent="Scrooll/GridContainer/ChooseLevelButton9/TextureButton" index="0"]
+text = "十轮 浓雾"
+
+[node name="Panel" type="Panel" parent="Scrooll/GridContainer/ChooseLevelButton9" unique_id=348861772]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -46.0
+offset_top = 3.0
+offset_right = 47.0
+offset_bottom = 73.0
+grow_horizontal = 2
+pivot_offset = Vector2(41, 33.5)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ddvl6")
+
+[node name="TextureRect" type="TextureRect" parent="Scrooll/GridContainer/ChooseLevelButton9/Panel" unique_id=1815388907]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.683
+offset_top = -59.9414
+offset_right = 141.317
+offset_bottom = 140.059
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("18_q5nmj")
+
+[node name="Zombie016Jackbox" parent="Scrooll/GridContainer/ChooseLevelButton9/Panel/TextureRect" unique_id=904027721 instance=ExtResource("29_6spch")]
+position = Vector2(96.138306, 128.23567)
+scale = Vector2(0.6, 0.6)
+character_init_type = 1
+
+[node name="ChooseLevelButton10" parent="Scrooll/GridContainer" unique_id=1292197840 instance=ExtResource("4_gtn0x")]
+layout_mode = 2
+curr_level_data_game_para = ExtResource("30_rjfvb")
+
+[node name="Label" parent="Scrooll/GridContainer/ChooseLevelButton10/TextureButton" index="0"]
+text = "十轮  屋顶"
+
+[node name="Panel" type="Panel" parent="Scrooll/GridContainer/ChooseLevelButton10" unique_id=780605810]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -45.9398
+offset_top = 0.987915
+offset_right = 42.0602
+offset_bottom = 68.9879
+grow_horizontal = 2
+pivot_offset = Vector2(41, 33.5)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ykbb6")
+
+[node name="TextureRect" type="TextureRect" parent="Scrooll/GridContainer/ChooseLevelButton10/Panel" unique_id=514240149]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = -51.0
+offset_right = 141.0
+offset_bottom = 149.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("36_6ic1y")
+
+[node name="Zombie021Bungi" parent="Scrooll/GridContainer/ChooseLevelButton10/Panel/TextureRect" unique_id=683639785 instance=ExtResource("31_yp0s4")]
+position = Vector2(99.05, 118.353)
+scale = Vector2(0.6, 0.6)
+character_init_type = 1
+
+[node name="ChooseLevelButton11" parent="Scrooll/GridContainer" unique_id=238516294 instance=ExtResource("4_gtn0x")]
+layout_mode = 2
+curr_level_data_game_para = ExtResource("32_8x5l1")
+
+[node name="Label" parent="Scrooll/GridContainer/ChooseLevelButton11/TextureButton" index="0"]
+text = "无尽 白天"
+
+[node name="Panel" type="Panel" parent="Scrooll/GridContainer/ChooseLevelButton11" unique_id=3402135]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -49.0
+offset_top = 2.13101
+offset_right = 46.0
+offset_bottom = 74.131
+grow_horizontal = 2
+pivot_offset = Vector2(41, 33.5)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1i0xb")
+
+[node name="TextureRect" type="TextureRect" parent="Scrooll/GridContainer/ChooseLevelButton11/Panel" unique_id=1538833387]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = -39.0
+offset_right = 145.0
+offset_bottom = 161.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_v10ix")
+
+[node name="Plant001PeaShooterSingle" parent="Scrooll/GridContainer/ChooseLevelButton11/Panel/TextureRect" unique_id=88375265 node_paths=PackedStringArray("node_no_change_direction", "node_follow_body_direction", "node2d_detect_in_slope") instance=ExtResource("8_nmuw1")]
+position = Vector2(68.33332, 86.44833)
+scale = Vector2(0.6, 0.6)
+node_no_change_direction = []
+node_follow_body_direction = []
+character_init_type = 1
+node2d_detect_in_slope = []
+
+[node name="Zombie001Norm" parent="Scrooll/GridContainer/ChooseLevelButton11/Panel/TextureRect" unique_id=279819705 instance=ExtResource("24_j77gj")]
+position = Vector2(116.66666, 89.78165)
+scale = Vector2(0.6, 0.6)
+character_init_type = 1
+
+[node name="ChooseLevelButton12" parent="Scrooll/GridContainer" unique_id=2146279371 instance=ExtResource("4_gtn0x")]
+layout_mode = 2
+curr_level_data_game_para = ExtResource("33_o4fgc")
+
+[node name="Label" parent="Scrooll/GridContainer/ChooseLevelButton12/TextureButton" index="0"]
+text = "无尽 黑夜"
+
+[node name="Panel" type="Panel" parent="Scrooll/GridContainer/ChooseLevelButton12" unique_id=4056854]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -46.0
+offset_top = 3.0
+offset_right = 47.0
+offset_bottom = 73.0
+grow_horizontal = 2
+pivot_offset = Vector2(41, 33.5)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ddvl6")
+
+[node name="TextureRect" type="TextureRect" parent="Scrooll/GridContainer/ChooseLevelButton12/Panel" unique_id=1115972499]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = -41.5
+offset_right = 142.0
+offset_bottom = 158.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("12_fw7le")
+
+[node name="Plant009Puff" parent="Scrooll/GridContainer/ChooseLevelButton12/Panel/TextureRect" unique_id=585138454 node_paths=PackedStringArray("node_no_change_direction", "node_follow_body_direction", "node2d_detect_in_slope") instance=ExtResource("13_wq805")]
+position = Vector2(73.33333, 97.500015)
+scale = Vector2(0.6, 0.6)
+is_sleep_in_day = false
+node_no_change_direction = []
+node_follow_body_direction = []
+character_init_type = 1
+node2d_detect_in_slope = []
+
+[node name="Zombie006Paper" parent="Scrooll/GridContainer/ChooseLevelButton12/Panel/TextureRect" unique_id=204473968 instance=ExtResource("26_spbaq")]
+position = Vector2(120, 94.166664)
+scale = Vector2(0.6, 0.6)
+character_init_type = 1
+
+[node name="ChooseLevelButton13" parent="Scrooll/GridContainer" unique_id=2020335401 instance=ExtResource("4_gtn0x")]
+layout_mode = 2
+curr_level_data_game_para = ExtResource("34_p4eqw")
+
+[node name="Label" parent="Scrooll/GridContainer/ChooseLevelButton13/TextureButton" index="0"]
+text = "无尽 泳池"
+
+[node name="Panel" type="Panel" parent="Scrooll/GridContainer/ChooseLevelButton13" unique_id=621868005]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -46.0
+offset_top = 3.0
+offset_right = 47.0
+offset_bottom = 73.0
+grow_horizontal = 2
+pivot_offset = Vector2(41, 33.5)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ddvl6")
+
+[node name="TextureRect" type="TextureRect" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel" unique_id=863947902]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.683
+offset_top = -59.9414
+offset_right = 141.317
+offset_bottom = 140.059
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("15_myt2c")
+
+[node name="Plant017LilyPad" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect" unique_id=1063196412 node_paths=PackedStringArray("node_no_change_direction", "node_follow_body_direction", "node2d_detect_in_slope") instance=ExtResource("16_8l0dj")]
+position = Vector2(71.13829, 124.90235)
+scale = Vector2(0.6, 0.6)
+node_no_change_direction = []
+node_follow_body_direction = []
+character_init_type = 1
+node2d_detect_in_slope = []
+
+[node name="Zombie001Norm" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect" unique_id=1598878739 instance=ExtResource("24_j77gj")]
+position = Vector2(122.80498, 123.23569)
+scale = Vector2(0.6, 0.6)
+character_init_type = 1
+
+[node name="Anim_innerarm3" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Anim_innerarm" parent_id_path=PackedInt32Array(1598878739, 2067243020) index="0" unique_id=925974421]
+position = Vector2(24.669935, 75.85947)
+rotation = 6.317419
+scale = Vector2(0.799, 0.799)
+
+[node name="Anim_innerarm2" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Anim_innerarm" parent_id_path=PackedInt32Array(1598878739, 2067243020) index="1" unique_id=1634211063]
+position = Vector2(26.479736, 61.369934)
+rotation = 6.347934
+scale = Vector2(0.799, 0.799)
+
+[node name="Anim_innerarm1" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Anim_innerarm" parent_id_path=PackedInt32Array(1598878739, 2067243020) index="2" unique_id=294883347]
+position = Vector2(29.949669, 41.7098)
+rotation = 6.347934
+scale = Vector2(0.9983007, 0.9983007)
+
+[node name="Zombie_flaghand" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Zombie_flaghand" parent_id_path=PackedInt32Array(1598878739, 851435722) index="0" unique_id=914742018]
+position = Vector2(-5.9803977, 48.34053)
+rotation = 5.747871
+scale = Vector2(0.79760134, 0.79760134)
+
+[node name="Zombie_flagpole" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Zombie_flag" parent_id_path=PackedInt32Array(1598878739, 888927977) index="0" unique_id=343698953]
+position = Vector2(10.592752, -6.695813)
+rotation = -0.5692102
+
+[node name="Zombie_flag" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Zombie_flag" parent_id_path=PackedInt32Array(1598878739, 888927977) index="1" unique_id=1607195862]
+position = Vector2(12.592747, -6.695813)
+rotation = -0.5692102
+
+[node name="Zombie_innerarm_screendoor" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Zombie_innerarm_screendoor" parent_id_path=PackedInt32Array(1598878739, 1293642331) index="0" unique_id=889736193]
+position = Vector2(3.7098012, 47)
+
+[node name="Zombie_neck" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect" index="5" unique_id=1713611]
+position = Vector2(35.35947, 30.639868)
+rotation = 0.11430166
+scale = Vector2(0.837, 0.797)
+
+[node name="Anim_head1" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Anim_head" parent_id_path=PackedInt32Array(1598878739, 889357428) index="0" unique_id=305952388]
+position = Vector2(15.398675, 3.3098013)
+rotation = 0.058451656
+scale = Vector2(0.799, 0.799)
+
+[node name="Zombie_innerleg_upper" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/leg" parent_id_path=PackedInt32Array(1598878739, 1779529884) index="0" unique_id=236722919]
+position = Vector2(43.869934, 76.13986)
+rotation = 0.09041454
+scale = Vector2(0.80430067, 0.8)
+skew = -0.09757852
+
+[node name="Zombie_outerleg_upper" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/leg" parent_id_path=PackedInt32Array(1598878739, 1779529884) index="3" unique_id=1296519292]
+position = Vector2(54.8, 67.939865)
+rotation = 0.015867269
+scale = Vector2(0.8, 0.8)
+
+[node name="Zombie_outerleg_foot" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/leg" parent_id_path=PackedInt32Array(1598878739, 1779529884) index="4" unique_id=493319351]
+position = Vector2(44.530067, 109.369934)
+rotation = -0.008543807
+
+[node name="Zombie_outerleg_lower" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/leg" parent_id_path=PackedInt32Array(1598878739, 1779529884) index="5" unique_id=1008857985]
+position = Vector2(59.770596, 93.73987)
+rotation = -0.017088313
+scale = Vector2(0.8, 0.8)
+skew = -0.00976429
+
+[node name="Zombie_body" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect" index="8" unique_id=944639131]
+position = Vector2(35.029404, 30.109802)
+rotation = 0.13804027
+
+[node name="Zombie_duckytube" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect" index="9" unique_id=1513176424]
+visible = true
+
+[node name="Zombie_duckytube" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Zombie_duckytube" index="0" unique_id=1142736004]
+position = Vector2(3.0098011, 43.5)
+rotation = 0.05339785
+scale = Vector2(0.8, 0.8)
+
+[node name="Zombie_tie" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Zombie_tie" parent_id_path=PackedInt32Array(1598878739, 559880305) index="0" unique_id=360310229]
+position = Vector2(27.689537, 46.65947)
+rotation = 6.2411375
+scale = Vector2(0.799, 0.799)
+
+[node name="Anim_head2" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Anim_head2" parent_id_path=PackedInt32Array(1598878739, 2093158389) index="0" unique_id=1949002323]
+position = Vector2(21.069271, 33.629406)
+rotation = 0.13980919
+scale = Vector2(0.7983007, 0.7983007)
+
+[node name="Anim_tongue" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Anim_tongue" parent_id_path=PackedInt32Array(1598878739, 1224355417) index="0" unique_id=1722091338]
+position = Vector2(28.299337, 37.219604)
+rotation = 6.276888
+scale = Vector2(0.799, 0.72939867)
+skew = 0.30037948
+
+[node name="Zombie_mustache" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Zombie_mustache" parent_id_path=PackedInt32Array(1598878739, 1321956222) index="0" unique_id=462427631]
+position = Vector2(11.979073, 25.269934)
+rotation = 0.058451656
+scale = Vector2(0.799, 0.799)
+
+[node name="Anim_screendoor" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Anim_screendoor" parent_id_path=PackedInt32Array(1598878739, 722436161) index="0" unique_id=75994408]
+position = Vector2(0.67973506, 29.490198)
+rotation = 0.0036617313
+
+[node name="Zombie_innerarm_screendoor_hand" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Zombie_innerarm_screendoor_hand" parent_id_path=PackedInt32Array(1598878739, 1447449147) index="0" unique_id=1254570422]
+position = Vector2(-0.320265, 47.690197)
+
+[node name="Zombie_outerarm_screendoor" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Zombie_outerarm_screendoor" parent_id_path=PackedInt32Array(1598878739, 1707107249) index="0" unique_id=626321369]
+position = Vector2(37.4098, 40.779736)
+
+[node name="Zombie_outerarm_hand" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Zombie_outerarm_hand" parent_id_path=PackedInt32Array(1598878739, 1627264158) index="0" unique_id=1655720202]
+position = Vector2(34.76927, 77.119606)
+rotation = 6.4489794
+scale = Vector2(0.798, 0.798)
+
+[node name="Zombie_outerarm_upper" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Zombie_outerarm_upper" parent_id_path=PackedInt32Array(1598878739, 121646891) index="0" unique_id=2042299627]
+position = Vector2(48.179733, 40.519604)
+rotation = 6.326818
+scale = Vector2(0.799, 0.799)
+
+[node name="Zombie_outerarm_lower" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Zombie_outerarm_lower" parent_id_path=PackedInt32Array(1598878739, 902376917) index="0" unique_id=224005766]
+position = Vector2(40.93987, 61.429405)
+rotation = 6.402598
+scale = Vector2(0.798, 0.798)
+
+[node name="Anim_hair" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Anim_hair" parent_id_path=PackedInt32Array(1598878739, 700406020) index="0" unique_id=1482504482]
+position = Vector2(11.498675, 0.33986753)
+rotation = 0.058451656
+scale = Vector2(0.799, 0.799)
+skew = -4.6993375e-07
+
+[node name="Anim_cone" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Anim_cone" parent_id_path=PackedInt32Array(1598878739, 2101136490) index="0" unique_id=1000565333]
+position = Vector2(21.738543, -23.44053)
+rotation = 0.10977281
+scale = Vector2(0.7993007, 0.7993007)
+
+[node name="Anim_bucket" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/Body/BodyCorrect/Anim_bucket" parent_id_path=PackedInt32Array(1598878739, 1745489942) index="0" unique_id=1999092670]
+position = Vector2(9.748343, -13.630067)
+rotation = 0.019529002
+scale = Vector2(0.8, 0.8)
+
+[node name="ProgressBarHpArmor2" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm/HpComponent/VBoxContainer/Armor2Control" parent_id_path=PackedInt32Array(1598878739, 1447254387) index="0" unique_id=606616615]
+value = 0.5
+
+[node name="DropItemComponent" parent="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm" index="9" unique_id=347239241]
+can_drop_x_range = Vector2(0, 900)
+drop_coin_rate = 0.3
+drop_coin_silver_glod_diamond_rate = [0.5, 0.4, 0.1]
+drop_garden_plant_rate = 0.004
+is_enable_default = true
+
+[node name="ChooseLevelButton14" parent="Scrooll/GridContainer" unique_id=906207904 instance=ExtResource("4_gtn0x")]
+layout_mode = 2
+curr_level_data_game_para = ExtResource("35_u5mra")
+
+[node name="Label" parent="Scrooll/GridContainer/ChooseLevelButton14/TextureButton" index="0"]
+text = "无尽 浓雾"
+
+[node name="Panel" type="Panel" parent="Scrooll/GridContainer/ChooseLevelButton14" unique_id=692639290]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -46.0
+offset_top = 3.0
+offset_right = 47.0
+offset_bottom = 73.0
+grow_horizontal = 2
+pivot_offset = Vector2(41, 33.5)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ddvl6")
+
+[node name="TextureRect" type="TextureRect" parent="Scrooll/GridContainer/ChooseLevelButton14/Panel" unique_id=995528408]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.683
+offset_top = -59.9414
+offset_right = 141.317
+offset_bottom = 140.059
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("18_q5nmj")
+
+[node name="Plant025SeaShroom" parent="Scrooll/GridContainer/ChooseLevelButton14/Panel/TextureRect" unique_id=6714938 node_paths=PackedStringArray("node_no_change_direction", "node_follow_body_direction", "node2d_detect_in_slope") instance=ExtResource("19_86o21")]
+position = Vector2(62.804962, 129.90233)
+scale = Vector2(0.6, 0.6)
+is_sleep_in_day = false
+node_no_change_direction = []
+node_follow_body_direction = []
+character_init_type = 1
+node2d_detect_in_slope = []
+
+[node name="Zombie016Jackbox" parent="Scrooll/GridContainer/ChooseLevelButton14/Panel/TextureRect" unique_id=2055355381 instance=ExtResource("29_6spch")]
+position = Vector2(117.80498, 123.23567)
+scale = Vector2(0.6, 0.6)
+character_init_type = 1
+
+[node name="ChooseLevelButton15" parent="Scrooll/GridContainer" unique_id=1841006312 instance=ExtResource("4_gtn0x")]
+layout_mode = 2
+curr_level_data_game_para = ExtResource("36_y1t6b")
+
+[node name="Label" parent="Scrooll/GridContainer/ChooseLevelButton15/TextureButton" index="0"]
+text = "无尽 屋顶"
+
+[node name="Panel" type="Panel" parent="Scrooll/GridContainer/ChooseLevelButton15" unique_id=944521556]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -45.9398
+offset_top = 0.987915
+offset_right = 42.0602
+offset_bottom = 68.9879
+grow_horizontal = 2
+pivot_offset = Vector2(41, 33.5)
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_ykbb6")
+
+[node name="TextureRect" type="TextureRect" parent="Scrooll/GridContainer/ChooseLevelButton15/Panel" unique_id=1466782742]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = -51.0
+offset_right = 141.0
+offset_bottom = 149.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("36_6ic1y")
+
+[node name="Zombie021Bungi" parent="Scrooll/GridContainer/ChooseLevelButton15/Panel/TextureRect" unique_id=1861527897 instance=ExtResource("31_yp0s4")]
+position = Vector2(94.066284, 111.68683)
+scale = Vector2(0.6, 0.6)
+character_init_type = 1
+
+[node name="Plant033CabbagePult" parent="Scrooll/GridContainer/ChooseLevelButton15/Panel/TextureRect" unique_id=1299828870 node_paths=PackedStringArray("node_no_change_direction", "node_follow_body_direction", "node2d_detect_in_slope") instance=ExtResource("37_ttjhx")]
+position = Vector2(95.733, 116.68679)
+scale = Vector2(0.6, 0.6)
+node_no_change_direction = []
+node_follow_body_direction = []
+character_init_type = 1
+node2d_detect_in_slope = []
+
+[node name="MainMenu" type="TextureButton" parent="." unique_id=895471445]
+layout_mode = 0
+offset_left = 669.0
+offset_top = 527.0
+offset_right = 758.0
+offset_bottom = 553.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("40_mfip2")
+texture_pressed = ExtResource("41_5u2b0")
+texture_click_mask = ExtResource("42_wgaqh")
+
+[node name="Label" type="Label" parent="MainMenu" unique_id=852783937]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -10.0
+offset_right = 18.5
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 13
+text = "主菜单"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="MainMenu" to="." method="back_start_menu"]
+
+[editable path="Scrooll/GridContainer/ChooseLevelButton"]
+[editable path="Scrooll/GridContainer/ChooseLevelButton2"]
+[editable path="Scrooll/GridContainer/ChooseLevelButton3"]
+[editable path="Scrooll/GridContainer/ChooseLevelButton4"]
+[editable path="Scrooll/GridContainer/ChooseLevelButton5"]
+[editable path="Scrooll/GridContainer/ChooseLevelButton6"]
+[editable path="Scrooll/GridContainer/ChooseLevelButton7"]
+[editable path="Scrooll/GridContainer/ChooseLevelButton8"]
+[editable path="Scrooll/GridContainer/ChooseLevelButton8/Panel/TextureRect/Zombie001Norm"]
+[editable path="Scrooll/GridContainer/ChooseLevelButton9"]
+[editable path="Scrooll/GridContainer/ChooseLevelButton10"]
+[editable path="Scrooll/GridContainer/ChooseLevelButton11"]
+[editable path="Scrooll/GridContainer/ChooseLevelButton12"]
+[editable path="Scrooll/GridContainer/ChooseLevelButton13"]
+[editable path="Scrooll/GridContainer/ChooseLevelButton13/Panel/TextureRect/Zombie001Norm"]
+[editable path="Scrooll/GridContainer/ChooseLevelButton14"]
+[editable path="Scrooll/GridContainer/ChooseLevelButton15"]

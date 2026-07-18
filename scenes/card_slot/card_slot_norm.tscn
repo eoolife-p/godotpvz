@@ -1,0 +1,1113 @@
+[gd_scene format=3 uid="uid://br65rimie4kcl"]
+
+[ext_resource type="Theme" uid="uid://brc7iy7wte3nn" path="res://data/norm_ui_theme.tres" id="1_b6s1c"]
+[ext_resource type="Script" uid="uid://bdcei3b1kbb8i" path="res://scripts/ui/card/card_slot/card_slot_norm/card_slot_norm.gd" id="1_mgrbe"]
+[ext_resource type="Texture2D" uid="uid://hvvk2fdgo3pw" path="res://assets/image/ui/ui_card/SeedBank.png" id="2_6irry"]
+[ext_resource type="Script" uid="uid://dh1fkeo6gppr5" path="res://scripts/ui/card/card_slot/card_slot_norm/card_slot_battle.gd" id="3_073h5"]
+[ext_resource type="Texture2D" uid="uid://dw6btivnki0kt" path="res://assets/image/ui/ui_card/SeedPacketSilhouette.png" id="4_iq6sw"]
+[ext_resource type="Texture2D" uid="uid://bgy071auro307" path="res://assets/image/ui/ui_card/all_card/SeedChooser_Background.png" id="5_ek8kr"]
+[ext_resource type="Script" uid="uid://r3tnwf8ta1p5" path="res://scripts/ui/card/card_slot/card_slot_norm/card_slot_candidate.gd" id="6_13mad"]
+[ext_resource type="Texture2D" uid="uid://bb6ohgnxwvi02" path="res://assets/image/ui/ui_card/SeedChooser_Button2.png" id="7_6x7kl"]
+[ext_resource type="Texture2D" uid="uid://qdi7snnimhh0" path="res://assets/image/ui/ui_card/SeedChooser_Button2_Glow.png" id="8_w4c6e"]
+[ext_resource type="BitMap" uid="uid://bxyj17qxinwq6" path="res://assets/image/ui/ui_card/SeedChooser_Button2_Mask.png" id="9_oo5b1"]
+[ext_resource type="Script" uid="uid://parybxg7tb1k" path="res://scripts/ui/PVZ_button_base.gd" id="10_heup1"]
+[ext_resource type="Texture2D" uid="uid://b1fuu1s6nfxnq" path="res://assets/image/ui/ui_card/all_card/SeedChooser_Button_Glow.png" id="11_l50va"]
+[ext_resource type="Texture2D" uid="uid://gy84wwo8bimw" path="res://assets/image/ui/ui_card/all_card/SeedChooser_Button_Glow2.png" id="12_1n7fa"]
+[ext_resource type="Texture2D" uid="uid://csank6typjsgr" path="res://assets/image/ui/ui_card/SeedChooser_ImitaterAddOn.png" id="13_1iavu"]
+[ext_resource type="PackedScene" uid="uid://cjuiaaq33o5aa" path="res://scenes/ui/all_cards/card.tscn" id="14_8evrr"]
+[ext_resource type="Script" uid="uid://srlinm3cf7jt" path="res://scripts/ui/card/card_imitater.gd" id="15_0r41g"]
+[ext_resource type="Texture2D" uid="uid://cdm356vgex30b" path="res://assets/image/ui/ui_card/SeedPacket_Larger.png" id="15_v6er4"]
+[ext_resource type="Texture2D" uid="uid://d0hpo2yp78fwc" path="res://assets/image/plant/plantshadow.png" id="16_336fv"]
+[ext_resource type="Script" uid="uid://dx752kig120mj" path="res://scripts/character/components/body_character.gd" id="17_0r41g"]
+[ext_resource type="Texture2D" uid="uid://c63tf7upqqxus" path="res://assets/reanim/Imitater_root2.png" id="18_b6s1c"]
+[ext_resource type="Texture2D" uid="uid://bqw13oc1ficg7" path="res://assets/reanim/Imitater_root3.png" id="19_kuj76"]
+[ext_resource type="Texture2D" uid="uid://wox6kcig3h35" path="res://assets/reanim/Imitater_body.png" id="20_nbi47"]
+[ext_resource type="Texture2D" uid="uid://bkjsjbi47lxlv" path="res://assets/reanim/Imitater_root1.png" id="21_56ytc"]
+[ext_resource type="Texture2D" uid="uid://d3etuf1sy65a1" path="res://assets/reanim/Imitater_blink1.png" id="22_mkt77"]
+[ext_resource type="Texture2D" uid="uid://bnccv7wjkdsph" path="res://assets/reanim/Imitater_hat.png" id="23_bfwmx"]
+[ext_resource type="Texture2D" uid="uid://c583jsodj755w" path="res://assets/reanim/Imitater_spin1.png" id="24_5qt4t"]
+[ext_resource type="Texture2D" uid="uid://djmmikwfs4n4o" path="res://assets/image/ui/ui_main_game_menu/UI_BG/combined_result_2.png" id="25_336fv"]
+[ext_resource type="Texture2D" uid="uid://bcq3pj58odr4i" path="res://assets/image/ui/ui_main_game_menu/UI_BG_original/dialog_header.png" id="26_5qt4t"]
+[ext_resource type="FontFile" uid="uid://dqb8lum530s2f" path="res://assets/fonts/方正少儿_GBK.ttf" id="26_336fv"]
+[ext_resource type="Texture2D" uid="uid://b48l4yjq0j5mo" path="res://assets/image/ui/ui_main_game_menu/UI_BG/button_BG.png" id="30_nbi47"]
+[ext_resource type="BitMap" uid="uid://cxokl66i7qyda" path="res://assets/image/ui/ui_main_game_menu/UI_BG/button_BG_mask.png" id="31_56ytc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x628s"]
+texture = ExtResource("2_6irry")
+texture_margin_left = 78.0
+texture_margin_top = 10.0
+texture_margin_right = 12.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_nbi47"]
+font = ExtResource("26_336fv")
+font_size = 24
+font_color = Color(0.99215686, 0.7764706, 0.5372549, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ika2"]
+resource_local_to_scene = true
+texture = ExtResource("25_336fv")
+texture_margin_left = 60.0
+texture_margin_top = 50.0
+texture_margin_right = 60.0
+texture_margin_bottom = 120.0
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 80.0
+
+[node name="CardSlotNorm" type="Control" unique_id=689624969]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+theme = ExtResource("1_b6s1c")
+script = ExtResource("1_mgrbe")
+
+[node name="CardSlotBattle" type="PanelContainer" parent="." unique_id=776008667]
+layout_mode = 0
+offset_top = -100.0
+offset_right = 140.0
+offset_bottom = -10.0
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxTexture_x628s")
+script = ExtResource("3_073h5")
+
+[node name="SunLabelControl" type="Control" parent="CardSlotBattle" unique_id=317218368]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="CurrSunValue" type="Label" parent="CardSlotBattle/SunLabelControl" unique_id=948605633]
+layout_mode = 0
+offset_left = -101.0
+offset_top = 51.0
+offset_right = 14.0
+offset_bottom = 79.0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "999990"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Marker2DSunTarget" type="Marker2D" parent="CardSlotBattle/SunLabelControl" unique_id=342325655]
+unique_name_in_owner = true
+position = Vector2(-39, 26)
+
+[node name="CardUiList" type="HBoxContainer" parent="CardSlotBattle" unique_id=576556480]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="CardPlaceholder_ori" type="TextureRect" parent="CardSlotBattle/CardUiList" unique_id=811402870]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardSlotCandidate" type="TextureRect" parent="." unique_id=2137259715]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = 600.0
+offset_right = 465.0
+offset_bottom = 1113.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("5_ek8kr")
+script = ExtResource("6_13mad")
+
+[node name="CancalCardButton" type="TextureButton" parent="CardSlotCandidate" unique_id=1271878732]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 4.0
+offset_right = 176.0
+offset_bottom = 35.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("7_6x7kl")
+texture_pressed = ExtResource("8_w4c6e")
+texture_click_mask = ExtResource("9_oo5b1")
+script = ExtResource("10_heup1")
+
+[node name="Label" type="Label" parent="CardSlotCandidate/CancalCardButton" unique_id=176503121]
+layout_mode = 0
+offset_left = 6.5
+offset_top = 2.0
+offset_right = 102.5
+offset_bottom = 25.0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 15
+text = "取消已选卡片"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelPage" type="Label" parent="CardSlotCandidate" unique_id=51147534]
+layout_mode = 0
+offset_left = 227.0
+offset_top = -1.0
+offset_right = 290.0
+offset_bottom = 28.0
+text = "1/32"
+label_settings = SubResource("LabelSettings_nbi47")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LastPageButton" type="TextureButton" parent="CardSlotCandidate" unique_id=1051995916]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 1.0
+offset_right = 370.0
+offset_bottom = 31.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("7_6x7kl")
+texture_pressed = ExtResource("8_w4c6e")
+texture_click_mask = ExtResource("9_oo5b1")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("10_heup1")
+
+[node name="Label" type="Label" parent="CardSlotCandidate/LastPageButton" unique_id=1635345447]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+text = "上一页"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextPageButton" type="TextureButton" parent="CardSlotCandidate" unique_id=844901877]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 1.0
+offset_right = 450.0
+offset_bottom = 31.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("7_6x7kl")
+texture_pressed = ExtResource("8_w4c6e")
+texture_click_mask = ExtResource("9_oo5b1")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("10_heup1")
+
+[node name="Label" type="Label" parent="CardSlotCandidate/NextPageButton" unique_id=42200348]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+text = "下一页"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AllCardPage" type="Control" parent="CardSlotCandidate" unique_id=631551743]
+layout_mode = 1
+anchors_preset = 0
+
+[node name="GridContainerPlant" type="GridContainer" parent="CardSlotCandidate/AllCardPage" unique_id=775585848]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 32.0
+offset_right = 450.0
+offset_bottom = 452.0
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 0
+columns = 8
+
+[node name="CardPlaceholder" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=1041378625]
+custom_minimum_size = Vector2(50, 70)
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder2" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=352715862]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder3" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=1417688872]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder4" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=186276980]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder5" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=329331819]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder6" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=74994018]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder7" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=20085210]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder8" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=1381344612]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder9" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=1522141454]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder10" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=697347467]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder11" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=735177010]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder12" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=2139028235]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder13" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=233026181]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder14" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=895935939]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder15" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=397977380]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder16" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=1950550516]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder17" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=2098779708]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder18" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=1134613606]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder19" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=1217696594]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder20" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=1736570976]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder21" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=1040042399]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder22" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=773326991]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder23" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=2032991493]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder24" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=204246272]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder25" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=1638750113]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder26" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=1559013769]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder27" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=1439828587]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder28" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=1115173182]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder29" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=1200245452]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder30" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=1222394190]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder31" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=1150393055]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder32" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=994212529]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder33" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=1440308105]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder34" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=1583696971]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder35" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=441900004]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder36" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=554782827]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder37" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=2001141469]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder38" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=1190370971]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder39" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=285403992]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder40" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=1650883177]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder41" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=541470248]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder42" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=319169385]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder43" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=99434177]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder44" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=2141980404]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder45" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=826663174]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder46" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=2141373677]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder47" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=490770382]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder48" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerPlant" unique_id=100760386]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="GridContainerZombie" type="GridContainer" parent="CardSlotCandidate/AllCardPage" unique_id=459884507]
+visible = false
+layout_mode = 0
+offset_left = 13.0
+offset_top = 32.0
+offset_right = 450.0
+offset_bottom = 452.0
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 0
+columns = 8
+
+[node name="CardPlaceholder" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=1807265507]
+custom_minimum_size = Vector2(50, 70)
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder2" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=700569478]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder3" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=451550490]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder4" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=1338900352]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder5" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=706832614]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder6" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=624393618]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder7" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=253299664]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder8" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=670513265]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder9" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=1689035405]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder10" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=1247144585]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder11" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=2080391919]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder12" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=2036829826]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder13" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=1261180522]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder14" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=1367574079]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder15" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=300648757]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder16" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=1303069441]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder17" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=567955253]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder18" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=854547623]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder19" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=150035047]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder20" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=320135621]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder21" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=50616703]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder22" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=93757531]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder23" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=888713600]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder24" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=1022356427]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder25" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=380815015]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder26" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=861327705]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder27" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=573471603]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder28" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=2060985110]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder29" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=453586942]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder30" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=2011450922]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder31" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=417513521]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder32" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=750942087]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder33" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=704336073]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder34" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=852457696]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder35" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=692622000]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder36" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=1479969659]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder37" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=1895675623]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder38" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=2062933841]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder39" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=981779339]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder40" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=915961390]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder41" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=921237887]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder42" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=1242842972]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder43" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=694832117]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder44" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=1834731419]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder45" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=421419348]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder46" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=894203260]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder47" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=2864665]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder48" type="TextureRect" parent="CardSlotCandidate/AllCardPage/GridContainerZombie" unique_id=2033378124]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="TextureButton" type="TextureButton" parent="CardSlotCandidate" unique_id=754916072]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -83.5
+offset_top = 202.5
+offset_right = 72.5
+offset_bottom = 244.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("11_l50va")
+texture_pressed = ExtResource("12_1n7fa")
+texture_hover = ExtResource("12_1n7fa")
+script = ExtResource("10_heup1")
+
+[node name="ReCardButton" type="TextureButton" parent="CardSlotCandidate" unique_id=249910084]
+layout_mode = 0
+offset_left = 327.5
+offset_top = 467.0
+offset_right = 438.5
+offset_bottom = 498.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("7_6x7kl")
+texture_pressed = ExtResource("8_w4c6e")
+texture_click_mask = ExtResource("9_oo5b1")
+script = ExtResource("10_heup1")
+
+[node name="Label" type="Label" parent="CardSlotCandidate/ReCardButton" unique_id=1185208902]
+layout_mode = 0
+offset_left = 6.5
+offset_top = 2.0
+offset_right = 102.5
+offset_bottom = 25.0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 15
+text = "重选上次卡片"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ImitaterBG" type="TextureRect" parent="CardSlotCandidate" unique_id=2081611481]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 412.0
+offset_right = 526.0
+offset_bottom = 505.0
+texture = ExtResource("13_1iavu")
+
+[node name="CardImitater" parent="CardSlotCandidate/ImitaterBG" unique_id=1528715866 instance=ExtResource("14_8evrr")]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 12.0
+offset_right = 56.0
+offset_bottom = 82.0
+theme = null
+script = ExtResource("15_0r41g")
+card_plant_type = 999
+curr_card_gb = 2
+cool_time = 0.0
+sun_cost = 0
+
+[node name="CardBg" parent="CardSlotCandidate/ImitaterBG/CardImitater" index="1"]
+texture = ExtResource("15_v6er4")
+
+[node name="Plant999Imitater" type="Node2D" parent="CardSlotCandidate/ImitaterBG/CardImitater/CardBg/CharacterStatic" parent_id_path=PackedInt32Array(1528715866, 704254800) index="0" unique_id=1341007157]
+position = Vector2(1, 15)
+scale = Vector2(0.5, 0.5)
+
+[node name="Shadow" type="Sprite2D" parent="CardSlotCandidate/ImitaterBG/CardImitater/CardBg/CharacterStatic/Plant999Imitater" unique_id=205635719]
+visible = false
+texture = ExtResource("16_336fv")
+
+[node name="Body" type="Node2D" parent="CardSlotCandidate/ImitaterBG/CardImitater/CardBg/CharacterStatic/Plant999Imitater" unique_id=448879067]
+script = ExtResource("17_0r41g")
+
+[node name="BodyCorrect" type="Node2D" parent="CardSlotCandidate/ImitaterBG/CardImitater/CardBg/CharacterStatic/Plant999Imitater/Body" unique_id=746235229]
+position = Vector2(-40, -69)
+
+[node name="Anim_blink" type="Sprite2D" parent="CardSlotCandidate/ImitaterBG/CardImitater/CardBg/CharacterStatic/Plant999Imitater/Body/BodyCorrect" unique_id=799829428]
+visible = false
+centered = false
+
+[node name="Anim_idle" type="Sprite2D" parent="CardSlotCandidate/ImitaterBG/CardImitater/CardBg/CharacterStatic/Plant999Imitater/Body/BodyCorrect" unique_id=1450085210]
+visible = false
+centered = false
+
+[node name="Anim_explode" type="Sprite2D" parent="CardSlotCandidate/ImitaterBG/CardImitater/CardBg/CharacterStatic/Plant999Imitater/Body/BodyCorrect" unique_id=1906517015]
+centered = false
+
+[node name="Imitater_root4" type="Sprite2D" parent="CardSlotCandidate/ImitaterBG/CardImitater/CardBg/CharacterStatic/Plant999Imitater/Body/BodyCorrect" unique_id=1237226541]
+visible = false
+position = Vector2(62.8, 49.1)
+rotation = 2.572615
+scale = Vector2(0.809, 0.809)
+skew = -3.1154125
+texture = ExtResource("18_b6s1c")
+centered = false
+
+[node name="Imitater_root3" type="Sprite2D" parent="CardSlotCandidate/ImitaterBG/CardImitater/CardBg/CharacterStatic/Plant999Imitater/Body/BodyCorrect" unique_id=1983897461]
+visible = false
+position = Vector2(55.8, 29.6)
+rotation = 0.249582
+scale = Vector2(0.799, 0.819)
+texture = ExtResource("19_kuj76")
+centered = false
+
+[node name="Imitater_root2" type="Sprite2D" parent="CardSlotCandidate/ImitaterBG/CardImitater/CardBg/CharacterStatic/Plant999Imitater/Body/BodyCorrect" unique_id=2084638656]
+visible = false
+position = Vector2(15.8, 49)
+rotation = -0.26529
+scale = Vector2(0.799, 0.819)
+texture = ExtResource("18_b6s1c")
+centered = false
+
+[node name="Anim_face" type="Sprite2D" parent="CardSlotCandidate/ImitaterBG/CardImitater/CardBg/CharacterStatic/Plant999Imitater/Body/BodyCorrect" unique_id=579158840]
+visible = false
+position = Vector2(17.3, 3.7)
+scale = Vector2(0.8, 0.819)
+texture = ExtResource("20_nbi47")
+centered = false
+
+[node name="Imitater_root1" type="Sprite2D" parent="CardSlotCandidate/ImitaterBG/CardImitater/CardBg/CharacterStatic/Plant999Imitater/Body/BodyCorrect" unique_id=601443942]
+visible = false
+position = Vector2(14.7, 31.7)
+rotation = -0.342085
+scale = Vector2(0.821, 0.819)
+skew = 0.2286386
+texture = ExtResource("21_56ytc")
+centered = false
+
+[node name="Imitater_blink" type="Sprite2D" parent="CardSlotCandidate/ImitaterBG/CardImitater/CardBg/CharacterStatic/Plant999Imitater/Body/BodyCorrect" unique_id=1133856205]
+visible = false
+position = Vector2(26.9, 13.4)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("22_mkt77")
+centered = false
+
+[node name="Imitater_hat" type="Sprite2D" parent="CardSlotCandidate/ImitaterBG/CardImitater/CardBg/CharacterStatic/Plant999Imitater/Body/BodyCorrect" unique_id=384921731]
+visible = false
+position = Vector2(15.8, -0.5)
+scale = Vector2(0.8, 0.819)
+texture = ExtResource("23_bfwmx")
+centered = false
+
+[node name="Imitater_spin" type="Sprite2D" parent="CardSlotCandidate/ImitaterBG/CardImitater/CardBg/CharacterStatic/Plant999Imitater/Body/BodyCorrect" unique_id=1403716590]
+position = Vector2(14.2, -3.8)
+scale = Vector2(0.801, 0.799)
+texture = ExtResource("24_5qt4t")
+centered = false
+
+[node name="Imitater_explode" type="Sprite2D" parent="CardSlotCandidate/ImitaterBG/CardImitater/CardBg/CharacterStatic/Plant999Imitater/Body/BodyCorrect" unique_id=980980308]
+visible = false
+centered = false
+
+[node name="AllImitaterCard" type="Control" parent="CardSlotCandidate" unique_id=2065527474]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+offset_left = 96.0
+offset_top = -87.0
+offset_right = 96.0
+offset_bottom = -87.0
+
+[node name="Panel" type="Panel" parent="CardSlotCandidate/AllImitaterCard" unique_id=19975874]
+layout_mode = 0
+offset_left = -24.0
+offset_top = 54.0
+offset_right = 491.0
+offset_bottom = 593.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_0ika2")
+
+[node name="Header" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel" unique_id=1797481821]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.5
+offset_top = -30.0
+offset_right = 86.5
+offset_bottom = 34.0
+grow_horizontal = 2
+texture = ExtResource("26_5qt4t")
+
+[node name="Label" type="Label" parent="CardSlotCandidate/AllImitaterCard/Panel" unique_id=1468197479]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 46.0
+offset_bottom = 65.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.650438, 0.5979016, 5.7756904e-07, 1)
+theme_override_fonts/font = ExtResource("26_336fv")
+theme_override_font_sizes/font_size = 27
+text = "选择种子来复制"
+horizontal_alignment = 1
+
+[node name="AllCardPageImitater" type="Control" parent="CardSlotCandidate/AllImitaterCard/Panel" unique_id=620824532]
+layout_mode = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GridContainerPlantImitater" type="GridContainer" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater" unique_id=1425308514]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 80.0
+offset_right = 475.0
+offset_bottom = 500.0
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 0
+columns = 8
+
+[node name="CardPlaceholder1" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=414451393]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder2" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=1959990880]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder3" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=249524256]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder4" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=734028058]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder5" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=1091781822]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder6" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=742035594]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder7" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=1040015611]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder8" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=1800231227]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder9" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=1218997352]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder10" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=772231800]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder11" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=2001156939]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder12" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=1293546121]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder13" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=1005050480]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder14" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=192271264]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder15" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=665298754]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder16" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=1872363248]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder17" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=200034071]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder18" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=188451299]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder19" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=895445681]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder20" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=521922468]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder21" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=1168712848]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder22" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=1260973079]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder23" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=76253105]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder24" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=1749140907]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder25" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=718254954]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder26" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=121818145]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder27" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=2124266345]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder28" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=508910456]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder29" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=1307890554]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder30" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=1877148389]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder31" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=1240395896]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder32" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=1551391308]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder33" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=1262150093]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder34" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=1788564355]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder35" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=1761406884]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder36" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=31792405]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder37" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=830763353]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder38" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=717463689]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder39" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=980395133]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder40" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=1120225596]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder41" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=96056094]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder42" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=1200532627]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder43" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=229259046]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder44" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=1253056478]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder45" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=467389934]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder46" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=211413562]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder47" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=2076439140]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="CardPlaceholder48" type="TextureRect" parent="CardSlotCandidate/AllImitaterCard/Panel/AllCardPageImitater/GridContainerPlantImitater" unique_id=1673097209]
+layout_mode = 2
+texture = ExtResource("4_iq6sw")
+
+[node name="ImitaterLastPageButton" type="TextureButton" parent="CardSlotCandidate/AllImitaterCard/Panel" unique_id=79546986]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -194.0
+offset_top = -37.0
+offset_right = -124.0
+offset_bottom = -7.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("30_nbi47")
+texture_pressed = ExtResource("30_nbi47")
+texture_click_mask = ExtResource("31_56ytc")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("10_heup1")
+
+[node name="Label" type="Label" parent="CardSlotCandidate/AllImitaterCard/Panel/ImitaterLastPageButton" unique_id=689450384]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+text = "上一页"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ImitaterNextPageButton" type="TextureButton" parent="CardSlotCandidate/AllImitaterCard/Panel" unique_id=95189995]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -117.0
+offset_top = -37.0
+offset_right = -47.0
+offset_bottom = -7.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("30_nbi47")
+texture_pressed = ExtResource("30_nbi47")
+texture_click_mask = ExtResource("31_56ytc")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("10_heup1")
+
+[node name="Label" type="Label" parent="CardSlotCandidate/AllImitaterCard/Panel/ImitaterNextPageButton" unique_id=594266750]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+text = "下一页"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TemporaryCard" type="Control" parent="." unique_id=1095515250]
+z_index = 50
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="pressed" from="CardSlotCandidate/CancalCardButton" to="." method="_on_cancal_card_button_pressed"]
+[connection signal="pressed" from="CardSlotCandidate/LastPageButton" to="CardSlotCandidate" method="_on_last_page_button_pressed"]
+[connection signal="pressed" from="CardSlotCandidate/NextPageButton" to="CardSlotCandidate" method="_on_next_page_button_pressed"]
+[connection signal="pressed" from="CardSlotCandidate/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="CardSlotCandidate/ReCardButton" to="." method="_on_re_card_button_pressed"]
+[connection signal="pressed" from="CardSlotCandidate/AllImitaterCard/Panel/ImitaterLastPageButton" to="CardSlotCandidate" method="_on_imitater_last_page_button_pressed"]
+[connection signal="pressed" from="CardSlotCandidate/AllImitaterCard/Panel/ImitaterNextPageButton" to="CardSlotCandidate" method="_on_imitater_next_page_button_pressed"]
+
+[editable path="CardSlotCandidate/ImitaterBG/CardImitater"]

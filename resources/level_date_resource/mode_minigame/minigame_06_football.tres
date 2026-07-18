@@ -1,0 +1,52 @@
+[gd_resource type="Resource" script_class="ResourceLevelData" format=3 uid="uid://bkw0634ym67up"]
+
+[ext_resource type="Script" uid="uid://bke3sg5otco7s" path="res://scripts/resources/level/pre_plant_in_level.gd" id="1_05at0"]
+[ext_resource type="Script" uid="uid://bjt3l56exxmdw" path="res://scripts/resources/level/level_data.gd" id="2_2ib0m"]
+
+[resource]
+script = ExtResource("2_2ib0m")
+game_round = null
+is_fog = null
+is_rain = null
+is_day = false
+is_lawn_mover = null
+zombie_multy = 10
+max_wave = null
+zombie_refresh_types = Array[int]([1, 8, 26, 29])
+range_num_bungi = null
+zombie_multy_hammer = null
+max_wave_hammer_zombie = null
+speed_zombie_init = null
+speed_zombie_add = null
+speed_zombie_max = null
+is_have_tombston = null
+init_tombstone_num = null
+is_seed_rain = null
+max_choosed_card_num = 15
+start_sun = 3000
+pre_choosed_card_list_plant = Array[int]([0])
+pre_choosed_card_list_zombie = Array[int]([0])
+create_new_card_speed = 1.5
+all_card_plant_type_probability_seed_rain = null
+all_card_zombie_type_probability_seed_rain = null
+card_order_plant_seed_rain = null
+card_order_zombie_seed_rain = null
+is_shovel = null
+is_pot_mode = null
+pot_mode = null
+is_can_look_random_res_pot = null
+is_save_plant_on_pot_mode = null
+weight_res_fiexd = null
+candidate_plant_pot = null
+candidate_zombie_pot = null
+weight_pot_type = null
+random_pot_plant = null
+random_pot_zombie = null
+plant_pot = null
+zombie_pot = null
+random_pot_num_on_fixed_mode = null
+is_bowling_stripe = null
+plant_cell_col_j = null
+plant_cell_can_use = null
+is_hammer = null
+metadata/_custom_type_script = "uid://bjt3l56exxmdw"
