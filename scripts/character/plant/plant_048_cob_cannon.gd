@@ -19,6 +19,7 @@ var attack_target_global_pos:Vector2
 ## 充能cd
 @export var charge_cd:float = 35
 var charge_cd_timer:Timer
+var _cob_bright_dark_tween:Tween
 
 @export_group("动画状态")
 ## 是否有子弹
@@ -51,19 +52,21 @@ func ready_norm():
 	area_2d_mouse.visible = true
 
 func cob_cannon_bright_dark():
-	# 你希望变到的 “暗” 颜色或透明度
+	# 你希望变到的 "暗" 颜色或透明度
 	var bright_modulate: Color = Color(1.5, 1.5, 1.5)
 	var dark_modulate: Color = Color(0.6, 0.6, 0.6)
 
-	var tween: Tween
+	# 杀死旧的tween避免泄漏
+	if _cob_bright_dark_tween:
+		_cob_bright_dark_tween.kill()
 	# 创建并添加 Tween
-	tween = create_tween()
+	_cob_bright_dark_tween = create_tween()
 	# 设置循环播放（往返）
-	tween.set_loops()
+	_cob_bright_dark_tween.set_loops()
 	# Tween 属性：从 bright_modulate 到 dark_modulate，用时 1 秒
-	tween.tween_property(cob_cannon_cob, "modulate", dark_modulate, 0.5)
+	_cob_bright_dark_tween.tween_property(cob_cannon_cob, "modulate", dark_modulate, 0.5)
 	# 然后从 dark_modulate 回到 bright_modulate，用时 1 秒
-	tween.tween_property(cob_cannon_cob, "modulate", bright_modulate, 0.5)
+	_cob_bright_dark_tween.tween_property(cob_cannon_cob, "modulate", bright_modulate, 0.5)
 
 
 func _on_charge_cd_timer_timeout():

@@ -58,6 +58,7 @@
 [ext_resource type="Script" uid="uid://dmcra0pjlpu70" path="res://scripts/character/components/drop_body/ZombieHeadDrop.gd" id="51_m7eas"]
 [ext_resource type="Script" uid="uid://cj4hccewpwgyv" path="res://scripts/character/components/drop_body/ZombieArm1Drop.gd" id="52_wqb7a"]
 [ext_resource type="Texture2D" uid="uid://ckk7f6cch1edv" path="res://assets/reanim/Black_football_helmet3.png" id="53_w3tnu"]
+[ext_resource type="Resource" uid="uid://fv5ap3kgnquu" path="res://resources/level_date_resource/mode_minigame/minigame_07_test.tres" id="54_ql0ka"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pmduy"]
 
@@ -816,50 +817,43 @@ scale = Vector2(0.796448, 0.796448)
 texture = ExtResource("53_w3tnu")
 centered = false
 
-[node name="ChooseLevelButton6" parent="Scrooll/GridContainer" unique_id=1800141219 instance=ExtResource("9_xsph7")]
+[node name="ChooseLevelButton23" parent="Scrooll/GridContainer" unique_id=478376922 instance=ExtResource("9_xsph7")]
 layout_mode = 2
+curr_level_data_game_para = ExtResource("54_ql0ka")
 
-[node name="ChooseLevelButton7" parent="Scrooll/GridContainer" unique_id=1410514000 instance=ExtResource("9_xsph7")]
-layout_mode = 2
+[node name="Label" parent="Scrooll/GridContainer/ChooseLevelButton23/TextureButton" index="0"]
+text = "TEST测试关卡"
 
-[node name="ChooseLevelButton8" parent="Scrooll/GridContainer" unique_id=1979953872 instance=ExtResource("9_xsph7")]
-layout_mode = 2
+[node name="Panel" type="Panel" parent="Scrooll/GridContainer/ChooseLevelButton23" unique_id=1413723370]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -45.93979
+offset_top = 0.98791504
+offset_right = 42.06021
+offset_bottom = 68.9879
+grow_horizontal = 2
+pivot_offset = Vector2(41, 33.5)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_icdg3")
 
-[node name="ChooseLevelButton9" parent="Scrooll/GridContainer" unique_id=479202796 instance=ExtResource("9_xsph7")]
-layout_mode = 2
-
-[node name="ChooseLevelButton10" parent="Scrooll/GridContainer" unique_id=204100931 instance=ExtResource("9_xsph7")]
-layout_mode = 2
-
-[node name="ChooseLevelButton11" parent="Scrooll/GridContainer" unique_id=706601745 instance=ExtResource("9_xsph7")]
-layout_mode = 2
-
-[node name="ChooseLevelButton12" parent="Scrooll/GridContainer" unique_id=1828470965 instance=ExtResource("9_xsph7")]
-layout_mode = 2
-
-[node name="ChooseLevelButton13" parent="Scrooll/GridContainer" unique_id=1363008173 instance=ExtResource("9_xsph7")]
-layout_mode = 2
-
-[node name="ChooseLevelButton14" parent="Scrooll/GridContainer" unique_id=94484363 instance=ExtResource("9_xsph7")]
-layout_mode = 2
-
-[node name="ChooseLevelButton15" parent="Scrooll/GridContainer" unique_id=1733835322 instance=ExtResource("9_xsph7")]
-layout_mode = 2
-
-[node name="ChooseLevelButton16" parent="Scrooll/GridContainer" unique_id=1114457582 instance=ExtResource("9_xsph7")]
-layout_mode = 2
-
-[node name="ChooseLevelButton17" parent="Scrooll/GridContainer" unique_id=150108094 instance=ExtResource("9_xsph7")]
-layout_mode = 2
-
-[node name="ChooseLevelButton18" parent="Scrooll/GridContainer" unique_id=64861427 instance=ExtResource("9_xsph7")]
-layout_mode = 2
-
-[node name="ChooseLevelButton19" parent="Scrooll/GridContainer" unique_id=744666271 instance=ExtResource("9_xsph7")]
-layout_mode = 2
-
-[node name="ChooseLevelButton20" parent="Scrooll/GridContainer" unique_id=664041713 instance=ExtResource("9_xsph7")]
-layout_mode = 2
+[node name="TextureRect" type="TextureRect" parent="Scrooll/GridContainer/ChooseLevelButton23/Panel" unique_id=71596563]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = -51.0
+offset_right = 141.0
+offset_bottom = 149.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_e2jkj")
 
 [node name="ChooseLevelButton22" parent="Scrooll/GridContainer" unique_id=777318894 instance=ExtResource("9_xsph7")]
 layout_mode = 2
@@ -950,4 +944,5 @@ vertical_alignment = 1
 [editable path="Scrooll/GridContainer/ChooseLevelButton4/Panel/TextureRect/Rain"]
 [editable path="Scrooll/GridContainer/ChooseLevelButton5"]
 [editable path="Scrooll/GridContainer/ChooseLevelButton21"]
+[editable path="Scrooll/GridContainer/ChooseLevelButton23"]
 [editable path="Scrooll/GridContainer/ChooseLevelButton22"]

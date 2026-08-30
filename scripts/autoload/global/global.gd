@@ -20,6 +20,9 @@ extends Node
 ## 全局只读数据（图鉴数据、刷怪白名单、罐子白名单等）
 @onready var global_read_data: GlobalReadData = %GlobalReadData
 
+## 网络管理器（通过 get_node 访问，不是 % 节点）
+var network_manager: NetworkManager
+
 
 
 func _ready() -> void:
@@ -29,6 +32,9 @@ func _ready() -> void:
 		reload_session_for_current_user()
 	## 创建全局数据自动存档计时器（由 SaveService 负责）
 	save_service.start_autosave(60.0)
+
+	## 初始化网络管理器
+	network_manager = get_node("/root/NetworkManager")
 
 
 ## 在 `user_manager.curr_user_name` 已更新后，加载该用户下的全局存档与配置（与启动时一致）。
@@ -43,3 +49,38 @@ var game_para:ResourceLevelData
 
 ## 游戏倍速
 var time_scale := 1.0
+
+## 网络游戏状态
+var network_game_mode: String = ""
+var network_selected_map: String = ""
+var network_selected_faction: String = ""
+var network_players_ready: Dictionary = {}
+
+## 网络游戏初始化
+func init_network_game(mode: String, map_name: String, faction_name: String) -> void:
+	if network_manager == null:
+		push_error("[Global] NetworkManager未找到")
+		return
+
+	# 设置游戏参数
+	network_game_mode = mode
+	network_selected_map = map_name
+	network_selected_faction = faction_name
+
+	# 创建网络游戏状态
+	var network_state = NetworkGameState.create_new(mode, map_name, faction_name)
+
+	# 如果是主机，创建主机
+	if network_manager.is_host_player():
+		network_manager.create_host(25565, 4)
+
+	# 如果是客户端，连接到主机
+	if network_manager.is_client_player():
+		network_manager.connect_to_host("localhost", 25565)
+
+	# 发送玩家信息
+	network_manager.send_player_info()
+
+	print("[Global] 网络游戏初始化完成")
+	if network_manager:
+		network_manager.print_debug_info()

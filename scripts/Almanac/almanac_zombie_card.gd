@@ -19,6 +19,8 @@ func _ready() -> void:
 		CharacterRegistry.ZombieType.Z025Imp:
 			target_scale = Vector2(3 ,3)
 			target_position = Vector2(40, 20)
+		CharacterRegistry.ZombieType.Z030RedEyeGargantuar:
+			target_scale = Vector2(2.3 ,2.3)
 	character_static.scale = target_scale#Vector2(1.6, 1.6)
 	character_static.position = target_position
 

@@ -47,6 +47,8 @@ var plant_condition:ResourcePlantCondition
 
 ## 是否为模仿者
 @export var is_imitater := false
+## 是否为魅惑卡片（放置僵尸时带魅惑滤镜）
+var is_charm_card := false
 
 func _ready() -> void:
 	## 如果是植物,根据是否为紫卡更新背景

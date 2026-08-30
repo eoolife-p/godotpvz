@@ -18,7 +18,7 @@ var curr_hp_armor1:int:
 		curr_hp_armor1 = value
 
 		label_hp_armor_1.text = str(curr_hp_armor1)
-		if max_hp_armor1 == 0:
+		if max_hp_armor1 <= 0:
 			progress_bar_hp_armor_1.value = 0
 		else:
 			progress_bar_hp_armor_1.value = float(curr_hp_armor1) / max_hp_armor1
@@ -36,7 +36,7 @@ var curr_hp_armor2:int:
 
 		## 血量ui显示
 		label_hp_armor_2.text = str(curr_hp_armor2)
-		if max_hp_armor2 == 0:
+		if max_hp_armor2 <= 0:
 			progress_bar_hp_armor_2.value = 0
 		else:
 			progress_bar_hp_armor_2.value = float(curr_hp_armor2) / max_hp_armor2
@@ -131,6 +131,10 @@ func Hp_loss(attack_value:int, bullet_mode :BulletRegistry.AttackMode =BulletReg
 				curr_hp_armor2 = new_curr_hp_armor2
 
 				flag_loss |= 4
+				if new_curr_hp_armor2 < 0:
+					attack_value = -new_curr_hp_armor2
+				else:
+					attack_value = 0
 
 			# 如果有一类防具
 			if curr_hp_armor1 > 0 and attack_value > 0:

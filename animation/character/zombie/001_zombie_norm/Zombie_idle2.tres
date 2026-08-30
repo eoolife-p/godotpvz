@@ -1,4 +1,4 @@
-[gd_resource type="Animation" load_steps=3 format=3 uid="uid://dbqea3ohfw2lp"]
+[gd_resource type="Animation" format=3 uid="uid://dbqea3ohfw2lp"]
 
 [ext_resource type="Texture2D" uid="uid://dfg74gsba28it" path="res://assets/reanim/Zombie_duckytube.png" id="14_fuck"]
 [ext_resource type="Texture2D" uid="uid://duyqfy4j8isia" path="res://assets/reanim/Zombie_outerarm_hand.png" id="22_fuck"]
@@ -383,26 +383,26 @@ tracks/30/keys = {
 tracks/31/type = "value"
 tracks/31/imported = false
 tracks/31/enabled = true
-tracks/31/path = NodePath("Body/BodyCorrect/Anim_head/Anim_head1:visible")
+tracks/31/path = NodePath("Body/BodyCorrect/Anim_head/Anim_head1:skew")
 tracks/31/interp = 1
 tracks/31/loop_wrap = true
 tracks/31/keys = {
-"times": PackedFloat32Array(0, 1.166667),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.083333, 0.166667, 0.25, 0.333333, 0.416667, 0.5, 0.583333, 0.666667, 0.75, 0.833333, 0.916667, 1, 1.083333, 1.166667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [true, true]
+"values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1e-07, -1e-07, 2e-07, 5e-07, 4e-07, 0.0, 0.0]
 }
 tracks/32/type = "value"
 tracks/32/imported = false
 tracks/32/enabled = true
-tracks/32/path = NodePath("Body/BodyCorrect/Anim_head/Anim_head1:position")
+tracks/32/path = NodePath("Body/BodyCorrect/Anim_head/Anim_head1:scale")
 tracks/32/interp = 1
 tracks/32/loop_wrap = true
 tracks/32/keys = {
 "times": PackedFloat32Array(0, 0.083333, 0.166667, 0.25, 0.333333, 0.416667, 0.5, 0.583333, 0.666667, 0.75, 0.833333, 0.916667, 1, 1.083333, 1.166667),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(6.7, 8.8), Vector2(6.2, 9.3), Vector2(5.8, 9.7), Vector2(5.3, 10.1), Vector2(5, 10.5), Vector2(4.5, 11), Vector2(4.1, 11.4), Vector2(3.6, 11.8), Vector2(2.8, 13.3), Vector2(1.9, 14.7), Vector2(2.9, 13.5), Vector2(3.8, 12.3), Vector2(4.8, 11.1), Vector2(5.8, 10), Vector2(6.7, 8.8)]
+"values": [Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8)]
 }
 tracks/33/type = "value"
 tracks/33/imported = false
@@ -419,26 +419,26 @@ tracks/33/keys = {
 tracks/34/type = "value"
 tracks/34/imported = false
 tracks/34/enabled = true
-tracks/34/path = NodePath("Body/BodyCorrect/Anim_head/Anim_head1:scale")
+tracks/34/path = NodePath("Body/BodyCorrect/Anim_head/Anim_head1:position")
 tracks/34/interp = 1
 tracks/34/loop_wrap = true
 tracks/34/keys = {
 "times": PackedFloat32Array(0, 0.083333, 0.166667, 0.25, 0.333333, 0.416667, 0.5, 0.583333, 0.666667, 0.75, 0.833333, 0.916667, 1, 1.083333, 1.166667),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8), Vector2(0.8, 0.8)]
+"values": [Vector2(6.7, 8.8), Vector2(6.2, 9.3), Vector2(5.8, 9.7), Vector2(5.3, 10.1), Vector2(5, 10.5), Vector2(4.5, 11), Vector2(4.1, 11.4), Vector2(3.6, 11.8), Vector2(2.8, 13.3), Vector2(1.9, 14.7), Vector2(2.9, 13.5), Vector2(3.8, 12.3), Vector2(4.8, 11.1), Vector2(5.8, 10), Vector2(6.7, 8.8)]
 }
 tracks/35/type = "value"
 tracks/35/imported = false
-tracks/35/enabled = true
-tracks/35/path = NodePath("Body/BodyCorrect/Anim_head/Anim_head1:skew")
+tracks/35/enabled = false
+tracks/35/path = NodePath("Body/BodyCorrect/Anim_head/Anim_head1:visible")
 tracks/35/interp = 1
 tracks/35/loop_wrap = true
 tracks/35/keys = {
-"times": PackedFloat32Array(0, 0.083333, 0.166667, 0.25, 0.333333, 0.416667, 0.5, 0.583333, 0.666667, 0.75, 0.833333, 0.916667, 1, 1.083333, 1.166667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.166667),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1e-07, -1e-07, 2e-07, 5e-07, 4e-07, 0.0, 0.0]
+"values": [true, true]
 }
 tracks/36/type = "value"
 tracks/36/imported = false

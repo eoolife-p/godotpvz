@@ -45,8 +45,12 @@ func _on_re_card_button_pressed() -> void:
 
 		elif card_type_data.has("zombie_type"):
 			var zombie_type:CharacterRegistry.ZombieType = card_type_data["zombie_type"]
-			if not card_slot_candidate.all_card_candidate_containers_zombie[AllCards.zombie_card_ids[zombie_type]].card.is_choosed_pre_card:
-				card_slot_candidate.all_card_candidate_containers_zombie[AllCards.zombie_card_ids[zombie_type]].card._on_button_pressed()
+			var is_charm:bool = card_type_data.get("is_charm_card", false)
+			var card_key = AllCards.zombie_card_ids[zombie_type]
+			if is_charm:
+				card_key += 10000
+			if not card_slot_candidate.all_card_candidate_containers_zombie[card_key].card.is_choosed_pre_card:
+				card_slot_candidate.all_card_candidate_containers_zombie[card_key].card._on_button_pressed()
 
 
 
@@ -70,6 +74,8 @@ func _on_texture_button_pressed() -> void:
 				card_type_data["is_imitater"] = true
 		elif card.card_zombie_type != CharacterRegistry.ZombieType.Null:
 			card_type_data["zombie_type"] = card.card_zombie_type
+			if card.is_charm_card:
+				card_type_data["is_charm_card"] = true
 		else:
 			print("error:当前卡牌类型不为植物也不为僵尸")
 		Global.global_game_state.selected_cards.append(card_type_data)

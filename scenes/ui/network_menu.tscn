@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://6qf40a1n7xlf"]
+
+[ext_resource type="Script" uid="uid://b8v8vh186yse0" path="res://scripts/ui/network_menu.gd" id="1_network_menu"]
+
+[node name="NetworkMenu" type="Control" unique_id=1333222641]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_network_menu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1533812163]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -200.0
+offset_right = 400.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"PVZMenu"
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer" unique_id=784885125]
+layout_mode = 2
+text = "联机模式"
+horizontal_alignment = 1
+
+[node name="ConnectionStatusLabel" type="Label" parent="VBoxContainer" unique_id=854392981]
+layout_mode = 2
+text = "连接状态: 未连接"
+horizontal_alignment = 1
+
+[node name="IPContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=232019347]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HostIPLabel" type="Label" parent="VBoxContainer/IPContainer" unique_id=1598694719]
+layout_mode = 2
+text = "主机IP:"
+horizontal_alignment = 1
+
+[node name="HostIPInput" type="LineEdit" parent="VBoxContainer/IPContainer" unique_id=1557262546]
+layout_mode = 2
+placeholder_text = "localhost"
+
+[node name="PortLabel" type="Label" parent="VBoxContainer/IPContainer" unique_id=814527926]
+layout_mode = 2
+text = "端口:"
+
+[node name="PortInput" type="LineEdit" parent="VBoxContainer/IPContainer" unique_id=347179465]
+layout_mode = 2
+text = "25565"
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=993663390]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HostButton" type="Button" parent="VBoxContainer/ButtonsContainer" unique_id=1338990662]
+layout_mode = 2
+text = "创建主机"
+
+[node name="ClientButton" type="Button" parent="VBoxContainer/ButtonsContainer" unique_id=1004844635]
+layout_mode = 2
+text = "加入游戏"
+
+[node name="PlayerCountLabel" type="Label" parent="VBoxContainer" unique_id=1007938654]
+layout_mode = 2
+text = "玩家数量: 0 / 4"
+horizontal_alignment = 1
+
+[node name="GameInfoContainer" type="VBoxContainer" parent="VBoxContainer" unique_id=1028872503]
+layout_mode = 2
+
+[node name="GameModeLabel" type="Label" parent="VBoxContainer/GameInfoContainer" unique_id=92182829]
+layout_mode = 2
+text = "游戏模式: 冒险模式"
+horizontal_alignment = 1
+
+[node name="MapLabel" type="Label" parent="VBoxContainer/GameInfoContainer" unique_id=39849751]
+layout_mode = 2
+text = "地图: 白天"
+horizontal_alignment = 1
+
+[node name="FactionLabel" type="Label" parent="VBoxContainer/GameInfoContainer" unique_id=72509780]
+layout_mode = 2
+text = "阵营: 植物阵营"
+horizontal_alignment = 1
+
+[node name="PlayerList" type="VBoxContainer" parent="VBoxContainer" unique_id=851619612]
+layout_mode = 2
+
+[node name="ReadyButton" type="Button" parent="VBoxContainer" unique_id=1374250206]
+layout_mode = 2
+text = "准备"
+
+[node name="StartButton" type="Button" parent="VBoxContainer" unique_id=2054558279]
+layout_mode = 2
+disabled = true
+text = "开始游戏"
+
+[node name="BackButton" type="Button" parent="VBoxContainer" unique_id=2103939350]
+layout_mode = 2
+text = "返回"

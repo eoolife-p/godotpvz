@@ -47,7 +47,7 @@ func main_game_refresh_card():
 	for i in range(curr_cards.size()):
 		var card:Card = curr_cards[i]
 		card.judge_sun_enough(sun_value)
-		card.set_shortcut((i+1)%10)
+		card.set_shortcut(i + 1)
 		if not card.signal_card_use_end.is_connected(card_use_end.bind(card)):
 			card.signal_card_use_end.connect(card_use_end.bind(card))
 	judge_disappear_add_card_bar()

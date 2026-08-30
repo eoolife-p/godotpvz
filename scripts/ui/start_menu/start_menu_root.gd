@@ -51,6 +51,11 @@ func _on_custom_button_pressed() -> void:
 	Global.game_para = null
 	get_tree().change_scene_to_file(Global.main_scene_registry.MainScenesMap[MainSceneRegistry.MainScenes.ChooseLevelCustom])
 
+## 联机模式
+func _on_network_button_pressed() -> void:
+	Global.game_para = null
+	get_tree().change_scene_to_file("res://scenes/ui/network_menu.tscn")
+
 #region 选项
 func _on_option_button_1_pressed() -> void:
 	$StartMenuOptionDialog.appear_menu()

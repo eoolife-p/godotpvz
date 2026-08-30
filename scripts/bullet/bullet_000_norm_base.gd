@@ -111,8 +111,10 @@ func _on_area_2d_attack_area_entered(area: Area2D) -> void:
 		if not enemy.curr_be_attack_status & can_attack_plant_status:
 			return
 	elif enemy is Zombie000Base:
-		## 子弹阵营为植物
-		if bullet_camp == CharacterRegistry.CharacterType.Zombie:
+		## 同阵营不打：僵尸阵营不打未魅惑僵尸，植物阵营不打魅惑僵尸
+		if bullet_camp == CharacterRegistry.CharacterType.Zombie and not enemy.is_hypno:
+			return
+		if bullet_camp == CharacterRegistry.CharacterType.Plant and enemy.is_hypno:
 			return
 		## 如果不是可攻击状态敌人
 		if not enemy.curr_be_attack_status & can_attack_zombie_status:
@@ -148,6 +150,8 @@ func _attack_zombie(zombie:Zombie000Base):
 ## 对植物敌人造成伤害
 func _attack_plant(plant:Plant000Base):
 	plant = get_first_be_hit_plant_in_cell(plant)
+	if not is_instance_valid(plant):
+		return
 	## 攻击敌人
 	plant.be_attacked_bullet(attack_value, bullet_mode, true, trigger_be_attack_sfx)
 

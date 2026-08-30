@@ -1,11 +1,11 @@
-[gd_resource type="Animation" load_steps=7 format=3 uid="uid://bec43cvxog3qs"]
+[gd_resource type="Animation" format=3 uid="uid://bec43cvxog3qs"]
 
-[ext_resource type="Texture2D" uid="uid://lyw24xd1xo6b" path="res://assets/reanim/Gatlingpea_head.png" id="8_fuck"]
-[ext_resource type="Texture2D" uid="uid://d4al6wc7hk8at" path="res://assets/reanim/Gatlingpea_mouth.png" id="9_fuck"]
-[ext_resource type="Texture2D" uid="uid://bxifwtxc523wo" path="res://assets/reanim/Gatlingpea_barrel.png" id="10_fuck"]
-[ext_resource type="Texture2D" uid="uid://w2pc4t1b0k5v" path="res://assets/reanim/Gatlingpea_mouth_overlay.png" id="11_fuck"]
-[ext_resource type="Texture2D" uid="uid://dgigsil3n5prk" path="res://assets/reanim/Peashooter_eyebrow.png" id="13_fuck"]
-[ext_resource type="Texture2D" uid="uid://bilalnayg1vtf" path="res://assets/reanim/Gatlingpea_helmet.png" id="14_fuck"]
+[ext_resource type="Texture2D" uid="uid://lyw24xd1xo6b" path="res://assets/reanim/GatlingPea_head.png" id="8_fuck"]
+[ext_resource type="Texture2D" uid="uid://d4al6wc7hk8at" path="res://assets/reanim/GatlingPea_mouth.png" id="9_fuck"]
+[ext_resource type="Texture2D" uid="uid://bxifwtxc523wo" path="res://assets/reanim/GatlingPea_barrel.png" id="10_fuck"]
+[ext_resource type="Texture2D" uid="uid://w2pc4t1b0k5v" path="res://assets/reanim/GatlingPea_mouth_overlay.png" id="11_fuck"]
+[ext_resource type="Texture2D" uid="uid://dgigsil3n5prk" path="res://assets/reanim/PeaShooter_eyebrow.png" id="13_fuck"]
+[ext_resource type="Texture2D" uid="uid://bilalnayg1vtf" path="res://assets/reanim/GatlingPea_helmet.png" id="14_fuck"]
 
 [resource]
 resource_name = "GatlingPea_head_idle"
@@ -771,7 +771,7 @@ tracks/62/keys = {
 tracks/63/type = "value"
 tracks/63/imported = false
 tracks/63/enabled = true
-tracks/63/path = NodePath("Body/BodyCorrect/Anim_idle/HeadCorrect/GatlingPea_helmet:visible")
+tracks/63/path = NodePath("Body/BodyCorrect/Anim_idle/HeadCorrect/Node/GatlingPea_helmet:visible")
 tracks/63/interp = 1
 tracks/63/loop_wrap = true
 tracks/63/keys = {
@@ -783,7 +783,7 @@ tracks/63/keys = {
 tracks/64/type = "value"
 tracks/64/imported = false
 tracks/64/enabled = true
-tracks/64/path = NodePath("Body/BodyCorrect/Anim_idle/HeadCorrect/GatlingPea_helmet:position")
+tracks/64/path = NodePath("Body/BodyCorrect/Anim_idle/HeadCorrect/Node/GatlingPea_helmet:position")
 tracks/64/interp = 1
 tracks/64/loop_wrap = true
 tracks/64/keys = {
@@ -795,19 +795,19 @@ tracks/64/keys = {
 tracks/65/type = "value"
 tracks/65/imported = false
 tracks/65/enabled = true
-tracks/65/path = NodePath("Body/BodyCorrect/Anim_idle/HeadCorrect/GatlingPea_helmet:rotation")
+tracks/65/path = NodePath("Body/BodyCorrect/Anim_idle/HeadCorrect/Node/GatlingPea_helmet:rotation")
 tracks/65/interp = 1
 tracks/65/loop_wrap = true
 tracks/65/keys = {
 "times": PackedFloat32Array(0, 0.083333, 0.166667, 0.25, 0.333333, 0.416667, 0.5, 0.583333, 0.666667, 0.75, 0.833333, 0.916667, 1, 1.08333, 1.16667, 1.25, 1.33333, 1.41667, 1.5, 1.58333, 1.66667, 1.75, 1.83333, 1.91667, 2),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.064577, 0.066323, 0.066323, 0.068068, 0.069813, 0.069813, 0.071558, 0.069813, 0.068068, 0.068068, 0.066323, 0.064577, 0.062832, 0.061087, 0.062832, 0.064577, 0.068068, 0.069813, 0.071558, 0.069813, 0.069813, 0.068068, 0.066323, 0.066323, 0.064577]
+"values": [0.064577, 0.06632299999999999, 0.06632299999999999, 0.068068, 0.069813, 0.069813, 0.071558, 0.069813, 0.068068, 0.068068, 0.06632299999999999, 0.064577, 0.062832, 0.061087, 0.062832, 0.064577, 0.068068, 0.069813, 0.071558, 0.069813, 0.069813, 0.068068, 0.06632299999999999, 0.06632299999999999, 0.064577]
 }
 tracks/66/type = "value"
 tracks/66/imported = false
 tracks/66/enabled = true
-tracks/66/path = NodePath("Body/BodyCorrect/Anim_idle/HeadCorrect/GatlingPea_helmet:scale")
+tracks/66/path = NodePath("Body/BodyCorrect/Anim_idle/HeadCorrect/Node/GatlingPea_helmet:scale")
 tracks/66/interp = 1
 tracks/66/loop_wrap = true
 tracks/66/keys = {
@@ -819,7 +819,7 @@ tracks/66/keys = {
 tracks/67/type = "value"
 tracks/67/imported = false
 tracks/67/enabled = true
-tracks/67/path = NodePath("Body/BodyCorrect/Anim_idle/HeadCorrect/GatlingPea_helmet:skew")
+tracks/67/path = NodePath("Body/BodyCorrect/Anim_idle/HeadCorrect/Node/GatlingPea_helmet:skew")
 tracks/67/interp = 1
 tracks/67/loop_wrap = true
 tracks/67/keys = {
@@ -830,8 +830,8 @@ tracks/67/keys = {
 }
 tracks/68/type = "value"
 tracks/68/imported = false
-tracks/68/enabled = true
-tracks/68/path = NodePath("Body/BodyCorrect/Anim_idle/HeadCorrect/GatlingPea_helmet:texture")
+tracks/68/enabled = false
+tracks/68/path = NodePath("Body/BodyCorrect/Anim_idle/HeadCorrect/Node/GatlingPea_helmet:texture")
 tracks/68/interp = 1
 tracks/68/loop_wrap = true
 tracks/68/keys = {
@@ -843,7 +843,7 @@ tracks/68/keys = {
 tracks/69/type = "value"
 tracks/69/imported = false
 tracks/69/enabled = true
-tracks/69/path = NodePath("Body/BodyCorrect/Anim_idle/HeadCorrect/GatlingPea_helmet:self_modulate")
+tracks/69/path = NodePath("Body/BodyCorrect/Anim_idle/HeadCorrect/Node/GatlingPea_helmet:self_modulate")
 tracks/69/interp = 1
 tracks/69/loop_wrap = true
 tracks/69/keys = {

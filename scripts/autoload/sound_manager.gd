@@ -248,10 +248,11 @@ const SFXCarzyDaveMap := {
 
 ## 音效对象池实现
 var sfx_bullet_pool = []
+const SFX_POOL_MAX_SIZE = 32
 
 func play_sfx_with_pool(sfx_resource: AudioStream) -> AudioStreamPlayer:
 	if sfx_resource in curr_frame_sfx:
-		return
+		return null
 	curr_frame_sfx.append(sfx_resource)
 
 	var player: AudioStreamPlayer
@@ -261,13 +262,17 @@ func play_sfx_with_pool(sfx_resource: AudioStream) -> AudioStreamPlayer:
 			player = p
 			break
 
-	# 如果没有可用播放器，创建新的
+	# 如果没有可用播放器，创建新的（有上限）
 	if not player:
-		player = AudioStreamPlayer.new()
-		player.bus = AudioServer.get_bus_name(Bus.SFX)
-		player.finished.connect(_on_sfx_finished.bind(player))
-		sfx_all.add_child(player)
-		sfx_bullet_pool.append(player)
+		if sfx_bullet_pool.size() < SFX_POOL_MAX_SIZE:
+			player = AudioStreamPlayer.new()
+			player.bus = AudioServer.get_bus_name(Bus.SFX)
+			player.finished.connect(_on_sfx_finished.bind(player))
+			sfx_all.add_child(player)
+			sfx_bullet_pool.append(player)
+		else:
+			# 池已满，复用最早创建的播放器
+			player = sfx_bullet_pool[0]
 
 	## 配置播放器
 	player.stream = sfx_resource
@@ -315,8 +320,7 @@ func play_crazy_dave_SFX(option:StringName):
 	crazy_dave_player.play()
 
 func play_rain_SFX():
-	var RAIN = load("uid://dmjld1k8ieh1g")
-	rain_player.stream = RAIN
+	rain_player.stream = preload("uid://dmjld1k8ieh1g")
 	rain_player.play()
 
 func stop_rain_SFX():
@@ -424,8 +428,9 @@ func setup_ui_start_menu_sound(node:Node, is_menu_button:=false):
 		if is_menu_button:
 			button.button_down.connect(play_other_SFX.bind("gravebutton"))
 		else:
-			if not button.button_down.is_connected(play_other_SFX):
-				button.button_down.connect(play_other_SFX.bind("tap"))
+			var bound_callable = play_other_SFX.bind("tap")
+			if not button.button_down.is_connected(bound_callable):
+				button.button_down.connect(bound_callable)
 
 
 	for child in node.get_children():

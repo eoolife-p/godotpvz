@@ -65,6 +65,8 @@ func loss_iron_item():
 		charred_component.anim_lib_name = "ALL_ANIMS2"
 		zombie_questionmark.visible = true
 		await get_tree().create_timer(1.0,false).timeout
+		if not is_instance_valid(self):
+			return
 		zombie_questionmark.visible = false
 		dig_end()
 

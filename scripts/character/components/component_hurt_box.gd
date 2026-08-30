@@ -27,6 +27,8 @@ func update_area_monitorable(area:Area2D, v:bool):
 	area.monitorable = v
 
 	## INFO: 更新 monitoring 才会更新 monitorable
-	area.monitoring = not area.monitoring
-	area.monitoring = not area.monitoring
+	area.set_deferred("monitoring", not v)
+	await get_tree().process_frame
+	if is_instance_valid(area):
+		area.set_deferred("monitoring", v)
 

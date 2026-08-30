@@ -3064,8 +3064,6 @@ offset_bottom = -178.0
 [connection signal="pressed" from="BG_Right/Menu/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="BG_Right/Menu/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="BG_Right/Menu/Button4" to="." method="_on_button_4_pressed"]
-[connection signal="button_down" from="BG_Right/Menu/ZenNextGarden" to="BG_Right/Menu/ZenNextGarden" method="_on_button_down"]
-[connection signal="button_down" from="BG_Right/LeftMemu/ZombatarMainmenubackHighlight" to="BG_Right/LeftMemu/ZombatarMainmenubackHighlight" method="_on_ZMH_button_down"]
 [connection signal="pressed" from="BG_Right/Option/TextureButton" to="." method="_on_option_button_1_pressed"]
 [connection signal="pressed" from="BG_Right/Option/TextureButton2" to="." method="_on_option_button_2_pressed"]
 [connection signal="pressed" from="BG_Right/Option/TextureButton3" to="." method="_on_option_button_3_pressed"]

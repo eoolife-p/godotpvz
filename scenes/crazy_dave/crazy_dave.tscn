@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=3 uid="uid://dsxyx35geqj23"]
+[gd_scene format=3 uid="uid://dsxyx35geqj23"]
 
 [ext_resource type="Script" uid="uid://bcog1jf31uui7" path="res://scripts/crazy_dave/crazy_dave.gd" id="1_ffcxg"]
 [ext_resource type="Texture2D" uid="uid://cc31mlx7ye5ka" path="res://assets/reanim/CrazyDave_innerpants.png" id="1_w5sht"]
@@ -335,11 +335,11 @@ texture = ExtResource("58_y5vhj")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gdxht"]
 texture = ExtResource("57_xswp6")
 
-[node name="CrazyDave" type="Node2D" node_paths=PackedStringArray("hand_container")]
+[node name="CrazyDave" type="Node2D" unique_id=967241874 node_paths=PackedStringArray("hand_container")]
 script = ExtResource("1_ffcxg")
 hand_container = NodePath("Body/Dave_handinghand/HandContainer")
 
-[node name="DaveDialogMousePressPanel" type="Panel" parent="."]
+[node name="DaveDialogMousePressPanel" type="Panel" parent="." unique_id=1844802211]
 offset_left = -342.0
 offset_top = -137.0
 offset_right = 1578.0
@@ -347,256 +347,266 @@ offset_bottom = 943.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_o23mx")
 script = ExtResource("3_smsmo")
 
-[node name="Body" type="Node2D" parent="."]
+[node name="Body" type="Node2D" parent="." unique_id=532463084]
 
-[node name="Zombie_body" type="Sprite2D" parent="Body"]
+[node name="Zombie_body" type="Sprite2D" parent="Body" unique_id=1784251154]
 visible = false
 centered = false
 
-[node name="Zombie_upperleg1" type="Sprite2D" parent="Body"]
+[node name="Zombie_upperleg1" type="Sprite2D" parent="Body" unique_id=852913625]
 visible = false
 centered = false
 
-[node name="Zombie_upperleg2" type="Sprite2D" parent="Body"]
+[node name="Zombie_upperleg2" type="Sprite2D" parent="Body" unique_id=145255839]
 visible = false
 centered = false
 
-[node name="Zombie_lowerleg1" type="Sprite2D" parent="Body"]
+[node name="Zombie_lowerleg1" type="Sprite2D" parent="Body" unique_id=217812196]
 visible = false
 centered = false
 
-[node name="Zombie_foot1" type="Sprite2D" parent="Body"]
+[node name="Zombie_foot1" type="Sprite2D" parent="Body" unique_id=512277815]
 visible = false
 centered = false
 
-[node name="Zombie_lowerleg2" type="Sprite2D" parent="Body"]
+[node name="Zombie_lowerleg2" type="Sprite2D" parent="Body" unique_id=1844146008]
 visible = false
 centered = false
 
-[node name="Zombie_foot2" type="Sprite2D" parent="Body"]
+[node name="Zombie_foot2" type="Sprite2D" parent="Body" unique_id=1710377980]
 visible = false
 centered = false
 
-[node name="Zombie_arm1" type="Sprite2D" parent="Body"]
+[node name="Zombie_arm1" type="Sprite2D" parent="Body" unique_id=1020388644]
 visible = false
 centered = false
 
-[node name="Zombie_hand1" type="Sprite2D" parent="Body"]
+[node name="Zombie_hand1" type="Sprite2D" parent="Body" unique_id=1169553422]
 visible = false
 centered = false
 
-[node name="Zombie_arm2" type="Sprite2D" parent="Body"]
+[node name="Zombie_arm2" type="Sprite2D" parent="Body" unique_id=1299546210]
 visible = false
 centered = false
 
-[node name="Zombie_hand2" type="Sprite2D" parent="Body"]
+[node name="Zombie_hand2" type="Sprite2D" parent="Body" unique_id=2015403080]
 visible = false
 centered = false
 
-[node name="Zombie_head2" type="Sprite2D" parent="Body"]
+[node name="Zombie_head2" type="Sprite2D" parent="Body" unique_id=1006826106]
 visible = false
 centered = false
 
-[node name="Zombie_head1" type="Sprite2D" parent="Body"]
+[node name="Zombie_head1" type="Sprite2D" parent="Body" unique_id=1645302762]
 visible = false
 centered = false
 
-[node name="Dave_innerpants" type="Sprite2D" parent="Body"]
+[node name="Dave_innerpants" type="Sprite2D" parent="Body" unique_id=243688181]
 position = Vector2(-22.2, 843.5)
 texture = ExtResource("1_w5sht")
 centered = false
 
-[node name="Dave_foot2" type="Sprite2D" parent="Body"]
+[node name="Dave_foot2" type="Sprite2D" parent="Body" unique_id=2054411913]
 position = Vector2(94.2, 817)
 texture = ExtResource("2_yg7cu")
 centered = false
 
-[node name="Dave_foot1" type="Sprite2D" parent="Body"]
+[node name="Dave_foot1" type="Sprite2D" parent="Body" unique_id=1503754536]
 position = Vector2(-31.5, 820.4)
 texture = ExtResource("3_cqc0n")
 centered = false
 
-[node name="Dave_body2" type="Sprite2D" parent="Body"]
+[node name="Dave_body2" type="Sprite2D" parent="Body" unique_id=1789526970]
 position = Vector2(-21.6, 510.9)
 texture = ExtResource("4_yfpeb")
 centered = false
 
-[node name="Dave_body1" type="Sprite2D" parent="Body"]
-position = Vector2(-44.248684, 222.23178)
-rotation = 0.033970647
-scale = Vector2(1, 1.0010729)
+[node name="Dave_body1" type="Sprite2D" parent="Body" unique_id=180979710]
+position = Vector2(-50.899998, 218.45715)
+rotation = 0.013215006
+scale = Vector2(1, 1.0185715)
 texture = ExtResource("5_kf3nt")
 centered = false
 
-[node name="Grabhand1" type="Sprite2D" parent="Body"]
+[node name="Grabhand1" type="Sprite2D" parent="Body" unique_id=933369383]
 visible = false
 centered = false
 
-[node name="Grabhand2" type="Sprite2D" parent="Body"]
+[node name="Grabhand2" type="Sprite2D" parent="Body" unique_id=1944721909]
 visible = false
 centered = false
 
-[node name="Dave_pot_inside" type="Sprite2D" parent="Body"]
+[node name="Dave_pot_inside" type="Sprite2D" parent="Body" unique_id=36803703]
 visible = false
 centered = false
 
-[node name="Dave_head" type="Sprite2D" parent="Body"]
-position = Vector2(36.848988, 110.58543)
-rotation = 0.08922517
-scale = Vector2(0.9997318, 1.0008047)
+[node name="Dave_head" type="Sprite2D" parent="Body" unique_id=1400768295]
+position = Vector2(24.200005, 106.01428)
+rotation = 0.04388301
+scale = Vector2(1, 1.0184286)
+skew = -0.0019951265
 texture = ExtResource("6_nj2p7")
 centered = false
 
-[node name="Dave_blink" type="Sprite2D" parent="Body"]
+[node name="Dave_blink" type="Sprite2D" parent="Body" unique_id=657831705]
 visible = false
 centered = false
 
-[node name="Dave_beard" type="Sprite2D" parent="Body"]
-position = Vector2(94.763565, 212.53178)
-rotation = 0.08922517
-scale = Vector2(0.9997318, 1.0008047)
+[node name="Dave_beard" type="Sprite2D" parent="Body" unique_id=121199453]
+position = Vector2(86.557144, 206.9857)
+rotation = 0.04388301
+scale = Vector2(1, 1.0184286)
+skew = -0.0019951265
 texture = ExtResource("7_mbnm1")
 centered = false
 
-[node name="Dave_mouths" type="Sprite2D" parent="Body"]
-position = Vector2(125.31721, 226.85132)
-rotation = 0.08922517
-scale = Vector2(0.9997318, 1.0008047)
+[node name="Dave_mouths" type="Sprite2D" parent="Body" unique_id=1369794722]
+position = Vector2(117.75715, 220.14285)
+rotation = 0.04388301
+scale = Vector2(1, 1.0184286)
+skew = -0.0019951265
 texture = ExtResource("8_7kxro")
 centered = false
 
-[node name="Dave_eye" type="Sprite2D" parent="Body"]
-position = Vector2(160.83673, 180.06357)
-rotation = 6.3270326
-scale = Vector2(0.999, 1.0000728)
+[node name="Dave_eye" type="Sprite2D" parent="Body" unique_id=1208874030]
+position = Vector2(151.22858, 170.91428)
+rotation = 6.282433
+scale = Vector2(1, 1.0184286)
 texture = ExtResource("9_usqct")
 centered = false
 
-[node name="Dave_eyebrow" type="Sprite2D" parent="Body"]
-position = Vector2(163.96356, 166.86852)
-rotation = 6.3270326
-scale = Vector2(0.999, 1.0000728)
+[node name="Dave_eyebrow" type="Sprite2D" parent="Body" unique_id=2027635909]
+position = Vector2(153.8, 152.95715)
+rotation = 6.282433
+scale = Vector2(1, 1.0184286)
 texture = ExtResource("10_gw4o1")
 centered = false
 
-[node name="Dave_pot" type="Sprite2D" parent="Body"]
-position = Vector2(33.6417, 95.378136)
-rotation = 6.3544855
-scale = Vector2(1.032, 1.0000728)
+[node name="Dave_pot" type="Sprite2D" parent="Body" unique_id=2078771202]
+position = Vector2(18.357145, 92.59999)
+rotation = 6.295154
+scale = Vector2(1.032, 1.0184286)
 texture = ExtResource("11_5uciu")
 centered = false
 
-[node name="Dave_innerarm" type="Sprite2D" parent="Body"]
-position = Vector2(223.00728, 428.52948)
-rotation = 0.026093533
-scale = Vector2(0.999, 1.0000728)
-skew = -0.00046825642
+[node name="Dave_innerarm" type="Sprite2D" parent="Body" unique_id=41475756]
+position = Vector2(221.2, 423.1143)
+rotation = 0.0074802963
+scale = Vector2(1, 1.0184286)
 texture = ExtResource("12_kxyio")
 centered = false
 
-[node name="Dave_innerhand" type="Sprite2D" parent="Body"]
-position = Vector2(179.76094, 453.9076)
-rotation = -0.03392968
-scale = Vector2(0.923, 0.92380464)
+[node name="Dave_innerhand" type="Sprite2D" parent="Body" unique_id=2111343140]
+position = Vector2(180.2, 447.48572)
+rotation = -0.017203717
+scale = Vector2(0.923, 0.9405714)
+skew = 0.0014957164
 texture = ExtResource("13_1mi2n")
 centered = false
 
-[node name="Dave_innerfinger1" type="Sprite2D" parent="Body"]
-position = Vector2(155.00728, 462.90295)
-rotation = -0.23826592
-scale = Vector2(0.92173177, 0.92280465)
+[node name="Dave_innerfinger1" type="Sprite2D" parent="Body" unique_id=647619269]
+position = Vector2(155.34285, 453)
+rotation = -0.13414098
+scale = Vector2(0.923, 0.93957144)
+skew = 0.005236
 texture = ExtResource("14_5x3gs")
 centered = false
 
-[node name="Dave_innerfinger2" type="Sprite2D" parent="Body"]
-position = Vector2(169.93411, 478.77115)
-rotation = -0.08097201
-scale = Vector2(0.922, 0.9230729)
+[node name="Dave_innerfinger2" type="Sprite2D" parent="Body" unique_id=705943533]
+position = Vector2(170.2, 471.72858)
+rotation = -0.047871724
+scale = Vector2(0.923, 0.9405714)
+skew = 0.0014958164
 texture = ExtResource("15_pkxbp")
 centered = false
 
-[node name="Dave_innerfinger3" type="Sprite2D" parent="Body"]
-position = Vector2(184.11954, 492.1589)
-rotation = -0.15717126
-scale = Vector2(0.922, 0.92280465)
+[node name="Dave_innerfinger3" type="Sprite2D" parent="Body" unique_id=1946399583]
+position = Vector2(185.14287, 484.91428)
+rotation = -0.09025802
+scale = Vector2(0.923, 0.94042856)
+skew = 0.0034902
 texture = ExtResource("16_cm68l")
 centered = false
 
-[node name="Dave_innerfinger4" type="Sprite2D" parent="Body"]
-position = Vector2(204.73906, 502.6417)
-rotation = -0.18249685
-scale = Vector2(0.922, 0.92280465)
+[node name="Dave_innerfinger4" type="Sprite2D" parent="Body" unique_id=53139908]
+position = Vector2(205.34285, 495.6857)
+rotation = -0.09948368
+scale = Vector2(0.923, 0.94042856)
+skew = 0.0034906429
 texture = ExtResource("17_56ysj")
 centered = false
 
-[node name="Dave_outerarm" type="Sprite2D" parent="Body"]
-position = Vector2(5.0122466, 439.7805)
-rotation = 0.029289424
-scale = Vector2(1, 1.0010729)
+[node name="Dave_outerarm" type="Sprite2D" parent="Body" unique_id=826842584]
+position = Vector2(2.6428576, 438.67142)
+rotation = 0.0147109935
+scale = Vector2(1, 1.0184286)
 texture = ExtResource("18_2flxe")
 centered = false
 
-[node name="Dave_outerhand" type="Sprite2D" parent="Body"]
-position = Vector2(85.136734, 396.99768)
-rotation = 0.1342226
-scale = Vector2(1.0867318, 1.0878047)
+[node name="Dave_outerhand" type="Sprite2D" parent="Body" unique_id=1495873334]
+position = Vector2(79.97143, 393.45715)
+rotation = 0.07081015
+scale = Vector2(1.087, 1.1074286)
+skew = -0.0019942694
 texture = ExtResource("19_qdppa")
 centered = false
 
-[node name="Dave_outerfinger1" type="Sprite2D" parent="Body"]
-position = Vector2(85.83441, 372.7513)
-rotation = -0.05384533
-scale = Vector2(1.0857317, 1.0870728)
+[node name="Dave_outerfinger1" type="Sprite2D" parent="Body" unique_id=1522172928]
+position = Vector2(82.928566, 367.3)
+rotation = -0.007978508
+scale = Vector2(1.0868572, 1.1072857)
+skew = 0.0014957449
 texture = ExtResource("20_2t86a")
 centered = false
 
-[node name="Dave_outerfinger2" type="Sprite2D" parent="Body"]
-position = Vector2(113.714874, 397.5758)
-rotation = 0.2881987
-scale = Vector2(1.0857317, 1.0868046)
+[node name="Dave_outerfinger2" type="Sprite2D" parent="Body" unique_id=200806362]
+position = Vector2(106.85715, 392.25714)
+rotation = 0.15358931
+scale = Vector2(1.0868572, 1.1062857)
+skew = -0.006732316
 texture = ExtResource("21_c22xj")
 centered = false
 
-[node name="Dave_outerfinger3" type="Sprite2D" parent="Body"]
-position = Vector2(118.995346, 415.32947)
-rotation = 0.2612958
-scale = Vector2(1.0857317, 1.0868046)
+[node name="Dave_outerfinger3" type="Sprite2D" parent="Body" unique_id=547246373]
+position = Vector2(113.58572, 409.12857)
+rotation = 0.1438653
+scale = Vector2(1.0868572, 1.1064286)
+skew = -0.0052362573
 texture = ExtResource("22_3xq2r")
 centered = false
 
-[node name="Dave_outerfinger4" type="Sprite2D" parent="Body"]
-position = Vector2(126.6245, 436.16852)
-rotation = 0.2320071
-scale = Vector2(1.0857317, 1.0868046)
+[node name="Dave_outerfinger4" type="Sprite2D" parent="Body" unique_id=197270269]
+position = Vector2(123.01428, 430.62857)
+rotation = 0.12641145
+scale = Vector2(1.0868572, 1.1064286)
+skew = -0.0044877063
 texture = ExtResource("23_ffcxg")
 centered = false
 
-[node name="Dave_handinghand" type="Sprite2D" parent="Body"]
+[node name="Dave_handinghand" type="Sprite2D" parent="Body" unique_id=269001143]
 visible = false
-position = Vector2(87.55364, 432.75626)
+position = Vector2(91.42857, 426.69998)
 texture = ExtResource("41_mnqem")
 centered = false
 
-[node name="HandContainer" type="Node2D" parent="Body/Dave_handinghand"]
+[node name="HandContainer" type="Node2D" parent="Body/Dave_handinghand" unique_id=1464954021]
 unique_name_in_owner = true
 position = Vector2(54.288616, 36.284874)
 rotation = 0.033161
 scale = Vector2(1.00301, 1.00301)
 
-[node name="Dave_handinghand2" type="Sprite2D" parent="Body"]
+[node name="Dave_handinghand2" type="Sprite2D" parent="Body" unique_id=716003441]
 visible = false
 centered = false
 
-[node name="Dave_handinghand3" type="Sprite2D" parent="Body"]
+[node name="Dave_handinghand3" type="Sprite2D" parent="Body" unique_id=502356224]
 visible = false
 centered = false
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_sqwtv")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1167632319]
+libraries/ = SubResource("AnimationLibrary_sqwtv")
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1112600859]
 tree_root = SubResource("AnimationNodeBlendTree_csyta")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
@@ -604,7 +614,7 @@ parameters/StateMachine/BlendTree/TimeScale/scale = 2.0
 "parameters/StateMachine/BlendTree 2/TimeScale/scale" = 2.0
 parameters/TimeScale/scale = 0.5
 
-[node name="SpeechBubble" type="Control" parent="."]
+[node name="SpeechBubble" type="Control" parent="." unique_id=239580906]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 181.0
@@ -612,14 +622,14 @@ offset_top = 11.0
 offset_right = 221.0
 offset_bottom = 51.0
 
-[node name="Bubble2" type="Panel" parent="SpeechBubble"]
+[node name="Bubble2" type="Panel" parent="SpeechBubble" unique_id=167369115]
 visible = false
 layout_mode = 0
 offset_right = 291.0
 offset_bottom = 201.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_7er0j")
 
-[node name="MarginContainer" type="MarginContainer" parent="SpeechBubble/Bubble2"]
+[node name="MarginContainer" type="MarginContainer" parent="SpeechBubble/Bubble2" unique_id=1928647082]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -628,7 +638,7 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="SpeechTextLabel" type="Label" parent="SpeechBubble/Bubble2/MarginContainer"]
+[node name="SpeechTextLabel" type="Label" parent="SpeechBubble/Bubble2/MarginContainer" unique_id=514023677]
 custom_minimum_size = Vector2(270, 155)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -639,18 +649,18 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Bubble" type="Panel" parent="SpeechBubble"]
+[node name="Bubble" type="Panel" parent="SpeechBubble" unique_id=1077272365]
 visible = false
 layout_mode = 0
 offset_right = 291.0
 offset_bottom = 200.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_gdxht")
 
-[node name="TimerLongTimeIdle" type="Timer" parent="."]
+[node name="TimerLongTimeIdle" type="Timer" parent="." unique_id=1192972607]
 wait_time = 5.0
 one_shot = true
 
-[node name="ChooseNode" type="Control" parent="."]
+[node name="ChooseNode" type="Control" parent="." unique_id=823949238]
 visible = false
 layout_mode = 3
 anchors_preset = 0
@@ -660,7 +670,7 @@ offset_right = 667.0
 offset_bottom = 509.0
 theme = ExtResource("44_r0tb0")
 
-[node name="ChooseMouseStopPanel" type="Panel" parent="ChooseNode"]
+[node name="ChooseMouseStopPanel" type="Panel" parent="ChooseNode" unique_id=1156989112]
 layout_mode = 0
 offset_left = -323.0
 offset_top = -196.0
@@ -668,7 +678,7 @@ offset_right = 1597.0
 offset_bottom = 884.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_o23mx")
 
-[node name="Panel" type="Panel" parent="ChooseNode"]
+[node name="Panel" type="Panel" parent="ChooseNode" unique_id=1096228792]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -677,7 +687,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_type_variation = &"PanelDialogBG"
 
-[node name="MarginContainer" type="MarginContainer" parent="ChooseNode/Panel"]
+[node name="MarginContainer" type="MarginContainer" parent="ChooseNode/Panel" unique_id=1881653232]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -689,7 +699,7 @@ theme_override_constants/margin_top = 80
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 100
 
-[node name="ChooseContent" type="Label" parent="ChooseNode/Panel/MarginContainer"]
+[node name="ChooseContent" type="Label" parent="ChooseNode/Panel/MarginContainer" unique_id=2077163348]
 custom_minimum_size = Vector2(277, 0)
 layout_mode = 2
 text = "是否同意戴夫的提议"
@@ -697,7 +707,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ChooseNode/Panel"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ChooseNode/Panel" unique_id=1900397545]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -710,8 +720,7 @@ offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="PVZButton" type="BaseButton" parent="ChooseNode/Panel/HBoxContainer"]
-_import_path = NodePath("")
+[node name="PVZButton" type="BaseButton" parent="ChooseNode/Panel/HBoxContainer" unique_id=1022144732]
 unique_name_in_owner = false
 process_mode = 0
 process_priority = 0
@@ -779,7 +788,7 @@ shortcut_in_tooltip = true
 script = ExtResource("45_q0qf3")
 metadata/_custom_type_script = "uid://parybxg7tb1k"
 
-[node name="Panel" type="Panel" parent="ChooseNode/Panel/HBoxContainer/PVZButton"]
+[node name="Panel" type="Panel" parent="ChooseNode/Panel/HBoxContainer/PVZButton" unique_id=76147192]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -789,7 +798,7 @@ grow_vertical = 2
 mouse_filter = 2
 theme_type_variation = &"PanelButtonBG"
 
-[node name="Label" type="Label" parent="ChooseNode/Panel/HBoxContainer/PVZButton"]
+[node name="Label" type="Label" parent="ChooseNode/Panel/HBoxContainer/PVZButton" unique_id=1620931383]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -800,8 +809,7 @@ text = "确认"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PVZButton2" type="BaseButton" parent="ChooseNode/Panel/HBoxContainer"]
-_import_path = NodePath("")
+[node name="PVZButton2" type="BaseButton" parent="ChooseNode/Panel/HBoxContainer" unique_id=1197551914]
 unique_name_in_owner = false
 process_mode = 0
 process_priority = 0
@@ -869,7 +877,7 @@ shortcut_in_tooltip = true
 script = ExtResource("45_q0qf3")
 metadata/_custom_type_script = "uid://parybxg7tb1k"
 
-[node name="Panel" type="Panel" parent="ChooseNode/Panel/HBoxContainer/PVZButton2"]
+[node name="Panel" type="Panel" parent="ChooseNode/Panel/HBoxContainer/PVZButton2" unique_id=2100364794]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -879,7 +887,7 @@ grow_vertical = 2
 mouse_filter = 2
 theme_type_variation = &"PanelButtonBG"
 
-[node name="Label" type="Label" parent="ChooseNode/Panel/HBoxContainer/PVZButton2"]
+[node name="Label" type="Label" parent="ChooseNode/Panel/HBoxContainer/PVZButton2" unique_id=2003350699]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

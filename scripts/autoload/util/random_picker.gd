@@ -143,6 +143,8 @@ func get_items_weights(item_datas: Array) -> Dictionary:
 func get_random_item(should_remove: bool = false) -> Variant:
 	if _item_pool.is_empty():
 		return null
+	if _alias.is_empty() or _prob.is_empty():
+		return null
 
 	var n := _item_pool.size()
 	var index := randi() % n

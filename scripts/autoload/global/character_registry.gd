@@ -73,7 +73,7 @@ enum PlantType {
 	P048CobCannon,
 
 	P049PeaShooterDoubleReverse,
-
+	P050SuperPeaShooter,
 	## 模仿者
 	P999Imitater = 999,
 	## 发芽
@@ -134,6 +134,8 @@ enum ZombieType {
 	Z027AngerNorm,
 	Z028ConeDancer,
 	Z029BlueFootball,
+	Z030RedEyeGargantuar,
+	Z031PeaZombie,
 	Z1001BobsledSingle=1001,	## 单个雪橇车僵尸
 	}
 
@@ -525,7 +527,13 @@ const PlantInfo = {
 		PlantInfoAttribute.PlantConditionResource : preload("res://resources/character_resource/plant_condition/000_common_plant_land.tres"),
 		PlantInfoAttribute.PlantScenes : preload("res://scenes/character/plant/plant_049_pea_shooter_double_reverse.tscn")
 		},
-
+	PlantType.P050SuperPeaShooter:{
+		PlantInfoAttribute.PlantName: "SuperPea",
+		PlantInfoAttribute.CoolTime: 10,
+		PlantInfoAttribute.SunCost: 400,
+		PlantInfoAttribute.PlantConditionResource : preload("res://resources/character_resource/plant_condition/000_common_plant_land.tres"),
+		PlantInfoAttribute.PlantScenes : preload("res://scenes/character/plant/plant_050_super_pea.tscn")		
+		},
 	## 模仿者
 	PlantType.P999Imitater:{
 		PlantInfoAttribute.PlantName: "Imitater",
@@ -785,6 +793,20 @@ const ZombieInfo = {
 		ZombieInfoAttribute.CoolTime: 0.0,
 		ZombieInfoAttribute.SunCost: 200,
 		ZombieInfoAttribute.ZombieScenes: preload("res://scenes/character/zombie/zombie_029_bluefootball.tscn"),
+		ZombieInfoAttribute.ZombieRowType:CharacterRegistry.ZombieRowType.Land		
+	},
+	ZombieType.Z030RedEyeGargantuar:{
+		ZombieInfoAttribute.ZombieName: "RedEyeZombieGargantuar",
+		ZombieInfoAttribute.CoolTime: 0.0,
+		ZombieInfoAttribute.SunCost: 600,
+		ZombieInfoAttribute.ZombieScenes:preload("res://scenes/character/zombie/zombie_030_red_eye_gargantuar.tscn"),
+		ZombieInfoAttribute.ZombieRowType:CharacterRegistry.ZombieRowType.Land
+	},
+	ZombieType.Z031PeaZombie:{
+		ZombieInfoAttribute.ZombieName: "PeaZombie",
+		ZombieInfoAttribute.CoolTime: 0.0,
+		ZombieInfoAttribute.SunCost: 100,
+		ZombieInfoAttribute.ZombieScenes:preload("res://scenes/character/zombie/zombie_031_pea_zombie.tscn"),
 		ZombieInfoAttribute.ZombieRowType:CharacterRegistry.ZombieRowType.Land		
 	},
 	## 单独雪橇僵尸

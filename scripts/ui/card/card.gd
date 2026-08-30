@@ -141,7 +141,14 @@ func _on_button_pressed() -> void:
 
 ## 快捷键设置
 func set_shortcut(i:int):
-	short_cut.text = str(i)
+	if i >= 1 and i <= 10:
+		short_cut.text = str(i % 10)
+	elif i > 10:
+		## 11+: a,b,c,d,e,g,h,i（跳过f，铲子占用）
+		var letter_index = i - 11
+		if letter_index >= 5:
+			letter_index += 1
+		short_cut.text = char(97 + letter_index)
 	short_cut.visible = true
 
 func set_shortcut_disappear():
@@ -192,37 +199,33 @@ func mouse_filter_stop():
 
 
 func _on_button_mouse_entered() -> void:
+	var text = ""
 	if card_plant_type == CharacterRegistry.PlantType.Null:
 		
 		var card_zombie_name = Global.character_registry.get_zombie_info(card_zombie_type, CharacterRegistry.ZombieInfoAttribute.ZombieName)#获取僵尸名
-		
-		if Global.global_read_data.data_almanac != {}:
-			if Global.global_read_data.data_almanac["Zombie"].has(card_zombie_name):
-				var card_zombie_almanac_name = Global.global_read_data.data_almanac["Zombie"][card_zombie_name]["名字"]#图鉴名
-				$PlantName.text=card_zombie_almanac_name
-			else:
-				$PlantName.text="僵尸"
+		var tmp = Global.global_read_data.data_almanac["Zombie"]
+		if tmp.has(card_zombie_name):
+			var card_zombie_almanac_name = tmp[card_zombie_name]["名字"]#图鉴名
+			text=card_zombie_almanac_name
 		else:
-			$PlantName.text="僵尸"
-			pass
+			text="僵尸"
 	else:
 		var card_plant_name = Global.character_registry.get_plant_info(card_plant_type, CharacterRegistry.PlantInfoAttribute.PlantName)#获取植物名
-		if Global.global_read_data.data_almanac != {}:
-			if Global.global_read_data.data_almanac["Plant"].has(card_plant_name):
-				var card_plant_almanac_name = Global.global_read_data.data_almanac["Plant"][card_plant_name]["名字"]#图鉴名
-				$PlantName.text=card_plant_almanac_name
-			else:
-				$PlantName.text="植物"
+		var tmp=Global.global_read_data.data_almanac["Plant"]
+		if tmp.has(card_plant_name):
+			var card_plant_almanac_name = tmp[card_plant_name]["名字"]#图鉴名
+			text=card_plant_almanac_name
 		else:
-			$PlantName.text="植物"
-			pass
+			text="植物"
 	if is_imitater:
-		$PlantName.text="模仿者 "+$PlantName.text
+		text="模仿者 "+text
 		$PlantName.scale=Vector2(0.45,0.45)
+	if is_charm_card:
+		text="魅惑"+text
+		$PlantName.scale=Vector2(0.5,0.5)
+	$PlantName.text=text
 	$PlantName.show()
 	pass # Replace with function body.
-
-
 func _on_button_mouse_exited() -> void:
 	$PlantName.hide()
 	pass # Replace with function body.

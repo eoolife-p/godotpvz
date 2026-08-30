@@ -9,4 +9,3 @@ func _on_main_game_progress_update(main_game_progress :MainGameManager.E_MainGam
 		visible = false
 	else:
 		visible = true
-

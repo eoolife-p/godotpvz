@@ -79,6 +79,7 @@ const curr_plant :Array[CharacterRegistry.PlantType]= [
 	CharacterRegistry.PlantType.P047SpikeRock,
 	CharacterRegistry.PlantType.P048CobCannon,
 	CharacterRegistry.PlantType.P049PeaShooterDoubleReverse,
+	CharacterRegistry.PlantType.P050SuperPeaShooter,
 ]
 
 const curr_zombie :Array[CharacterRegistry.ZombieType]= [
@@ -111,5 +112,7 @@ const curr_zombie :Array[CharacterRegistry.ZombieType]= [
 	CharacterRegistry.ZombieType.Z027AngerNorm,
 	CharacterRegistry.ZombieType.Z028ConeDancer,
 	CharacterRegistry.ZombieType.Z029BlueFootball,
+	CharacterRegistry.ZombieType.Z030RedEyeGargantuar,
+	CharacterRegistry.ZombieType.Z031PeaZombie,
 	CharacterRegistry.ZombieType.Z1001BobsledSingle,
 ]

@@ -1168,96 +1168,87 @@ node_no_change_direction = [NodePath("HpComponent"), NodePath("SleepComponent"),
 position = Vector2(-41, -90)
 
 [node name="Gravebuster_tooth1" type="Sprite2D" parent="Body/BodyCorrect" index="0" unique_id=704773411]
-position = Vector2(6.5384846, 46.233234)
-scale = Vector2(1.0252041, 0.9841545)
+position = Vector2(7.3, 46.183964)
 texture = ExtResource("2_xhurg")
 centered = false
 
 [node name="Gravebuster_tooth2" type="Sprite2D" parent="Body/BodyCorrect" index="1" unique_id=1976876860]
-position = Vector2(11.26414, 43.266766)
-scale = Vector2(1.0252041, 0.9841545)
+position = Vector2(12, 42.34914)
 texture = ExtResource("3_2a3ft")
 centered = false
 
 [node name="Gravebuster_tooth3" type="Sprite2D" parent="Body/BodyCorrect" index="2" unique_id=1582332749]
-position = Vector2(26.225657, 44.407578)
-scale = Vector2(1.0252041, 0.9841545)
+position = Vector2(26.6, 44.51741)
 texture = ExtResource("4_27we4")
 centered = false
 
 [node name="Gravebuster_tooth6" type="Sprite2D" parent="Body/BodyCorrect" index="3" unique_id=6161588]
-position = Vector2(59.474342, 45.61545)
-scale = Vector2(1.0252041, 0.9841545)
+position = Vector2(59, 44.93276)
 texture = ExtResource("5_1p5sv")
 centered = false
 
 [node name="Gravebuster_tooth5" type="Sprite2D" parent="Body/BodyCorrect" index="4" unique_id=2125279541]
-position = Vector2(49.28717, 42.969093)
-scale = Vector2(1.0252041, 0.9841545)
+position = Vector2(49, 42.95086)
 texture = ExtResource("6_dsbn4")
 centered = false
 
 [node name="Gravebuster_tooth4" type="Sprite2D" parent="Body/BodyCorrect" index="5" unique_id=717709924]
-position = Vector2(37.812828, 42.65394)
-scale = Vector2(1.0252041, 0.9841545)
+position = Vector2(37.9, 41.765865)
 texture = ExtResource("7_up1rf")
 centered = false
 
 [node name="Gravebuster_vines" type="Sprite2D" parent="Body/BodyCorrect" index="6" unique_id=1893146228]
-position = Vector2(-2.8230312, 7.4717183)
-scale = Vector2(1.0252041, 0.9671808)
+position = Vector2(-1.8, 5.5)
 texture = ExtResource("8_e122l")
 centered = false
 
 [node name="Gravebuster_head" type="Sprite2D" parent="Body/BodyCorrect" index="7" unique_id=1032072801]
-position = Vector2(2.076969, 15.184546)
-scale = Vector2(1.0252041, 0.9671808)
+position = Vector2(3, 13.5)
 texture = ExtResource("9_sguxt")
 centered = false
 
 [node name="Gravebuster_eyebrows" type="Sprite2D" parent="Body/BodyCorrect" index="8" unique_id=1557966061]
-position = Vector2(12, 18.21283)
-scale = Vector2(1.001, 0.77517486)
+position = Vector2(12.016724, 16.866209)
+scale = Vector2(1.0008328, 0.79403436)
 texture = ExtResource("10_axj0w")
 centered = false
 
 [node name="Gravebuster_leaf1" type="Sprite2D" parent="Body/BodyCorrect" index="9" unique_id=953048457]
-position = Vector2(-11.576969, 17.14111)
-rotation = -0.20631516
-scale = Vector2(0.996, 0.9791545)
-skew = -0.003043121
+position = Vector2(-9.51638, 13.116381)
+rotation = 0.10562531
+scale = Vector2(0.999, 0.999)
 texture = ExtResource("11_fdwy4")
 centered = false
 
 [node name="Gravebuster_leaf2" type="Sprite2D" parent="Body/BodyCorrect" index="10" unique_id=1954082887]
-position = Vector2(79.45132, 16.861515)
-rotation = 0.5316592
-scale = Vector2(0.9375131, 1.0117698)
-skew = 0.061936017
+position = Vector2(84.15017, 17.933447)
+rotation = 1.0539156
+scale = Vector2(0.945, 1.0271672)
+skew = 0.048869334
 texture = ExtResource("12_sd0vj")
 centered = false
 
 [node name="Gravebuster_leaf3" type="Sprite2D" parent="Body/BodyCorrect" index="11" unique_id=210305311]
-position = Vector2(66.46677, 7.161515)
-rotation = 0.70485854
-scale = Vector2(1.0103848, 0.9350263)
-skew = 0.08417808
+position = Vector2(63.63276, 4.083276)
+rotation = 0.29341707
+scale = Vector2(1.0181673, 0.9485017)
+skew = 0.06806805
 texture = ExtResource("12_sd0vj")
 centered = false
 
 [node name="Gravebuster_leaf4" type="Sprite2D" parent="Body/BodyCorrect" index="12" unique_id=1663071022]
-position = Vector2(31.302626, 0.95889044)
-rotation = 6.255355
-scale = Vector2(0.9908717, 0.8921545)
-skew = -0.1583773
+position = Vector2(29.933104, 0.050171763)
+rotation = 6.1173396
+scale = Vector2(0.99416727, 0.91116726)
+skew = -0.152135
 texture = ExtResource("12_sd0vj")
 centered = false
 
 [node name="Gravebuster_leaf5" type="Sprite2D" parent="Body/BodyCorrect" index="13" unique_id=1065851899]
-position = Vector2(6.7641406, 14.076969)
-rotation = 4.7751226
-scale = Vector2(0.91902626, 1.0301282)
-skew = -0.008279108
+position = Vector2(6.716724, 13.050172)
+rotation = 4.7452335
+scale = Vector2(0.9363345, 1.034)
+skew = -0.0014530509
 texture = ExtResource("12_sd0vj")
 centered = false
 

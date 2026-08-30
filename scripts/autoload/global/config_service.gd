@@ -74,6 +74,9 @@ var Debug := false:
 		Debug = value
 		signal_debug.emit()
 
+## 高级暂停（控制台选项）
+var advanced_pause := false
+
 func _get_config_path() -> String:
 	if user_manager == null or user_manager.curr_user_name.is_empty():
 		return ""
@@ -105,6 +108,7 @@ func load_and_apply_config() -> void:
 	plant_be_shovel_front = config.get_value("user_control", "plant_be_shovel_front", true)
 	open_all_level = config.get_value("user_control", "open_all_level", false)
 	track_bullet_mouse = config.get_value("user_control", "track_bullet_mouse", false)
+	advanced_pause = config.get_value("user_control", "advanced_pause", false)
 
 	EventBus.push_event("on_config_update")
 
@@ -132,6 +136,7 @@ func save_config() -> void:
 	config.set_value("user_control", "open_all_level", open_all_level)
 	config.set_value("user_control", "track_bullet_mouse", track_bullet_mouse)
 	config.set_value("user_control", "debug", Debug)
+	config.set_value("user_control", "advanced_pause", advanced_pause)
 	
 
 	config.save(path)

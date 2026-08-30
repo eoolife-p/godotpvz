@@ -26,18 +26,17 @@ func _process(delta):
 			node.position = start_pos.lerp(end_pos, t)
 			
 func _on_button_down() -> void:
-	node = $"../.."
+	node = $"../../BG_Right"
 	#node.position -= Vector2(266,0)
 	start_move(node.position,node.position+Vector2(-800+266,0))
 	pass # Replace with function body.
 
-
 func _ZMH_on_ready() -> void:
-	$"../..".position.x = 74.0
+	$"../../BG_Right".position.x = 74.0
 	modulate.a = 0
 	pass # Replace with function body.
 
 func _on_ZMH_button_down() -> void:
-	node = $"../.."
+	node = $"../../BG_Right"
 	start_move(node.position,node.position+Vector2(800-266,0))
 	pass # Replace with function body.

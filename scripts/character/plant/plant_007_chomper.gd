@@ -29,13 +29,13 @@ func ready_norm_signal_connect():
 
 ## 速度改变
 func owner_update_speed(speed_product:float):
-	if not chew_timer.is_stopped():
-		if speed_product == 0:
+	if speed_product == 0:
+		if not chew_timer.is_stopped():
 			chew_timer.paused = true
-		else:
-			chew_timer.paused = false
-			chew_timer.start(chew_timer.time_left / speed_product)
-
+		return
+	chew_timer.paused = false
+	if not chew_timer.is_stopped():
+		chew_timer.start(chew_timer.time_left / speed_product)
 	chew_timer.wait_time = eat_CD / speed_product
 
 ## 改变是否正在攻击,即攻击范围内是否有敌人

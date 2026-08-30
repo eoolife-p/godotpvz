@@ -11,6 +11,9 @@ class_name Zombie013Zamboni
 @export_group("动画状态")
 @export var is_caltrop:= false
 
+## 抖动tween引用
+var _shake_tween: Tween
+
 ## 僵尸上一帧和当前帧位置(更新冰道使用)
 var zombie_last_x:float
 var zombie_curr_x:float
@@ -57,15 +60,22 @@ func hp_stage_zamboni_change(curr_hp_stage:int):
 		2:
 			update_speed_factor(0, E_Influence_Speed_Factor.ZamboniHp)
 			## 停止移动,抖动
-			var tween = create_tween()
-			tween.tween_property(body, "position", body.position + Vector2(1, 1), 0.05).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-			tween.tween_property(body, "position", body.position, 0.05).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-			tween.set_loops()
+			if _shake_tween:
+				_shake_tween.kill()
+			_shake_tween = create_tween()
+			_shake_tween.tween_property(body, "position", body.position + Vector2(1, 1), 0.05).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+			_shake_tween.tween_property(body, "position", body.position, 0.05).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+			_shake_tween.set_loops()
 		3:
 			zamboni_death_effect()
 
 ## 死亡爆炸特效
 func zamboni_death_effect():
+	if _shake_tween:
+		_shake_tween.kill()
+	death_bomb.get_parent().remove_child(death_bomb)
+	get_tree().current_scene.add_child(death_bomb)
+	death_bomb.global_position = global_position
 	death_bomb.activate_it()
 	SoundManager.play_character_SFX(&"explosion")
 	queue_free()

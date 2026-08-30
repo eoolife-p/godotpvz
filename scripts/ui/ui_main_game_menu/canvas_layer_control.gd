@@ -14,6 +14,7 @@ class_name CanvasLayerConsole
 @onready var check_box_10: CheckBox = $OptionBG/HBoxContainer/VBoxContainer2/CheckBox10
 @onready var check_box_11: CheckBox = $OptionBG/HBoxContainer/VBoxContainer2/CheckBox11
 @onready var check_box_12: CheckBox = $OptionBG/HBoxContainer/VBoxContainer2/CheckBox12
+@onready var check_box_13: CheckBox = $OptionBG/HBoxContainer/VBoxContainer2/CheckBox13
 
 func _ready() -> void:
 	init_console_panel()
@@ -40,6 +41,7 @@ func _update_console_panel():
 	check_box_10.button_pressed = Global.config_service.open_all_level
 	check_box_11.button_pressed = Global.config_service.track_bullet_mouse
 	check_box_12.button_pressed = Global.config_service.Debug
+	check_box_13.button_pressed = Global.config_service.advanced_pause
 
 ## 关闭控制台
 func _on_texture_button_pressed() -> void:
@@ -95,3 +97,7 @@ func _on_check_box_12_toggled(toggled_on: bool) -> void:
 	EventBus.push_event("add_sun_value", [9999])
 	Global.config_service.Debug = toggled_on
 	pass # Replace with function body.
+
+## 高级暂停（暂停游戏，不显示暂停窗口，可交互，空格恢复）
+func _on_check_box_13_toggled(toggled_on: bool) -> void:
+	Global.config_service.advanced_pause = toggled_on

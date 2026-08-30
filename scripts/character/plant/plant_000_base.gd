@@ -118,7 +118,8 @@ func ready_norm_signal_connect():
 func ready_norm():
 	super()
 
-	garden_component.queue_free()
+	if is_instance_valid(garden_component):
+		garden_component.queue_free()
 	curr_be_attack_status = init_be_attack_status
 	## 如果白天睡觉
 	if is_sleep_in_day:
@@ -129,7 +130,8 @@ func ready_norm():
 ## 初始化展示角色
 func ready_show():
 	super()
-	garden_component.queue_free()
+	if is_instance_valid(garden_component):
+		garden_component.queue_free()
 
 
 

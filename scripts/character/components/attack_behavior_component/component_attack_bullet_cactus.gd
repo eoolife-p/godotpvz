@@ -26,5 +26,4 @@ func update_bullet_can_attack_zombie_status(value:bool):
 	if value:
 		can_attack_zombie_status = 8
 	else:
-		can_attack_zombie_status = ~8
-	print(can_attack_zombie_status)
+		can_attack_zombie_status = 1

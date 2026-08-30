@@ -21,7 +21,8 @@ var curr_hp:int:
 		value = max(value, 0)
 		curr_hp = value
 		label_hp.text = str(curr_hp)
-		progress_bar_hp.value = float(curr_hp) / max_hp
+		if max_hp > 0:
+			progress_bar_hp.value = float(curr_hp) / max_hp
 
 		## 如果血量小于死亡血量临界值,并且角色还未死亡时
 		if value <= death_hp and not is_death:

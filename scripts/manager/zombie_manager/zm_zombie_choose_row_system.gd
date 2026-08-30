@@ -58,20 +58,21 @@ func on_zombie_spawned(row_index: int):
 ## 计算平滑权重
 func calculate_smooth_weights(zombie_row_type: CharacterRegistry.ZombieRowType, special_base_weight: Array = []) -> Array:
 	var smooth_weights: Array[float] = []
+	var curr_base_weight: Array[float]
+	var curr_total_base_weight: float
 	if not special_base_weight.is_empty():
-		print("使用临时特殊基础权重")
-		base_weight = special_base_weight
-		total_base_weight = GlobalUtils.sum_arr(base_weight)
+		curr_base_weight = special_base_weight
+		curr_total_base_weight = GlobalUtils.sum_arr(curr_base_weight)
 	else:
-		base_weight = base_weigth_all_type[zombie_row_type]
-		total_base_weight = total_base_weight_all_type[zombie_row_type]
+		curr_base_weight = base_weigth_all_type[zombie_row_type]
+		curr_total_base_weight = total_base_weight_all_type[zombie_row_type]
 
 	for i in range(Global.main_game.zombie_manager.all_zombie_rows.size()):
-		if base_weight[i] <= 0 or total_base_weight <= 0:
+		if curr_base_weight[i] <= 0 or curr_total_base_weight <= 0:
 			smooth_weights.append(0.0)
 			continue
 
-		var weight_p = base_weight[i] / total_base_weight
+		var weight_p = curr_base_weight[i] / curr_total_base_weight
 
 		var p_last = (6.0 * last_picked[i] * weight_p + 6.0 * weight_p - 3.0) / 4.0
 		var p_second_last = (second_last_picked[i] * weight_p + weight_p - 1.0) / 4.0

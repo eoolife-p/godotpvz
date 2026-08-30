@@ -35,9 +35,11 @@ var show_character:Character000Base
 func almanac_update_plant_panel(curr_plant_type:CharacterRegistry.PlantType):
 	var curr_plant_name = Global.character_registry.get_plant_info(curr_plant_type, CharacterRegistry.PlantInfoAttribute.PlantName)
 	almanac_update_character_panel_common(Global.global_read_data.data_almanac["Plant"][curr_plant_name])
-
+	var sun_cost = str(Global.character_registry.get_plant_info(curr_plant_type,  CharacterRegistry.PlantInfoAttribute.SunCost))
 	## 花费
-	cost.get_node("Value").text = str(Global.character_registry.get_plant_info(curr_plant_type,  CharacterRegistry.PlantInfoAttribute.SunCost))
+	if curr_plant_type == Global.character_registry.PlantType.P999Imitater:
+		sun_cost = "自动"
+	cost.get_node("Value").text = sun_cost
 	## 冷却时间
 	cool_time.get_node("Value").text = str(Global.character_registry.get_plant_info(curr_plant_type,  CharacterRegistry.PlantInfoAttribute.CoolTime))
 	cool_time.get_node("Value").text += "(秒)"

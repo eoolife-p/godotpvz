@@ -41,6 +41,7 @@ var blacklist_zombie_types_with_pot: Array[CharacterRegistry.ZombieType] = [
 ]
 
 func _ready() -> void:
+	ensure_almanac_loaded()
 	update_whitelist_refresh_zombie_types_with_zombie_row_type()
 	update_whitelist_plant_types_with_pot()
 

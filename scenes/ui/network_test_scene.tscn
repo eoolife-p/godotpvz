@@ -1,0 +1,143 @@
+extends Node2D
+class_name NetworkTestScene
+
+## 网络测试场景
+
+@onready var network_manager: NetworkManager = get_node("/root/NetworkManager")
+
+## 测试按钮
+@onready var test_host_button: Button = $TestHostButton
+@onready var test_client_button: Button = $TestClientButton
+@onready var test_broadcast_button: Button = $TestBroadcastButton
+@onready var test_sync_button: Button = $TestSyncButton
+@onready var test_latency_button: Button = $TestLatencyButton
+@onready var test_disconnect_button: Button = $TestDisconnectButton
+
+## 测试结果标签
+@onready var test_result_label: Label = $TestResultLabel
+
+## 测试计数器
+var test_count: int = 0
+
+## 初始化测试场景
+func _ready() -> void:
+	if network_manager == null:
+		test_result_label.text = "错误: NetworkManager未找到"
+		test_host_button.disabled = true
+		test_client_button.disabled = true
+		test_broadcast_button.disabled = true
+		test_sync_button.disabled = true
+		test_latency_button.disabled = true
+		test_disconnect_button.disabled = true
+		return
+
+	# 连接测试按钮
+	test_host_button.pressed.connect(_on_test_host_pressed)
+	test_client_button.pressed.connect(_on_test_client_pressed)
+	test_broadcast_button.pressed.connect(_on_test_broadcast_pressed)
+	test_sync_button.pressed.connect(_on_test_sync_pressed)
+	test_latency_button.pressed.connect(_on_test_latency_pressed)
+	test_disconnect_button.pressed.connect(_on_test_disconnect_pressed)
+
+	test_result_label.text = "网络测试场景已就绪\n点击按钮开始测试"
+
+## 测试1: 创建主机
+func _on_test_host_pressed() -> void:
+	test_count += 1
+	network_manager.create_host(25565, 4)
+	test_result_label.text = "测试 %d: 创建主机成功\n等待玩家连接..." % test_count
+
+## 测试2: 连接到主机
+func _on_test_client_pressed() -> void:
+	test_count += 1
+	network_manager.connect_to_host("localhost", 25565)
+	test_result_label.text = "测试 %d: 连接到主机成功\n等待玩家连接..." % test_count
+
+## 测试3: 广播数据
+func _on_test_broadcast_pressed() -> void:
+	test_count += 1
+	network_manager.broadcast_data({"type": "test_broadcast", "count": test_count})
+	test_result_label.text = "测试 %d: 广播数据成功\n等待接收确认..." % test_count
+
+## 测试4: 同步状态
+func _on_test_sync_pressed() -> void:
+	test_count += 1
+	var sync_data = {
+		"type": "test_sync",
+		"test_count": test_count,
+		"timestamp": Time.get_unix_time_from_system()
+	}
+	network_manager.broadcast_data(sync_data)
+	test_result_label.text = "测试 %d: 同步状态成功\n等待接收确认..." % test_count
+
+## 测试5: 测量网络延迟
+func _on_test_latency_pressed() -> void:
+	test_count += 1
+	var latency = network_manager.get_network_latency()
+	var avg_latency = network_manager.get_network_average_latency()
+	test_result_label.text = "测试 %d: 网络延迟测试\n当前延迟: %d ms\n平均延迟: %d ms" % [test_count, latency, avg_latency]
+
+## 测试6: 断开连接
+func _on_test_disconnect_pressed() -> void:
+	test_count += 1
+	network_manager.disconnect_from_host()
+	test_result_label.text = "测试 %d: 断开连接成功"
+
+## 监听网络事件
+func _on_network_status_changed(status: NetworkManager.E_ConnectionStatus) -> void:
+	match status:
+		NetworkManager.E_ConnectionStatus.Disconnected:
+			test_result_label.text += "\n连接已断开"
+		NetworkManager.E_ConnectionStatus.Connecting:
+			test_result_label.text += "\n正在连接..."
+		NetworkManager.E_ConnectionStatus.Host:
+			test_result_label.text += "\n已创建主机"
+		NetworkManager.E_ConnectionStatus.Client:
+			test_result_label.text += "\n已连接到主机"
+
+## 监听玩家加入
+func _on_player_joined(player_id: int, player_name: String) -> void:
+	test_result_label.text += "\n玩家加入: %s (ID: %d)" % [player_name, player_id]
+
+## 监听玩家离开
+func _on_player_left(player_id: int) -> void:
+	test_result_label.text += "\n玩家离开 (ID: %d)" % player_id
+
+## 监听地图选择
+func _on_map_selected(map_name: String) -> void:
+	test_result_label.text += "\n地图选择: %s" % map_name
+
+## 监听阵营选择
+func _on_faction_selected(faction_name: String) -> void:
+	test_result_label.text += "\n阵营选择: %s" % faction_name
+
+## 监听游戏开始
+func _on_game_started() -> void:
+	test_result_label.text += "\n游戏开始！"
+
+## 接收网络数据
+func receive_data(data: Dictionary) -> void:
+	var data_type = data.get("type", "")
+	match data_type:
+		"test_broadcast":
+			var count = data.get("count", 0)
+			test_result_label.text += "\n接收广播测试: %d" % count
+		"test_sync":
+			var count = data.get("test_count", 0)
+			var timestamp = data.get("timestamp", 0)
+			var latency = network_manager.get_network_latency()
+			test_result_label.text += "\n接收同步测试: %d (延迟: %d ms)" % [count, latency]
+		_:
+			print("[NetworkTestScene] 接收到未知数据类型: %s" % data_type)
+
+## 清理
+func cleanup() -> void:
+	if network_manager:
+		network_manager.connection_status_changed.disconnect(_on_network_status_changed)
+		network_manager.player_joined.disconnect(_on_player_joined)
+		network_manager.player_left.disconnect(_on_player_left)
+		network_manager.map_selected.disconnect(_on_map_selected)
+		network_manager.faction_selected.disconnect(_on_faction_selected)
+		network_manager.game_started.disconnect(_on_game_started)
+
+	print("[NetworkTestScene] 已清理网络测试场景")

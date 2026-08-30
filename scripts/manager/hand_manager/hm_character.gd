@@ -179,7 +179,7 @@ func click_cell(plant_cell:PlantCell):
 				Zombie000Base.E_ZInitAttr.Lane:plant_cell.row_col.x,
 			}
 
-			Global.main_game.zombie_manager.create_norm_zombie(
+			var zombie:Zombie000Base = Global.main_game.zombie_manager.create_norm_zombie(
 				curr_card.card_zombie_type,
 				Global.main_game.zombie_manager.all_zombie_rows[plant_cell.row_col.x],
 				zombie_init_para,
@@ -189,6 +189,10 @@ func click_cell(plant_cell:PlantCell):
 				),
 				GlobalUtils.get_special_zombie_callable(curr_card.card_zombie_type, plant_cell)
 			)
+
+			## 魅惑僵尸卡片放置时调用原版魅惑效果
+			if curr_card.is_charm_card:
+				zombie.be_hypno()
 
 		## 卡片种植完成发射信号
 		curr_card.signal_card_use_end.emit()
@@ -254,7 +258,7 @@ func _click_cell_column(plant_cell:PlantCell):
 					Zombie000Base.E_ZInitAttr.Lane:_plant_cell.row_col.x,
 				}
 
-				Global.main_game.zombie_manager.create_norm_zombie(
+				var zombie:Zombie000Base = Global.main_game.zombie_manager.create_norm_zombie(
 					curr_card.card_zombie_type,
 					Global.main_game.zombie_manager.all_zombie_rows[_plant_cell.row_col.x],
 					zombie_init_para,
@@ -264,6 +268,9 @@ func _click_cell_column(plant_cell:PlantCell):
 					),
 					GlobalUtils.get_special_zombie_callable(curr_card.card_zombie_type, _plant_cell)
 				)
+
+				if curr_card.is_charm_card:
+					zombie.be_hypno()
 
 ## 柱子模式 清除数据
 func _clear_curr_data_column():

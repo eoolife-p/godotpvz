@@ -89,7 +89,11 @@ func set_cancel_attack():
 	pass
 
 ## 发射子弹（动画调用）
+## 植物可设置 on_shoot_bullet 回调替换发射逻辑，回调返回 true 表示已处理
+var on_shoot_bullet: Callable
 func _shoot_bullet():
+	if on_shoot_bullet.is_valid() and on_shoot_bullet.call():
+		return
 	signal_shoot_bullet.emit()
 	for i in range(markers_2d_bullet.size()):
 		var bullet:Bullet000Base = Global.bullet_registry.get_bullet_scenes(attack_bullet_type).instantiate()

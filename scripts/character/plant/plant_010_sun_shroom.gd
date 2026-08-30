@@ -38,13 +38,13 @@ func _on_grow_timer_timeout() -> void:
 
 ## 更新成长的速度
 func update_grow_speed(speed_factor:float):
-	if not grow_timer.is_stopped():
-		if speed_factor == 0:
+	if speed_factor == 0:
+		if not grow_timer.is_stopped():
 			grow_timer.paused = true
-		else:
-			grow_timer.paused = false
-
-			grow_timer.start(grow_timer.time_left / speed_factor)
+		return
+	grow_timer.paused = false
+	if not grow_timer.is_stopped():
+		grow_timer.start(grow_timer.time_left / speed_factor)
 
 
 ## 被僵尸啃食一次特殊效果,魅惑\大蒜\我是僵尸生产阳光

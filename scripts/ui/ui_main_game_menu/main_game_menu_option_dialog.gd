@@ -39,6 +39,9 @@ func time_sacle_signal(h_slider: HSlider):
 
 ## 出现菜单
 func appear_menu():
+	## 高级暂停时不显示菜单窗口
+	if TreePauseManager.is_advanced_paused:
+		return
 	await get_tree().create_timer(0.1).timeout
 	# 游戏暂停
 

@@ -65,7 +65,7 @@ func main_game_refresh_card():
 		var card:Card = curr_cards[i]
 		card.judge_sun_enough(int(Global.global_game_state.coin_value / 10.0))
 		card.signal_card_use_end.connect(card_use_end.bind(card))
-		card.set_shortcut((i+1)%10)
+		card.set_shortcut(i + 1)
 	judge_disappear_add_card_bar()
 
 ## 卡片种植后信号调用函数

@@ -14,8 +14,8 @@ func _process(_delta: float) -> void:
 	## 如果是我是僵尸模式
 	if is_zombie_mode:
 		if not is_pop and global_position.x < balloon_pop_glo_pos_x_in_zombie_mode:
-			hp_component = hp_component as HpComponentZombie
-			hp_component.Hp_loss(hp_component.curr_hp_armor1)
+			if hp_component is HpComponentZombie:
+				hp_component.Hp_loss(hp_component.curr_hp_armor1)
 
 ## 初始化正常出战角色信号连接
 func ready_norm_signal_connect():
@@ -51,4 +51,4 @@ func be_blow_away():
 
 ## 被冰冻控制
 func be_ice_freeze(time:float, new_time_ice_end_decelerate:float):
-	be_ice_decelerate(time + new_time_ice_end_decelerate)
+	super(time, new_time_ice_end_decelerate)

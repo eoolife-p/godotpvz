@@ -16,9 +16,13 @@ func init_plant_card():
 	for plant_type in Global.global_game_state.curr_plant:
 		print(plant_type)
 		var curr_plant_name = Global.character_registry.get_plant_info(plant_type, CharacterRegistry.PlantInfoAttribute.PlantName)
-		## 如果有图鉴数据
-		if Global.global_read_data.data_almanac["Plant"].has(curr_plant_name):
+		## 如果有图鉴数据且有对应卡片预制体
+		if Global.global_read_data.data_almanac["Plant"].has(curr_plant_name) and AllCards.all_plant_card_prefabs.has(plant_type):
 			var curr_plant_card:Card = AllCards.all_plant_card_prefabs[plant_type].duplicate()
 			card_grid_container.add_child(curr_plant_card)
 			curr_plant_card.signal_card_click.connect(almanac_character_show_panel.almanac_update_plant_panel.bind(curr_plant_card.card_plant_type))
 			curr_plant_card.set_almanac_card()
+
+## 模仿者图鉴（按钮调用）
+func show_imitater_almanac():
+	almanac_character_show_panel.almanac_update_plant_panel(CharacterRegistry.PlantType.P999Imitater)

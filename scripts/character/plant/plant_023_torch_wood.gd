@@ -20,7 +20,7 @@ func ready_norm() -> void:
 ## 子弹进入升级区域
 func _on_area_2d_up_bullet_area_entered(area: Area2D) -> void:
 	var bullet:Bullet000Base = area.owner
-	if bullet.is_can_up and bullet.bullet_type in bullet_upgrade_data.keys():
+	if bullet.is_can_up and bullet.bullet_type in bullet_upgrade_data.keys() and not bullet.is_queued_for_deletion():
 		_up_bullet(bullet)
 
 ## 子弹离开当前区域
@@ -32,6 +32,7 @@ func _on_area_2d_up_bullet_area_exited(area: Area2D) -> void:
 ## 升级子弹
 func _up_bullet(curr_bullet:Bullet000Base):
 	if curr_bullet not in curr_bullet_up:
+		curr_bullet.is_can_up = false
 		var new_bullet_up_scenes = Global.bullet_registry.get_bullet_scenes(bullet_upgrade_data[curr_bullet.bullet_type])
 		var bullet_up :Bullet000Base = new_bullet_up_scenes.instantiate()
 		bullet_up.init_bullet(curr_bullet.get_bullet_paras())

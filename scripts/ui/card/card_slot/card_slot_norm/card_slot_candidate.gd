@@ -153,6 +153,40 @@ func _init_card_slot_candidate_zombie():
 	for zombie_type:CharacterRegistry.ZombieType in Global.global_game_state.curr_zombie:
 		all_card_candidate_containers_zombie[AllCards.zombie_card_ids[zombie_type]].visible = true
 
+	## 魅惑僵尸独立最后一页：复制所有僵尸卡片 + 魅惑颜色
+	var charm_grid = grid_container_zombie.duplicate()
+	all_card_page.add_child(charm_grid)
+	all_card_page_array.append(charm_grid)
+	charm_grid.visible = false
+	var charm_placeholders = charm_grid.get_children()
+	var charm_slot_index := 0
+
+	for zombie_type:CharacterRegistry.ZombieType in Global.global_game_state.curr_zombie:
+		if not AllCards.all_zombie_card_prefabs.has(zombie_type):
+			continue
+		var orig_card: Card = AllCards.all_zombie_card_prefabs[zombie_type]
+		## 先在原卡片上设置魅惑样式，再复制（@onready变量在duplicate上为nil）
+		var orig_modulate = orig_card.character_static.modulate
+		var orig_scale = orig_card.character_static.scale
+		orig_card.character_static.modulate = Color(1, 0.5, 1)
+		orig_card.character_static.scale.x = -orig_scale.x
+		var charm_card := orig_card.duplicate() as Card
+		orig_card.character_static.modulate = orig_modulate
+		orig_card.character_static.scale = orig_scale
+		charm_card.is_charm_card = true
+		var charm_container: CardCandidateContainer = SceneRegistry.CARD_CANDIDATE_CONTAINER.instantiate()
+		charm_container.init_card_in_seed_chooser(charm_card)
+		charm_placeholders[charm_slot_index].add_child(charm_container)
+		all_card_candidate_containers_zombie[orig_card.card_id + 10000] = charm_container
+		charm_container.visible = false
+		charm_slot_index += 1
+
+	## 魅惑页始终可见
+	for zombie_type:CharacterRegistry.ZombieType in Global.global_game_state.curr_zombie:
+		var charm_key = AllCards.zombie_card_ids[zombie_type] + 10000
+		if charm_key in all_card_candidate_containers_zombie:
+			all_card_candidate_containers_zombie[charm_key].visible = true
+
 	grid_container_zombie.queue_free()
 
 ## 初始化生成模仿者待选卡槽

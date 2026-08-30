@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://network_game_setup_dialog"]
+
+[ext_resource type="Script" uid="uid://network_game_setup_dialog_script" path="res://scripts/ui/network_game_setup_dialog.gd" id="1_network_game_setup_dialog"]
+[ext_resource type="AudioStream" uid="uid://sfx_ui_open" path="res://assets/audio/SFX/ui_open.mp3" id="2_sfx_ui_open"]
+
+[node name="NetworkGameSetupDialog" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_network_game_setup_dialog")
+
+[node name="DialogContainer" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+modulate = Color(0, 0, 0, 0.7)
+
+[node name="Panel" type="Panel" parent="DialogContainer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -200.0
+offset_right = 300.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"PVZDialog"
+
+[node name="TitleLabel" type="Label" parent="DialogContainer/Panel"]
+layout_mode = 2
+text = "标题"
+horizontal_alignment = 1
+theme_type_variation = &"PVZDialogTitle"
+
+[node name="GameModeLabel" type="Label" parent="DialogContainer/Panel"]
+layout_mode = 2
+text = "游戏模式"
+
+[node name="MapSelectionContainer" type="VBoxContainer" parent="DialogContainer/Panel"]
+layout_mode = 2
+
+[node name="FactionSelectionContainer" type="VBoxContainer" parent="DialogContainer/Panel"]
+layout_mode = 2
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="DialogContainer/Panel"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ConfirmButton" type="Button" parent="DialogContainer/Panel/ButtonsContainer"]
+layout_mode = 2
+text = "确认"
+
+[node name="CancelButton" type="Button" parent="DialogContainer/Panel/ButtonsContainer"]
+layout_mode = 2
+text = "取消"

@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://shaders/my_shader/charm.gdshader" id="1_charm"]
+
+[resource]
+shader = ExtResource("1_charm")
+shader_parameter/tint_strength = 0.45
+shader_parameter/tint_color = Vector3(1.0, 0.45, 0.8)
+shader_parameter/brightness = 0.08

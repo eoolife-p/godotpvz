@@ -246,7 +246,8 @@ func judge_battlefield_update_speed():
 		judge_battlefield_timer.start()
 		## 等待进入战场
 		await signal_enter_battlefield
-		update_speed_factor(1, E_Influence_Speed_Factor.OutBattlefield)
+		if is_instance_valid(self):
+			update_speed_factor(1, E_Influence_Speed_Factor.OutBattlefield)
 
 func _on_judge_battlefield_timer_timeout():
 	#print("判断一次是否进入战场")
@@ -344,6 +345,8 @@ func change_is_swimming(value:bool):
 	is_swimming = value
 	move_component.update_move_factor(true, MoveComponent.E_MoveFactor.IsSwimingChange)
 	await get_tree().create_timer(0.2).timeout
+	if not is_instance_valid(self):
+		return
 	move_component.update_move_factor(false, MoveComponent.E_MoveFactor.IsSwimingChange)
 	shadow.visible = not value
 
@@ -447,10 +450,10 @@ func be_bomb(attack_value:int, is_cherry_bomb:bool = false):
 	## 如果角色死亡
 	if is_death:
 		## 在在灰烬动画条件下
-		if is_cherry_bomb and (not is_swimming or not curr_be_attack_status != E_BeAttackStatusZombie.IsDownGround):
+		if is_cherry_bomb and (not is_swimming or curr_be_attack_status != E_BeAttackStatusZombie.IsDownGround):
 			charred_component.play_charred_anim()
 		queue_free()
-	#await get_tree().process_frame
+		return
 	set_deferred("is_can_death_language", true)
 
 ## 被大嘴花吃
@@ -459,7 +462,7 @@ func be_chomper_eat(attack_value:int):
 	hp_component.Hp_loss(attack_value,BulletRegistry.AttackMode.Penetration, false, false)
 	if is_death:
 		queue_free()
-	#await get_tree().process_frame
+		return
 	set_deferred("is_can_death_language", true)
 
 ## 被倭瓜压
@@ -468,7 +471,7 @@ func be_squash(attack_value:int=1800):
 	hp_component.Hp_loss(attack_value,BulletRegistry.AttackMode.Penetration, false, false)
 	if is_death:
 		queue_free()
-	#await get_tree().process_frame
+		return
 	set_deferred("is_can_death_language", true)
 
 #endregion
@@ -539,7 +542,8 @@ func death_stop_butter():
 ## 黄油时间计时器结束
 func _on_butter_timer_timeout() -> void:
 	update_speed_factor(1.0, E_Influence_Speed_Factor.Butter)
-	butter_splat.visible = false
+	if is_instance_valid(butter_splat):
+		butter_splat.visible = false
 #endregion
 
 #region 僵尸吃大蒜换行
@@ -547,6 +551,8 @@ func update_lane_on_eat_garlic():
 	SoundManager.play_character_SFX("yuck")
 	update_speed_factor(0.0, E_Influence_Speed_Factor.EatGarlic)
 	await get_tree().create_timer(0.5, false).timeout
+	if not is_instance_valid(self):
+		return
 	update_speed_factor(1.0, E_Influence_Speed_Factor.EatGarlic)
 	update_lane()
 
@@ -561,6 +567,8 @@ func update_lane():
 	if lane != Global.main_game.zombie_manager.all_zombie_rows.size()-1 and Global.main_game.zombie_manager.all_zombie_rows[lane+1].zombie_row_type == curr_zombie_row_type:
 		can_update_zombie_row_i.append(lane+1)
 
+	if can_update_zombie_row_i.is_empty():
+		return
 	var new_lane_i = can_update_zombie_row_i.pick_random()
 	lane = new_lane_i
 	signal_lane_update.emit()

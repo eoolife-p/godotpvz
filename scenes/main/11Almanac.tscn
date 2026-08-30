@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dsaa0bforjqoc" path="res://assets/image/Almanac/Almanac_IndexButton.png" id="15_0vkb5"]
 [ext_resource type="Texture2D" uid="uid://cy68aplkty3cc" path="res://assets/image/Almanac/Almanac_IndexButtonHighlight.png" id="16_pt714"]
 [ext_resource type="BitMap" uid="uid://bu8dpvt5qxwnc" path="res://assets/image/Almanac/Almanac_IndexButton_Mask.png" id="17_2p4k2"]
+[ext_resource type="Texture2D" uid="uid://s4qdhdwkvu8l" path="res://assets/image/Almanac/Almanac_Imitater.png" id="18_dyjda"]
 [ext_resource type="Texture2D" uid="uid://b3uyrr2kg0xam" path="res://assets/image/Almanac/Almanac_ZombieBack_New.png" id="18_ji74r"]
 [ext_resource type="Script" uid="uid://bb1xg8pc7k07h" path="res://scripts/Almanac/zombie_page.gd" id="20_u1nrc"]
 [ext_resource type="Texture2D" uid="uid://ccpgan6lpyb76" path="res://assets/image/Almanac/Almanac_ZombieCard.png" id="54_lse7w"]
@@ -37,6 +38,7 @@ theme = ExtResource("1_pt714")
 script = ExtResource("1_fstyb")
 
 [node name="StartPage" type="TextureRect" parent="." unique_id=1624913101]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -262,7 +264,16 @@ theme_override_fonts/font = ExtResource("12_jlxhy")
 theme_override_font_sizes/font_size = 16
 text = "图鉴索引"
 
+[node name="Imitater" type="TextureButton" parent="PlantPage" unique_id=1771105948]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 20.0
+offset_right = 55.0
+offset_bottom = 63.0
+texture_normal = ExtResource("18_dyjda")
+
 [node name="ZombiePage" type="TextureRect" parent="." unique_id=43535276]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -431,6 +442,7 @@ vertical_alignment = 1
 [connection signal="pressed" from="StartPage/Panel/PlantButton" to="." method="_on_plant_button_pressed"]
 [connection signal="pressed" from="StartPage/Panel2/ZombieButton" to="." method="_on_zombie_button_pressed"]
 [connection signal="pressed" from="PlantPage/ReturnButton" to="." method="_on_return_button_pressed"]
+[connection signal="button_down" from="PlantPage/Imitater" to="PlantPage" method="show_imitater_almanac"]
 [connection signal="pressed" from="ZombiePage/ReturnButton" to="." method="_on_return_button_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
 

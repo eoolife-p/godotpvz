@@ -1,6 +1,39 @@
 extends Node2D
 class_name MainGameManager
 
+#region 网络功能
+@export_group("网络功能")
+## 是否为网络游戏
+@export var is_network_game: bool = false:
+	set(value):
+		is_network_game = value
+		if value and not has_node("/root/NetworkManager"):
+			push_error("[MainGameManager] 网络游戏模式已启用，但NetworkManager未找到")
+		EventBus.push_event("network_game_status_changed", [value])
+
+## 网络游戏模式
+var network_game_mode: String = ""
+
+## 选中的地图
+var network_selected_map: String = ""
+
+## 选中的阵营
+var network_selected_faction: String = ""
+
+## 玩家准备状态
+var network_players_ready: Dictionary = {}
+
+## 游戏是否已开始
+var network_game_started: bool = false
+
+## 网络管理器
+var network_manager: NetworkManager
+
+## 本地玩家ID
+var local_player_id: int = 0
+
+#endregion
+
 #region 游戏测试
 @export_group("测试相关")
 ## 游戏时测试方便修改阳光数
@@ -132,6 +165,35 @@ var curr_game_round = 1:
 ## 初始化时是否存档
 var is_save_game_data_on_init:=false
 
+## 网络游戏初始化
+func _init_network_game() -> void:
+	network_manager = get_node("/root/NetworkManager")
+	if network_manager == null:
+		push_error("[MainGameManager] NetworkManager未找到")
+		return
+
+	local_player_id = network_manager.get_local_player_id()
+
+	# 订阅网络事件
+	network_manager.map_selected.connect(_on_network_map_selected)
+	network_manager.faction_selected.connect(_on_network_faction_selected)
+	network_manager.game_started.connect(_on_network_game_started)
+
+	print("[MainGameManager] 网络游戏初始化完成，本地玩家ID: %d" % local_player_id)
+
+## 网络事件处理
+func _on_network_map_selected(map_name: String) -> void:
+	network_selected_map = map_name
+	print("[MainGameManager] 收到地图选择: %s" % map_name)
+
+func _on_network_faction_selected(faction_name: String) -> void:
+	network_selected_faction = faction_name
+	print("[MainGameManager] 收到阵营选择: %s" % faction_name)
+
+func _on_network_game_started() -> void:
+	network_game_started = true
+	print("[MainGameManager] 网络游戏开始")
+
 #endregion
 
 #endregion
@@ -159,6 +221,10 @@ func _exit_tree() -> void:
 		Global.main_game = null
 
 func _ready() -> void:
+	# 网络游戏初始化
+	if is_network_game:
+		_init_network_game()
+
 	game_para.init_para()
 	## 多轮游戏并且有存档
 	is_save_game_data_on_init = game_para.game_round != 1 and game_para.save_game_data_main_game != null
@@ -423,6 +489,11 @@ func on_zombie_go_home(zombie:Zombie000Base):
 	SoundManager.play_other_SFX("scream")
 	ui_remind_word.zombie_won_word_appear()
 
+	# 网络游戏处理
+	if is_network_game:
+		print("[MainGameManager] 网络游戏失败，返回主菜单")
+		get_tree().change_scene_to_file(Global.main_scene_registry.MainScenesMap[MainSceneRegistry.MainScenes.StartMenu])
+
 
 #region 奖杯
 ## 创建奖杯
@@ -476,7 +547,13 @@ func win_main_game():
 	## 多轮游戏，重置主游戏数据
 	if game_para.game_round != 1:
 		re_main_game()
-	get_tree().change_scene_to_file(Global.main_scene_registry.MainScenesMap.get(game_para.game_mode, Global.main_scene_registry.MainScenesMap[MainSceneRegistry.MainScenes.StartMenu]))
+
+	# 网络游戏处理
+	if is_network_game:
+		print("[MainGameManager] 网络游戏胜利，返回主菜单")
+		get_tree().change_scene_to_file(Global.main_scene_registry.MainScenesMap[MainSceneRegistry.MainScenes.StartMenu])
+	else:
+		get_tree().change_scene_to_file(Global.main_scene_registry.MainScenesMap.get(game_para.game_mode, Global.main_scene_registry.MainScenesMap[MainSceneRegistry.MainScenes.StartMenu]))
 
 #endregion
 

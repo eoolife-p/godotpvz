@@ -4,7 +4,7 @@ class_name CustomChooseLevel
 const CHOOSE_LEVEL_BUTTON_CUSTOMIZE = preload("res://scenes/choose_level/choose_level_button_customize.tscn")
 
 @onready var panel_help: Panel = $PanelHelp
-@onready var grid_container: GridContainer = $Scrooll/AllPage/GridContainer
+@onready var grid_container: GridContainer = $Scrooll/GridContainer
 
 ## 每一页的关卡数量
 var num_level_button_every_page:=20
